@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="94e3d330-e7d0-47e3-b423-21c0a18d897f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CCExpDateValidation" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="94e3d330-e7d0-47e3-b423-21c0a18d897ffileName">CCExpDateValidation</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="CCExpDateValidation" id="b3d64584-a824-4e37-83aa-f7edd159aea0"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidation" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+  "language": "",
+  "month": "",
+  "year": "",
+  "prompt": "",
+  "results_page": "",
+  "audio_path": ""
+}
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>

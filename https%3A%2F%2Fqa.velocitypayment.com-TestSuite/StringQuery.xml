@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b5c11733-ddd4-48bb-960e-10586c3e1464" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="StringQuery" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="b5c11733-ddd4-48bb-960e-10586c3e1464fileName">StringQuery</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="StringQuery" id="e3c62010-2925-4290-abf8-8f054984dfc7"><con:settings/><con:config service="REST Service 11" resourcePath="/vtps/rest/stringQuery" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="StringQuery" id="312ff84d-2e3a-49a8-a334-fc0469e34a3f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+  "language": "",
+  "string": "",  
+  "prompt": "",
+  "results_page": "",
+  "audio_path": ""
+}
+</con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>

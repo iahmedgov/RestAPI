@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cabd890a-9f8b-4e56-a833-724604afb0c5" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ConvenienceFeeACHLookup" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="cabd890a-9f8b-4e56-a833-724604afb0c5fileName">ConvenienceFeeACHLookup</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="CFACHLookup" id="5c7771e9-299c-4a8e-b97d-5be330700f33"><con:settings/><con:config service="REST Service 7" resourcePath="/vtps/rest/convenienceFeeACHLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CFACHLookup" id="b0180550-f14f-48a1-b692-1df8ae817c3f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+  "check_type": "P",
+  "amount": "10.00",
+  "applicationID": "61",
+  "language": "",
+  "prompt": "",
+  "results_page": "",
+  "audio_path": ""
+}
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeACHLookup</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
