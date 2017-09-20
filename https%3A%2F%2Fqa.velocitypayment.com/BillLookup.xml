@@ -4,6 +4,6 @@
   "customerID": "6",
   "lookup_field_1": "123466",
   "lookup_field_2": "3333",
-  "lookup_field_3": ""
+  "lookup_field_3": "00000"
 }
 </con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry/></con:parameterOrder></con:request></con:method></con:resource>
