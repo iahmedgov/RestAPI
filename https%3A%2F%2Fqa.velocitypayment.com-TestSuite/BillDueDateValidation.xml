@@ -8,4 +8,4 @@
   "audio_path": "",
   "day_of_month": "" 
 }
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
