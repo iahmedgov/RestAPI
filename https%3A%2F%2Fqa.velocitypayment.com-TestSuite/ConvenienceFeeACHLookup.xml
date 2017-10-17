@@ -8,4 +8,13 @@
   "results_page": "",
   "audio_path": ""
 }
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeACHLookup</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeACHLookup</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CFACHLookupUpgrade" id="93f54968-0be0-4d8d-a248-40b734ccfedd"><con:settings/><con:config service="REST Service 7" resourcePath="/vtps/rest/convenienceFeeACHLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CFACHLookupUpgrade" id="b0180550-f14f-48a1-b692-1df8ae817c3f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://upgrade.velocitypayment.com</con:endpoint><con:request>{
+  "check_type": "P",
+  "amount": "9.00",
+  "applicationID": "18",
+  "language": "en_US",
+  "prompt": "",
+  "results_page": "",
+  "audio_path": ""
+}
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeACHLookup</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
