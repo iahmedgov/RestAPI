@@ -4,7 +4,7 @@
   "customerID": "195",
   "applicationID": "608",
   "clientAccountNumber": "9999990",
-  "callTimestamp": "10/11/2017 14:33:16",
+  "callTimestamp": "10/30/2017 14:33:16",
   "callGUID": "37519986909",
   "DialedNumber": "5717306071"
 }
@@ -15,6 +15,16 @@
   "applicationID": "18",
   "clientAccountNumber": "9999990",
   "callTimestamp": "10/17/2017 14:33:16",
+  "callGUID": "37519986909",
+  "DialedNumber": "5717306071"
+}
+
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallTransfer</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CallTransferWWW" id="3ba67632-fc52-47f1-a926-fb90f7ba818a"><con:settings/><con:config service="REST Service 2" resourcePath="/vtps/rest/CallTransfer" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallTransferWWW" id="fcd3b32b-39c1-4226-a75e-e23f403a12cd" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+  "callerID": "7038945111",
+  "customerID": "2",
+  "applicationID": "18",
+  "clientAccountNumber": "9999990",
+  "callTimestamp": "10/18/2017 14:33:16",
   "callGUID": "37519986909",
   "DialedNumber": "5717306071"
 }

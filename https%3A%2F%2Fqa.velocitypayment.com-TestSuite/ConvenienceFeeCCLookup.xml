@@ -17,4 +17,13 @@
   "results_page": "",
   "audio_path": ""
 }
+</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeCCLookup</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CFCCLookupWWW" id="fc586931-3cb1-4677-93fe-b35e5740733b"><con:settings/><con:config service="REST Service 8" resourcePath="/vtps/rest/convenienceFeeCCLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CFCCLookupWWW" id="c58ce832-88ed-4d87-b1b6-8978a35b191f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+  "cardnumber": "4111111111111111",
+  "amount": "30.00",
+  "applicationID": "18",
+  "language": "en_US",
+  "prompt": "",
+  "results_page": "",
+  "audio_path": ""
+}
 </con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/convenienceFeeCCLookup</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
