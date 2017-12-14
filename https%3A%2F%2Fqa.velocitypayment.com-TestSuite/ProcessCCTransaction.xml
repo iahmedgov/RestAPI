@@ -111,7 +111,7 @@
    "response_format": "fixed_width",
    "card_expiration": "",
    "application_id": "18",
-   "remittance_id": "testIVR09262017181",
+   "remittance_id": "testIVR09262017191",
    "card_exmo": "01",
    "card_exyr": "2020",
    "username": "username",
@@ -127,7 +127,7 @@
    "user_defined9": "udf9 data",
    "user_defined10": "udf10 data",
    "client_account_number": "1564945"
-}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ProcessCCWWW" id="de45a562-da48-4ea4-8251-10fc604b7ea5"><con:settings/><con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ProcessCCWWW" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ProcessCCWWW" id="de45a562-da48-4ea4-8251-10fc604b7ea5"><con:settings/><con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ProcessCCWWW" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
    "card_address": "2311 york road",
    "amount": "50.00",
    "card_name": "imtiaz ahmed",
@@ -159,4 +159,4 @@
    "user_defined9": "udf9 data",
    "user_defined10": "udf10 data",
    "client_account_number": "1564945"
-}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>88888888</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
