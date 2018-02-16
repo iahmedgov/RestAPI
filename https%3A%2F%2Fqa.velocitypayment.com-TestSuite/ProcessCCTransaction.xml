@@ -9,13 +9,13 @@
    "card_number": "4111111111111111",
    "card_state": "",
    "transaction_type": "104",
-   "message_version": "2.0IVR_C1",
+   "message_version": "2.0IVR_C",
    "category": "MOTO",
    "requestSource": "",
    "response_format": "fixed_width",
    "card_expiration": "",
-   "application_id": "608",
-   "remittance_id": "testIVR0926201719",
+   "application_id": "6080",
+   "remittance_id": "testIVR0926201721",
    "card_exmo": "01",
    "card_exyr": "2020",
    "username": "username",
@@ -31,7 +31,7 @@
    "user_defined9": "udf9 data",
    "user_defined10": "udf10 data",
    "client_account_number": "1564945"
-}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Copy of ProcessCC" id="a4d48d7d-d25c-495c-b325-1d776bf860ad"><con:settings/><con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of ProcessCC" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:endpoint><con:request>{
+}</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Copy of ProcessCC" id="a4d48d7d-d25c-495c-b325-1d776bf860ad"><con:settings/><con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of ProcessCC" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:endpoint><con:request>{
    "card_address": "2311 york road",
    "amount": "10.00",
    "card_name": "imtiaz ahmed",
