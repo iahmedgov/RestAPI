@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/billDueDateValidation" path="/vtps/rest/billDueDateValidation" id="1ab65160-df23-4878-a9c5-9b2cbc93a92a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="1ab65160-df23-4878-a9c5-9b2cbc93a92afileName">%2Fvtps%2Frest%2FbillDueDateValidation</con:setting></con:settings><con:parameters/><con:method name="POST" id="f50e5587-7173-4a70-a86e-8ee616421442" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:bil="https://qa.velocitypayment.com/vtps/rest/billDueDateValidation">bil:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="POST Request" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="multipart/mixed" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource>
+<con:resource name="/vtps/rest/billDueDateValidation" path="/vtps/rest/billDueDateValidation" id="1ab65160-df23-4878-a9c5-9b2cbc93a92a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1ab65160-df23-4878-a9c5-9b2cbc93a92afileName">%2Fvtps%2Frest%2FbillDueDateValidation</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="f50e5587-7173-4a70-a86e-8ee616421442" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:bil="https://qa.velocitypayment.com/vtps/rest/billDueDateValidation">bil:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

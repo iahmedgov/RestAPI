@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="12753aa5-7455-4cef-9263-c13cf31b7aff" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ParseMoney" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="ab7eee89-4d28-4215-83a3-5255f7f4e119" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of BillLookup" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="12753aa5-7455-4cef-9263-c13cf31b7afffileName">ParseMoney</con:setting>
+    <con:setting id="9c971b5f-6e4f-4c20-86a6-3ba44dfc9e38fileName">BillLookup</con:setting>
+    <con:setting id="ab7eee89-4d28-4215-83a3-5255f7f4e119fileName">Copy-of-BillLookup</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="ParseMoney" id="8b100255-6cad-4c01-8408-c056f3688a7d">
+  <con:testStep type="restrequest" name="BillLookup" id="1dd82505-617f-41d0-b4b3-4ea8855d9190">
     <con:settings/>
-    <con:config service="REST Service 4" resourcePath="/vtps/rest/parseMoney" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ParseMoney" id="e9e829cc-d48d-4635-8394-e68ebdbf7c37" mediaType="application/json" postQueryString="false">
+    <con:config service="REST Service 3" resourcePath="/vtps/rest/billLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillLookup" id="1244f771-b705-49a1-96f5-7355a2640582" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{
-  "language": "en_US",
-  "amount": "3170.00",
-  "prompt": "",
-  "results_page": "",
-  "audio_path": ""
+   "applicationID": "6094",
+   "customerID": "195",
+   "lookup_field_1": "999999",
+   "lookup_field_2": "11011990",
+   "lookup_field_3": ""
 }</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/parseMoney</con:originalUri>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri>
         <con:credentials>
           <con:username>iahmed</con:username>
-          <con:password>hello2222</con:password>
+          <con:password>hello1111</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:preemptive>false</con:preemptive>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
@@ -32,26 +34,27 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ParseMoneyUpgrade" id="6f6fc325-8c2f-4224-a3ed-0350e09be30f">
+  <con:testStep type="restrequest" name="BillLookupUpgrade" id="f6dc761c-4b36-4ad9-9f87-b2a0534195c0">
     <con:settings/>
-    <con:config service="REST Service 4" resourcePath="/vtps/rest/parseMoney" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ParseMoneyUpgrade" id="e9e829cc-d48d-4635-8394-e68ebdbf7c37" mediaType="application/json" postQueryString="false">
+    <con:config service="REST Service 3" resourcePath="/vtps/rest/billLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillLookupUpgrade" id="1244f771-b705-49a1-96f5-7355a2640582" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
         <con:request>{
-  "language": "en_US",
-  "amount": "3170.00",
-  "prompt": "",
-  "results_page": "",
-  "audio_path": ""
+   "applicationID": "2325",
+   "customerID": "2",
+   "lookup_field_1": "4512826810",
+   "lookup_field_2": "12152016",
+   "lookup_field_3": ""
 }</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/parseMoney</con:originalUri>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri>
         <con:credentials>
           <con:username>InContactIVR</con:username>
           <con:password>Velocity17!337</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:preemptive>false</con:preemptive>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
@@ -60,26 +63,27 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ParseMoneyWWW" id="e07d5194-7caa-4d7c-ba48-fbcc8903f235">
+  <con:testStep type="restrequest" name="BillLookupWWW" id="b24ae3e6-32ab-4b16-8233-2553ce4bd156">
     <con:settings/>
-    <con:config service="REST Service 4" resourcePath="/vtps/rest/parseMoney" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ParseMoneyWWW" id="e9e829cc-d48d-4635-8394-e68ebdbf7c37" mediaType="application/json" postQueryString="false">
+    <con:config service="REST Service 3" resourcePath="/vtps/rest/billLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillLookupWWW" id="1244f771-b705-49a1-96f5-7355a2640582" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{
-  "language": "en_US",
-  "amount": "3170.00",
-  "prompt": "",
-  "results_page": "",
-  "audio_path": ""
+   "applicationID": "2325",
+   "customerID": "2",
+   "lookup_field_1": "4512826810",
+   "lookup_field_2": "12152016",
+   "lookup_field_3": ""
 }</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/parseMoney</con:originalUri>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri>
         <con:credentials>
           <con:username>InContactIVR</con:username>
           <con:password>Velocity17!337</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:preemptive>false</con:preemptive>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
@@ -88,26 +92,27 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ParseMoneyDemo" id="fe5d2a01-e925-4a1e-9390-ae713530f3e1">
+  <con:testStep type="restrequest" name="BillLookupDemo" id="ecd624fd-bbc0-4870-b55e-47be9839a452">
     <con:settings/>
-    <con:config service="REST Service 4" resourcePath="/vtps/rest/parseMoney" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ParseMoneyDemo" id="e9e829cc-d48d-4635-8394-e68ebdbf7c37" mediaType="application/json" postQueryString="false">
+    <con:config service="REST Service 3" resourcePath="/vtps/rest/billLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillLookupDemo" id="1244f771-b705-49a1-96f5-7355a2640582" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
         <con:request>{
-  "language": "en_US",
-  "amount": "3170.00",
-  "prompt": "",
-  "results_page": "",
-  "audio_path": ""
+   "applicationID": "2045",
+   "customerID": "550",
+   "lookup_field_1": "673786",
+   "lookup_field_2": "1230",
+   "lookup_field_3": ""
 }</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/parseMoney</con:originalUri>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri>
         <con:credentials>
           <con:username>InContactIVR</con:username>
           <con:password>Velocity17!337</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:preemptive>false</con:preemptive>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
