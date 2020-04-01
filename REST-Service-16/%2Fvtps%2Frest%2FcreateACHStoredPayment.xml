@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/createACHStoredPayment" path="/vtps/rest/createACHStoredPayment" id="599d56f2-a5c5-46aa-ab17-50058e90fdf4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="599d56f2-a5c5-46aa-ab17-50058e90fdf4fileName">%2Fvtps%2Frest%2FcreateACHStoredPayment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="f37f9bcb-7787-4cf5-885c-239232e32831" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://qa.velocitypayment.com/vtps/rest/createACHStoredPayment">cre:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://qa.velocitypayment.com/vtps/rest/createACHStoredPayment">cre:Response</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="b4dd6391-8a4c-4f9a-a485-3c85b8888bee" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

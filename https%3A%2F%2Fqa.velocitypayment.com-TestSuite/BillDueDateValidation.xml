@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b43accb1-cb3d-432d-b18a-1af065e54ec7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillDueDateValidation" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="b43accb1-cb3d-432d-b18a-1af065e54ec7fileName">BillDueDateValidation</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="BillDueDateValidation" id="4d6efca0-ccad-4785-8720-f78a2cae1960"><con:settings/><con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="BillDueDateValidation" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+<con:testCase id="b43accb1-cb3d-432d-b18a-1af065e54ec7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillDueDateValidation" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b43accb1-cb3d-432d-b18a-1af065e54ec7fileName">BillDueDateValidation</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="BillDueDateValidation" id="4d6efca0-ccad-4785-8720-f78a2cae1960">
+    <con:settings/>
+    <con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillDueDateValidation" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_US",
   "month": "12",
   "year": "2017",
@@ -7,8 +20,30 @@
   "results_page": "",
   "audio_path": "",
   "day_of_month": "15" 
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="BillDueDateValidationUpgrade" id="672a7c3e-7bda-47ee-942f-a5ef7e577db0"><con:settings/><con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="BillDueDateValidationUpgrade" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://upgrade.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillDueDateValidationUpgrade" id="672a7c3e-7bda-47ee-942f-a5ef7e577db0">
+    <con:settings/>
+    <con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillDueDateValidationUpgrade" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_US",
   "month": "12",
   "year": "2017",
@@ -16,8 +51,30 @@
   "results_page": "",
   "audio_path": "",
   "day_of_month": "15" 
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="BillDueDateValidationWWW" id="66a106af-b45e-459e-8d77-99ba445422b1"><con:settings/><con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="BillDueDateValidationWWW" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillDueDateValidationWWW" id="66a106af-b45e-459e-8d77-99ba445422b1">
+    <con:settings/>
+    <con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillDueDateValidationWWW" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_US",
   "month": "12",
   "year": "2017",
@@ -25,8 +82,29 @@
   "results_page": "",
   "audio_path": "",
   "day_of_month": "15" 
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="BillDueDateValidationDemo" id="35efdc90-e17a-49a2-b962-aa6cf96c6457"><con:settings/><con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="BillDueDateValidationDemo" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://demo.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillDueDateValidationDemo" id="35efdc90-e17a-49a2-b962-aa6cf96c6457">
+    <con:settings/>
+    <con:config service="REST Service 1" resourcePath="/vtps/rest/billDueDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillDueDateValidationDemo" id="4fcb8abf-6064-40ff-8db0-136e99cea07f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_US",
   "month": "12",
   "year": "2017",
@@ -34,5 +112,20 @@
   "results_page": "",
   "audio_path": "",
   "day_of_month": "15" 
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billDueDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

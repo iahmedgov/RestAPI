@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/createCCStoredPayment" path="/vtps/rest/createCCStoredPayment" id="02d9b8a8-b060-4d53-bfd1-534e3ac0d4eb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="02d9b8a8-b060-4d53-bfd1-534e3ac0d4ebfileName">%2Fvtps%2Frest%2FcreateCCStoredPayment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="ea381613-a6cb-44d5-bd0e-252af820c518" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment">cre:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment">cre:Response</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="993d281f-9a20-435c-9a55-1c3d55bdd422" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

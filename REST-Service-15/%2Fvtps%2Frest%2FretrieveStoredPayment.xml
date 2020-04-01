@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/retrieveStoredPayment" path="/vtps/rest/retrieveStoredPayment" id="31eaabb1-a539-4856-b334-7825c35760da" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="31eaabb1-a539-4856-b334-7825c35760dafileName">%2Fvtps%2Frest%2FretrieveStoredPayment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="f23a2b12-d67e-4582-a20c-5234a9747ca9" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ret="https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment">ret:Response</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="223f6ece-aabf-49de-940b-992579323348" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

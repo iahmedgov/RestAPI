@@ -13,48 +13,50 @@
           <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{
-   "card_address": "2311 york road",
-   "amount": "10.50",
-   "card_name": "imtiaz ahmed",
-   "card_city": "",
-   "card_zip": "22201",
-   "email": "",
-   "card_number": "4111111111111111",
-   "card_state": "",
-   "transaction_type": "104",
-   "message_version": "2.0IVR_C",
-   "category": "MOTO",
-   "requestSource": "",
-   "response_format": "fixed_width",
-   "card_expiration": "",
-   "application_id": "608",
-   "remittance_id": "testIVR08312018100",
-   "card_exmo": "01",
-   "card_exyr": "2020",
-   "username": "username",
-   "password": "password",
-   "user_defined1": "udf1 data",
-   "user_defined2": "udf2 data",
-   "user_defined3": "udf3 data",
-   "user_defined4": "udf4 data",
-   "user_defined5": "udf5 data",
-   "user_defined6": "udf6 data",
-   "user_defined7": "udf7 data",
-   "user_defined8": "udf8 data",
-   "user_defined9": "udf9 data",
-   "user_defined10": "udf10 data",
-   "client_account_number": "1564945"
+        <con:request>{\r
+   "card_address" : "2311 york road",\r
+   "amount" : "10.50",\r
+   "card_name" : "imtiaz ahmed",\r
+   "card_city" : "",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "609",\r
+   "remittance_id" : "testIVR07152019100",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2020",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "user_defined1" : "udf1 data",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "1564945"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
         <con:credentials>
-          <con:username>InContactIVR</con:username>
-          <con:password>Velocity17!337</con:password>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>
@@ -84,7 +86,7 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "609",\r
-   "remittance_id" : "testIVR08312018100",\r
+   "remittance_id" : "testIVR08312018125",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2020",\r
    "username" : "username",\r
@@ -103,14 +105,15 @@
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
         <con:credentials>
-          <con:username>saryu</con:username>
-          <con:password>22222222</con:password>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
           <con:preemptive>false</con:preemptive>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>
@@ -166,6 +169,7 @@
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>
@@ -221,6 +225,7 @@
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>

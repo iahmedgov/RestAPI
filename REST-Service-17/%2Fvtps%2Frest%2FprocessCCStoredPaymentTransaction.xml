@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/processCCStoredPaymentTransaction" path="/vtps/rest/processCCStoredPaymentTransaction" id="35d23b83-12d6-466d-af72-852d6b895a83" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="35d23b83-12d6-466d-af72-852d6b895a83fileName">%2Fvtps%2Frest%2FprocessCCStoredPaymentTransaction</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="3275b760-a950-457b-8bd4-328af1d2f2ee" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="GET Request" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

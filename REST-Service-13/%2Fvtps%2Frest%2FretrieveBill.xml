@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/convenienceFeeCCLookup" path="/vtps/rest/convenienceFeeCCLookup" id="44e04ce6-2745-41b4-b092-a5c5c00e8949" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/vtps/rest/retrieveBill" path="/vtps/rest/retrieveBill" id="bccc2037-52ba-40fb-90b6-7468b28fc799" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="44e04ce6-2745-41b4-b092-a5c5c00e8949fileName">%2Fvtps%2Frest%2FconvenienceFeeCCLookup</con:setting>
+    <con:setting id="bccc2037-52ba-40fb-90b6-7468b28fc799fileName">%2Fvtps%2Frest%2FretrieveBill</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="ef28f81e-9cd1-41f9-b729-e52d4492094a" method="POST">
+  <con:method name="POST" id="b679a621-6ab5-477a-9ff3-172f5766ac77" method="POST">
     <con:settings/>
     <con:parameters/>
     <con:representation type="REQUEST">
@@ -15,15 +15,15 @@
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:con1="https://qa.velocitypayment.com/vtps/rest/convenienceFeeCCLookup">con1:Response</con:element>
+      <con:element xmlns:ret="https://qa.velocitypayment.com/vtps/rest/retrieveBill">ret:Response</con:element>
     </con:representation>
     <con:representation type="FAULT">
-      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
-      <con:status>401</con:status>
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
       <con:params/>
-      <con:element>html</con:element>
+      <con:element xmlns:ret="https://qa.velocitypayment.com/vtps/rest/retrieveBill">ret:Fault</con:element>
     </con:representation>
-    <con:request name="POST Request" id="c58ce832-88ed-4d87-b1b6-8978a35b191f" mediaType="application/json">
+    <con:request name="POST Request" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
       <con:credentials>

@@ -11,3 +11,6 @@ ProcessCCTransaction.xml
 StringQuery.xml
 TestCase-1.xml
 Copy-of-BillLookup.xml
+BillTransferQA.xml
+BillRetrieve.xml
+AdvancedIVR-StoredPM.xml
