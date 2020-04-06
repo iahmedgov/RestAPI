@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/convenienceFeeCCLookup" path="/vtps/rest/convenienceFeeCCLookup" id="625b31ac-7487-40f0-8d18-4bfbd1af0c22" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="625b31ac-7487-40f0-8d18-4bfbd1af0c22fileName">%2Fvtps%2Frest%2FconvenienceFeeCCLookup</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="c7c20cb2-eb9e-4c53-8e9d-fc216a026879" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="POST Request" id="f0aa9450-e550-4455-9415-5c392f6010b9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

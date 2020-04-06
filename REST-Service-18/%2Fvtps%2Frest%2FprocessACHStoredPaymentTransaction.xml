@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/processACHStoredPaymentTransaction" path="/vtps/rest/processACHStoredPaymentTransaction" id="40b3e98e-b1b7-4bf7-a35f-6022c0a09e29" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="40b3e98e-b1b7-4bf7-a35f-6022c0a09e29fileName">%2Fvtps%2Frest%2FprocessACHStoredPaymentTransaction</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="5760257d-cd08-4f17-aa4b-a387dcf6474e" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="POST Request" id="3c1948d7-1b4a-4da9-bc29-757a00259231" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
