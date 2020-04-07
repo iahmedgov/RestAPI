@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/callPostback" path="/vtps/rest/callPostback" id="65975195-13e8-4761-bc37-6bf986ce5644" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="65975195-13e8-4761-bc37-6bf986ce5644fileName">%2Fvtps%2Frest%2FcallPostback</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="8569dc45-5670-448f-9ed3-91ccc2b23fae" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/callPostback">cal:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/callPostback">cal:Response</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

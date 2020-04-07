@@ -19,6 +19,7 @@ REST-Service-16\%2Fvtps%2Frest%2FcreateACHStoredPayment.xml
 REST-Service-17\%2Fvtps%2Frest%2FprocessCCStoredPaymentTransaction.xml
 REST-Service-18\%2Fvtps%2Frest%2FprocessACHStoredPaymentTransaction.xml
 REST-Service-19\%2Fvtps%2Frest%2FconvenienceFeeCCLookup.xml
+REST-Service-20\%2Fvtps%2Frest%2FcallPostback.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillLookup.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\ParseMoney.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillDueDateValidation.xml
@@ -35,3 +36,4 @@ https%3A%2F%2Fqa.velocitypayment.com-TestSuite\Copy-of-BillLookup.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillTransferQA.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillRetrieve.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\AdvancedIVR-StoredPM.xml
+AdvIVR-Automation\CreateAndRetrieveCCStoredPM.xml

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2e32db01-2d59-4f2e-97ff-358f3eb8213b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CreateAndRetrieveCCStoredPM" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2e32db01-2d59-4f2e-97ff-358f3eb8213bfileName">CreateAndRetrieveCCStoredPM</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceCCStoredPM" id="97548cbf-09fc-4838-86f0-fd294b63213a">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/AdvIVRStoredPM.xlsx</file>
+          <worksheet>CreateCCStoredPM</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Note</con:property>
+      <con:property>CAN</con:property>
+      <con:property>AppID</con:property>
+      <con:property>CustID</con:property>
+      <con:property>PMType</con:property>
+      <con:property>PAN</con:property>
+      <con:property>CardExp</con:property>
+      <con:property>ExpMo</con:property>
+      <con:property>ExpYear</con:property>
+      <con:property>Fname</con:property>
+      <con:property>Lname</con:property>
+      <con:property>CompName</con:property>
+      <con:property>AL1</con:property>
+      <con:property>City</con:property>
+      <con:property>State</con:property>
+      <con:property>ZIP</con:property>
+      <con:property>Country</con:property>
+      <con:property>Result</con:property>
+      <con:property>ErrorCode</con:property>
+      <con:property>ErrorMessage</con:property>
+      <con:property>RetCAN</con:property>
+      <con:property>RetCustID</con:property>
+      <con:property>RetPMType</con:property>
+      <con:property>RetLast4Digits</con:property>
+      <con:property>RetCount</con:property>
+      <con:property>RetResult</con:property>
+      <con:property>RetErrorCode</con:property>
+      <con:property>RetErrorMsg</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenCAN" id="8bcd15ec-54e7-4469-97ba-1e789dd64637">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>100000</start>
+          <end>999999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>RadomCAN</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>true</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CreateCCStoredPM" id="18c22fb4-d699-44ac-bdfe-ec514151abe4">
+    <con:settings/>
+    <con:config service="REST Service 14" resourcePath="/vtps/rest/createCCStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CreateCCStoredPM" id="993d281f-9a20-435c-9a55-1c3d55bdd422" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{  "header": {   
+	"clientAccountNumber": "${DataGenCAN#RadomCAN}",   
+	"applicationID": "${DataSourceCCStoredPM#AppID}",   
+	"customerID": "${DataSourceCCStoredPM#CustID}"  },
+"paymentMethod": {   
+	"paymentMethodType": "${DataSourceCCStoredPM#PMType}",   
+	"pan": "${DataSourceCCStoredPM#PAN}",   
+	"card_expiration": "${DataSourceCCStoredPM#CardExp}",   
+	"card_exmo": "${DataSourceCCStoredPM#ExpMo}",   
+	"card_exyr": "${DataSourceCCStoredPM#ExpYear}"  },
+"customerInformation": {   
+	"firstName": "${DataSourceCCStoredPM#Fname}",   
+	"lastName": "${DataSourceCCStoredPM#Lname}",   
+	"companyName": "${DataSourceCCStoredPM#CompName}",   
+	"addressLine1": "${DataSourceCCStoredPM#AL1}",   
+	"city": "${DataSourceCCStoredPM#City}",   
+	"state": "${DataSourceCCStoredPM#State}",   
+	"zip": "${DataSourceCCStoredPM#ZIP}",   
+	"country": "${DataSourceCCStoredPM#Country}"  
+}
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment</con:originalUri>
+        <con:assertion type="JsonPath Match" id="856e7073-dcb6-41a4-913c-3fbd7bdedacd" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSourceCCStoredPM#Result}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b1be041b-cdb8-40ed-b335-dfb4005301ce" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceCCStoredPM#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="bf6503f7-62b2-4ee0-8113-0f259c2b2a0d" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSourceCCStoredPM#ErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="RetrieveCCStoredPM" id="8e373388-5350-4502-ab19-f5806682bbd4">
+    <con:settings/>
+    <con:config service="REST Service 15" resourcePath="/vtps/rest/retrieveStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="RetrieveCCStoredPM" id="223f6ece-aabf-49de-940b-992579323348" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{ 
+"clientAccountNumber": "${CreateCCStoredPM#RawRequest#$['header']['clientAccountNumber']}", 
+"customerID": "${DataSourceCCStoredPM#RetCustID}" 
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
+        <con:assertion type="JsonPath Match" id="7b3fed1a-85f4-4dd5-97ab-513205623083" name="Match content of [paymentMethodType]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['paymentMethodType']</path>
+            <content>${DataSourceCCStoredPM#RetPMType}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="52bafa0a-2d97-4722-a412-5391a1ea2a6b" name="Check for existence of [paymentMethodID]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['paymentMethodID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="aaebb499-1f61-42c4-8deb-5854896eb812" name="Match content of [Last4Digits]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['Last4Digits']</path>
+            <content>${DataSourceCCStoredPM#RetLast4Digits}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="67933438-4a76-4a39-88da-71cda7c13f8f" name="Match content of [clientAccountNumber]">
+          <con:configuration>
+            <path>$['clientAccountNumber']</path>
+            <content>${CreateCCStoredPM#RawRequest#$['header']['clientAccountNumber']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="7bf98970-1438-4021-95d0-5b3380174a99" name="Match content of [count]">
+          <con:configuration>
+            <path>$['count']</path>
+            <content>${DataSourceCCStoredPM#RetCount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="d29d7920-0784-420f-bf74-b678de93b74d" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSourceCCStoredPM#RetResult}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ece3b4e4-094f-405b-9ee9-b5dc4af1387d" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceCCStoredPM#RetErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="49521641-3b61-42f5-9774-aa6c506fb98a" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSourceCCStoredPM#RetErrorMsg}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="c51ca369-da51-4c0e-968e-26ee844b5a45">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceCCStoredPM</dataSourceStep>
+      <targetStep>CreateCCStoredPM</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>97548cbf-09fc-4838-86f0-fd294b63213a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c51ca369-da51-4c0e-968e-26ee844b5a45</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

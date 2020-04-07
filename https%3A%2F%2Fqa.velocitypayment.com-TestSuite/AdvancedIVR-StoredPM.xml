@@ -13,7 +13,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{  "header": {   
-	"clientAccountNumber": "123450000",   
+	"clientAccountNumber": "123450002",   
 	"applicationID": "609",   
 	"customerID": "195"  },
 "paymentMethod": {   
@@ -232,6 +232,26 @@
 	"audio_path": "" 
  
 }</con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CallPostBack" id="0eeb3e1e-6d03-4b8b-a3bf-280639d95b06">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CallPostBack" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{   "callerID":"7039606129" }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
