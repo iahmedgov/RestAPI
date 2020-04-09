@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="6757acc2-d1ec-434b-985e-6139edf93eb9" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="NegativeCreateCCStoredPM" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6757acc2-d1ec-434b-985e-6139edf93eb9fileName">NegativeCreateCCStoredPM</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceNegativeCreateCC" id="4da4a06d-4f76-4b92-90b8-0d61d806a84a">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/AdvIVRStoredPM.xlsx</file>
+          <worksheet>NegativeCreateCCStoredPM</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Note</con:property>
+      <con:property>CAN</con:property>
+      <con:property>AppID</con:property>
+      <con:property>CustID</con:property>
+      <con:property>PMType</con:property>
+      <con:property>PAN</con:property>
+      <con:property>CardExp</con:property>
+      <con:property>ExpMo</con:property>
+      <con:property>ExpYear</con:property>
+      <con:property>Fname</con:property>
+      <con:property>Lname</con:property>
+      <con:property>CompName</con:property>
+      <con:property>AL1</con:property>
+      <con:property>City</con:property>
+      <con:property>State</con:property>
+      <con:property>ZIP</con:property>
+      <con:property>Country</con:property>
+      <con:property>Result</con:property>
+      <con:property>ErrorCode</con:property>
+      <con:property>ErrorMessage</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="NegativeCreateCCStoredPM" id="ab9247b8-f178-4f8b-8629-3232d5d3653a">
+    <con:settings/>
+    <con:config service="REST Service 14" resourcePath="/vtps/rest/createCCStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="NegativeCreateCCStoredPM" id="993d281f-9a20-435c-9a55-1c3d55bdd422" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{  "header": {   
+	"clientAccountNumber": "${DataSourceNegativeCreateCC#CAN}",   
+	"applicationID": "${DataSourceNegativeCreateCC#AppID}",   
+	"customerID": "${DataSourceNegativeCreateCC#CustID}"  },
+"paymentMethod": {   
+	"paymentMethodType": "${DataSourceNegativeCreateCC#PMType}",   
+	"pan": "${DataSourceNegativeCreateCC#PAN}",   
+	"card_expiration": "${DataSourceNegativeCreateCC#CardExp}",   
+	"card_exmo": "${DataSourceNegativeCreateCC#ExpMo}",   
+	"card_exyr": "${DataSourceNegativeCreateCC#ExpYear}"  },
+"customerInformation": {   
+	"firstName": "${DataSourceNegativeCreateCC#Fname}",   
+	"lastName": "${DataSourceNegativeCreateCC#Lname}",   
+	"companyName": "${DataSourceNegativeCreateCC#CompName}",   
+	"addressLine1": "${DataSourceNegativeCreateCC#AL1}",   
+	"city": "${DataSourceNegativeCreateCC#City}",   
+	"state": "${DataSourceNegativeCreateCC#State}",   
+	"zip": "${DataSourceNegativeCreateCC#ZIP}",   
+	"country": "${DataSourceNegativeCreateCC#Country}"  
+}
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment</con:originalUri>
+        <con:assertion type="JsonPath Match" id="16637d53-b1ae-4e86-a192-b8ee41c3bd4f" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSourceNegativeCreateCC#Result}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0655931d-7c8a-43ca-ae19-898ed381978e" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceNegativeCreateCC#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e88b6319-1803-4e2c-8ccf-fcf52591bcb2" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSourceNegativeCreateCC#ErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="42b584ba-5ab4-4413-b128-77f931661804">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceNegativeCreateCC</dataSourceStep>
+      <targetStep>NegativeCreateCCStoredPM</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
