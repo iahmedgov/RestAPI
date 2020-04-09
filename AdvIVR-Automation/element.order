@@ -1,1 +1,3 @@
 CreateAndRetrieveCCStoredPM.xml
+DuplicateCreateCCStoredPM.xml
+MultipleCreateAndRetrieveCCStoredPM.xml

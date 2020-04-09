@@ -13,12 +13,12 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{  "header": {   
-	"clientAccountNumber": "123450002",   
+	"clientAccountNumber": "123000101",   
 	"applicationID": "609",   
 	"customerID": "195"  },
 "paymentMethod": {   
 	"paymentMethodType": "1",   
-	"pan": "4111111111111111",   
+	"pan": "4000056655665556",   
 	"card_expiration": "102021",   
 	"card_exmo": "10",   
 	"card_exyr": "2021"  },
@@ -93,7 +93,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "123450000", 
+"clientAccountNumber": "123000101", 
 "customerID": "195" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>

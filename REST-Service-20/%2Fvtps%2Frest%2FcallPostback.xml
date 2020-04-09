@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/callPostback" path="/vtps/rest/callPostback" id="65975195-13e8-4761-bc37-6bf986ce5644" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/vtps/rest/callPostback" path="/vtps/rest/callPostback" id="65975195-13e8-4761-bc37-6bf986ce5644" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="65975195-13e8-4761-bc37-6bf986ce5644fileName">%2Fvtps%2Frest%2FcallPostback</con:setting>
   </con:settings>
@@ -26,6 +26,10 @@
     <con:request name="POST Request" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

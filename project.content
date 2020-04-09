@@ -37,3 +37,5 @@ https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillTransferQA.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillRetrieve.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\AdvancedIVR-StoredPM.xml
 AdvIVR-Automation\CreateAndRetrieveCCStoredPM.xml
+AdvIVR-Automation\DuplicateCreateCCStoredPM.xml
+AdvIVR-Automation\MultipleCreateAndRetrieveCCStoredPM.xml

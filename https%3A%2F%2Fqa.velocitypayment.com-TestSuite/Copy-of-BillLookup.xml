@@ -10,14 +10,14 @@
     <con:config service="REST Service 3" resourcePath="/vtps/rest/billLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="BillLookup" id="1244f771-b705-49a1-96f5-7355a2640582" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{
-   "applicationID": "6094",
+   "applicationID": "609",
    "customerID": "195",
-   "lookup_field_1": "999999",
-   "lookup_field_2": "11011990",
+   "lookup_field_1": "11111",
+   "lookup_field_2": "22201",
    "lookup_field_3": ""
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/billLookup</con:originalUri>
