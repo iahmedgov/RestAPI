@@ -40,3 +40,5 @@ AdvIVR-Automation\CreateAndRetrieveCCStoredPM.xml
 AdvIVR-Automation\DuplicateCreateCCStoredPM.xml
 AdvIVR-Automation\MultipleCreateAndRetrieveCCStoredPM.xml
 AdvIVR-Automation\NegativeCreateCCStoredPM.xml
+AdvIVR-Automation\CreateAndProcessCCWithStoredPM.xml
+AdvIVR-Automation\ProcessCCWithStoredPM.xml

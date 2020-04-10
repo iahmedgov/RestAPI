@@ -13,12 +13,12 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{  "header": {   
-	"clientAccountNumber": "123000101",   
+	"clientAccountNumber": "1230001102",   
 	"applicationID": "609",   
 	"customerID": "195"  },
 "paymentMethod": {   
 	"paymentMethodType": "1",   
-	"pan": "4000056655665556",   
+	"pan": "4111111111111111",   
 	"card_expiration": "102021",   
 	"card_exmo": "10",   
 	"card_exyr": "2021"  },
@@ -53,13 +53,13 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{  "header": {   
-		"clientAccountNumber": "123450000",   
+		"clientAccountNumber": "1230001103",   
 		"applicationID": "609",   
 		"customerID": "195"  
 	},  
 	"paymentMethod": {   
-		"paymentMethodType": "2",   
-		"accountNumber": "11223344",   
+		"paymentMethodType": "4",   
+		"accountNumber": "12341104",   
 		"routingNumber": "256072691"  
 		},  
 	"customerInformation": {   
@@ -93,7 +93,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "123000101", 
+"clientAccountNumber": "1230001103", 
 "customerID": "195" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
@@ -107,48 +107,49 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessCCStoredPMTransaction" id="04db6043-2459-495c-bce2-e0b1f3677e7a">
+  <con:testStep type="restrequest" name="ProcessCCWithStoredPMTransaction" id="04db6043-2459-495c-bce2-e0b1f3677e7a">
     <con:settings/>
     <con:config service="REST Service 17" resourcePath="/vtps/rest/processCCStoredPaymentTransaction" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ProcessCCStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
+      <con:restRequest name="ProcessCCWithStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{ 
-	"amount": "50.00", 
-	"email": "john@doe.com", 
-	"transaction_type": "104", 
-	"message_version": "2.0IVR_C", 
-	"category": "MOTO", 
-	"requestSource": "", 
-	"response_format": "fixed_width", 
-	"application_id": "", 
-	"remittance_id": "", 
-	"username": "", 
-	"password": "", 
-	"user_defined1": "", 
-	"user_defined2": "", 
-	"user_defined3": "", 
-	"user_defined4": "",           
-	"user_defined5": "",          
-	"user_defined6": "",          
-	"user_defined7": "",          
-	"user_defined8": "",          
-	"user_defined9": "",          
-	"user_defined10": "",          
-	"client_account_number": "", 
-	"paymentMethodID": "", 
-	"card_address": "", 
-	"card_name": "", 
-	"card_city": "", 
-	"card_zip": "", 
-	"card_number": "", 
-	"card_state": "", 
-	"card_expiration": "", 
-	"card_exmo": "", 
-	"card_exyr": "" 
+        <con:request>{\r
+   "amount" : "10.50",\r
+   "email" : "iahmed@govolution.com",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "application_id" : "609",\r
+   "remittance_id" : "dasd4546fsdfs2",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "user_defined1" : "",\r
+   "user_defined2" : "",\r
+   "user_defined3" : "",\r
+   "user_defined4" : "",\r
+   "user_defined5" : "",\r
+   "user_defined6" : "",\r
+   "user_defined7" : "",\r
+   "user_defined8" : "",\r
+   "user_defined9" : "",\r
+   "user_defined10" : "",\r
+   "client_account_number" : "123000102",\r
+   "paymentMethodID" : "83152",\r
+   "card_address" : "2311 york road",\r
+   "card_name" : "Dggtrd Sgdd",\r
+   "card_city" : "Crofton",\r
+   "card_zip" : "21030",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "MD",\r
+   "card_expiration" : "122021",\r
+   "card_exmo" : "12",\r
+   "card_exyr" : "2021"\r
 }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCStoredPaymentTransaction</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -252,6 +253,59 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{   "callerID":"7039606129" }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCCWithoutStoredPMTransaction" id="88a9aef6-f85c-4270-b17c-be98cd765190">
+    <con:settings/>
+    <con:config service="REST Service 17" resourcePath="/vtps/rest/processCCStoredPaymentTransaction" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCCWithoutStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{ 
+	"amount": "10.50", 
+	"email": "iahmed@govolution.com", 
+	"transaction_type": "104", 
+	"message_version": "2.0IVR_C", 
+	"category": "MOTO", 
+	"requestSource": "", 
+	"response_format": "fixed_width", 
+	"application_id": "609", 
+	"remittance_id": "443gfdg4556ggg", 
+	"username": "username", 
+	"password": "password", 
+	"user_defined1": "", 
+	"user_defined2": "", 
+	"user_defined3": "", 
+	"user_defined4": "",           
+	"user_defined5": "",          
+	"user_defined6": "",          
+	"user_defined7": "",          
+	"user_defined8": "",          
+	"user_defined9": "",          
+	"user_defined10": "",          
+	"client_account_number": "99955124", 
+	"paymentMethodID": "", 
+	"card_address": "2311 york road", 
+	"card_name": "Imt Ahm", 
+	"card_city": "Arlington", 
+	"card_zip": "22201", 
+	"card_number": "4111111111111111", 
+	"card_state": "VA", 
+	"card_expiration": "", 
+	"card_exmo": "12", 
+	"card_exyr": "2023" 
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCStoredPaymentTransaction</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

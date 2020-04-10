@@ -3,6 +3,6 @@
   <con:settings>
     <con:setting id="c306148f-afc9-42c3-988c-89bf9c8070adfileName">REST-Service-17</con:setting>
   </con:settings>
-  <con:definitionCache/>
+  <con:definitionCache type="TEXT" rootPart=""/>
   <con:endpoints/>
 </con:interface>

@@ -7,6 +7,16 @@
   <con:method name="GET" id="3275b760-a950-457b-8bd4-328af1d2f2ee" method="POST">
     <con:settings/>
     <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:proc="https://qa.velocitypayment.com/vtps/rest/processCCStoredPaymentTransaction">proc:Response</con:element>
+    </con:representation>
     <con:request name="GET Request" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

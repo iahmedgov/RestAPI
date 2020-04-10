@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bca34919-4b39-4539-8f71-53382cdadeb6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ProcessCCWithStoredPM" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bca34919-4b39-4539-8f71-53382cdadeb6fileName">ProcessCCWithStoredPM</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datagen" name="DataGenRandomRemID" id="8403b4b1-1306-4697-9450-423bd46c5d6b">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>10000000000</start>
+          <end>99999999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>RandomRemID</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>true</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="DataSourceProcessCCStoredPM" id="c6045fca-3db0-47b0-a08d-e8d5a757763f">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/AdvIVRStoredPM.xlsx</file>
+          <worksheet>ProcessCCWithStoredPM</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>PAmount</con:property>
+      <con:property>PEmail</con:property>
+      <con:property>PTranxType</con:property>
+      <con:property>PMV</con:property>
+      <con:property>PCategory</con:property>
+      <con:property>PRequestSource</con:property>
+      <con:property>PResFormat</con:property>
+      <con:property>PAppID</con:property>
+      <con:property>PRemID</con:property>
+      <con:property>PUsername</con:property>
+      <con:property>PPassword</con:property>
+      <con:property>PUDF1</con:property>
+      <con:property>PUDF2</con:property>
+      <con:property>PUDF3</con:property>
+      <con:property>PUDF4</con:property>
+      <con:property>PUDF5</con:property>
+      <con:property>PUDF6</con:property>
+      <con:property>PUDF7</con:property>
+      <con:property>PUDF8</con:property>
+      <con:property>PUDF9</con:property>
+      <con:property>PUDF10</con:property>
+      <con:property>PCAN</con:property>
+      <con:property>PPMID</con:property>
+      <con:property>PAL1</con:property>
+      <con:property>PName</con:property>
+      <con:property>PCity</con:property>
+      <con:property>PZIP</con:property>
+      <con:property>PCardNumber</con:property>
+      <con:property>PState</con:property>
+      <con:property>PExp</con:property>
+      <con:property>PExMo</con:property>
+      <con:property>PExYr</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCCWithStoredPMTransaction" id="1efda5cc-3eb7-41e4-a50d-28c239219a51">
+    <con:settings/>
+    <con:config service="REST Service 17" resourcePath="/vtps/rest/processCCStoredPaymentTransaction" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCCWithStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "amount" : "${DataSourceProcessCCStoredPM#PAmount}",\r
+   "email" : "${DataSourceProcessCCStoredPM#PEmail}",\r
+   "transaction_type" : "${DataSourceProcessCCStoredPM#PTranxType}",\r
+   "message_version" : "${DataSourceProcessCCStoredPM#PMV}",\r
+   "category" : "${DataSourceProcessCCStoredPM#PCategory}",\r
+   "requestSource" : "${DataSourceProcessCCStoredPM#PRequestSource}",\r
+   "response_format" : "${DataSourceProcessCCStoredPM#PResFormat}",\r
+   "application_id" : "${DataSourceProcessCCStoredPM#PAppID}",\r
+   "remittance_id" : "${DataGenRandomRemID#RandomRemID}",\r
+   "username" : "${DataSourceProcessCCStoredPM#PUsername}",\r
+   "password" : "${DataSourceProcessCCStoredPM#PPassword}",\r
+   "user_defined1" : "${DataSourceProcessCCStoredPM#PUDF1}",\r
+   "user_defined2" : "${DataSourceProcessCCStoredPM#PUDF2}",\r
+   "user_defined3" : "${DataSourceProcessCCStoredPM#PUDF3}",\r
+   "user_defined4" : "${DataSourceProcessCCStoredPM#PUDF4}",\r
+   "user_defined5" : "${DataSourceProcessCCStoredPM#PUDF5}",\r
+   "user_defined6" : "${DataSourceProcessCCStoredPM#PUDF6}",\r
+   "user_defined7" : "${DataSourceProcessCCStoredPM#PUDF7}",\r
+   "user_defined8" : "${DataSourceProcessCCStoredPM#PUDF8}",\r
+   "user_defined9" : "${DataSourceProcessCCStoredPM#PUDF9}",\r
+   "user_defined10" : "${DataSourceProcessCCStoredPM#PUDF10}",\r
+   "client_account_number" : "${DataSourceProcessCCStoredPM#PCAN}",\r
+   "paymentMethodID" : "${DataSourceProcessCCStoredPM#PPMID}",\r
+   "card_address" : "${DataSourceProcessCCStoredPM#PAL1}",\r
+   "card_name" : "${DataSourceProcessCCStoredPM#PName}",\r
+   "card_city" : "${DataSourceProcessCCStoredPM#PCity}",\r
+   "card_zip" : "${DataSourceProcessCCStoredPM#PZIP}",\r
+   "card_number" : "${DataSourceProcessCCStoredPM#PCardNumber}",\r
+   "card_state" : "${DataSourceProcessCCStoredPM#PState}",\r
+   "card_expiration" : "${DataSourceProcessCCStoredPM#PExp}",\r
+   "card_exmo" : "${DataSourceProcessCCStoredPM#PExMo}",\r
+   "card_exyr" : "${DataSourceProcessCCStoredPM#PExYr}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCStoredPaymentTransaction</con:originalUri>
+        <con:assertion type="JsonPath Existence Match" id="88ef25d5-6f59-45b5-ab34-5e2c13124256" name="Check for existence of [remittanceID]">
+          <con:configuration>
+            <path>$['remittanceID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="ac762446-8f01-4d72-92b8-d344cfe866a7" name="Check for existence of [transactionID]">
+          <con:configuration>
+            <path>$['transactionID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="1fcd07df-47ba-4c1b-b5cf-51947caa8419" name="Match content of [responseCode]">
+          <con:configuration>
+            <path>$['responseCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="6c240559-c63d-45fb-ba6d-2f9a1520433b" name="Match content of [responseCodeMessage]">
+          <con:configuration>
+            <path>$['responseCodeMessage']</path>
+            <content>Transaction approved, no errors</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="44a2a610-6568-4a60-a30e-6073410f5ab7" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="b78a3a46-a314-4f62-b5e9-40cbe5e0caad" name="Check for existence of [approvalCode]">
+          <con:configuration>
+            <path>$['approvalCode']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="21b3ac7d-0fa4-43db-bd27-136541cafa82">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceProcessCCStoredPM</dataSourceStep>
+      <targetStep>ProcessCCWithStoredPMTransaction</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>8403b4b1-1306-4697-9450-423bd46c5d6b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
