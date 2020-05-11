@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1b47aadb-18f8-466a-8814-5cd53890cb3c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="AutoCCCreate&amp;Retrieve" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="88b93f69-3ae3-4728-9d5c-609838ca6603fileName">AutoCCCreate%26Retrieve</con:setting>
+    <con:setting id="1b47aadb-18f8-466a-8814-5cd53890cb3cfileName">AutoCCCreate%26Retrieve</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource" id="15740305-94af-490a-9b8c-88ab931e528f">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/iahmed/Documents/AutoCCCreate&amp;Retrieve-Pavneet.xlsx</file>
+          <worksheet>Sheet1</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>clientAccountNumber</con:property>
+      <con:property>applicationID</con:property>
+      <con:property>customerID</con:property>
+      <con:property>paymentMethodType</con:property>
+      <con:property>pan</con:property>
+      <con:property>card_expiration</con:property>
+      <con:property>card_exmo</con:property>
+      <con:property>card_exyr</con:property>
+      <con:property>firstName</con:property>
+      <con:property>lastName</con:property>
+      <con:property>companyName</con:property>
+      <con:property>addressLine1</con:property>
+      <con:property>city</con:property>
+      <con:property>state</con:property>
+      <con:property>zip</con:property>
+      <con:property>country</con:property>
+      <con:property>Expresult</con:property>
+      <con:property>ExperrorCode</con:property>
+      <con:property>ExperrorMessage</con:property>
+      <con:property>RetclientAccountNumber</con:property>
+      <con:property>RetcustomerID</con:property>
+      <con:property>RetPMType</con:property>
+      <con:property>RetPMID</con:property>
+      <con:property>RetLast4Digits</con:property>
+      <con:property>RetCAN</con:property>
+      <con:property>RetCount</con:property>
+      <con:property>RetResult</con:property>
+      <con:property>RetErrorCode</con:property>
+      <con:property>RetErrorMessage</con:property>
+      <con:startRow/>
+      <con:endRow/>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGen" id="2c2fc2ab-83e1-4cb4-95ea-1f5d43eb3f45">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>0000000</start>
+          <end>9999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>Client Account Number</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>true</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CreateCC" id="a95360a6-1880-4b10-8cc7-5259f53f78d8">
+    <con:settings/>
+    <con:config service="REST Service 14" methodName="POST" resourcePath="/vtps/rest/createCCStoredPayment" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CreateCC" id="c9010b0d-db99-46ff-ae59-867b5135be3d" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="Basic SW5Db250YWN0SVZSOlZlbG9jaXR5MTchMzM3"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+	"header": {   
+		"clientAccountNumber": "${DataGen#Client Account Number}",   
+		"applicationID": "${DataSource#applicationID}",   
+		"customerID": "${DataSource#customerID}"  
+		},  
+	"paymentMethod": {   
+		"paymentMethodType": "${DataSource#paymentMethodType}",   
+		"pan": "${DataSource#pan}",   
+		"card_expiration": "${DataSource#card_expiration}",   
+		"card_exmo": "${DataSource#card_exmo}",   
+		"card_exyr": "${DataSource#card_exyr}"  
+		}, 
+	"customerInformation": {   
+		"firstName": "${DataSource#firstName}",   
+		"lastName": "${DataSource#lastName}",   
+		"companyName": "${DataSource#companyName}",   
+		"addressLine1": "${DataSource#addressLine1}",   
+		"city": "${DataSource#city}",   
+		"state": "${DataSource#state}",   
+		"zip": "${DataSource#zip}",   
+		"country": "${DataSource#country}"  
+		}
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment</con:originalUri>
+        <con:assertion type="JsonPath Match" id="70234967-6c89-456a-8f20-f73bbac47268" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSource#Expresult}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="acab9e95-16d3-48f0-ac2f-9963c1007c88" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSource#ExperrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e129c021-59f7-4a89-8f0d-b6bd1585f61c" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSource#ExperrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="RetrieveCC" id="8e17a989-4fb9-4421-b981-752e6a9ec76c">
+    <con:settings/>
+    <con:config service="REST Service 15" methodName="POST" resourcePath="/vtps/rest/retrieveStoredPayment" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="RetrieveCC" id="78f4635f-ec4e-4fa8-9b7b-39b29232986d" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic SW5Db250YWN0SVZSOlZlbG9jaXR5MTchMzM3" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{ 
+	"clientAccountNumber": "${CreateCC#RawRequest#$['header']['clientAccountNumber']}", 	
+	"customerID": "${DataSource#RetcustomerID}" 
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
+        <con:assertion type="JsonPath Match" id="7564fa6a-62db-4c56-9ef7-f408007303f4" name="Match content of [paymentMethodType]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['paymentMethodType']</path>
+            <content>${DataSource#RetPMType}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="cb767433-819b-4f56-a8ad-689d9941fb91" name="Check for existence of [paymentMethodID]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['paymentMethodID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="9bad1dcb-70a0-44c0-9bfa-13ef338fb69f" name="Match content of [Last4Digits]">
+          <con:configuration>
+            <path>$['paymentMethods'][0]['Last4Digits']</path>
+            <content>${DataSource#RetLast4Digits}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="3bd74a85-45dd-41d9-92d3-5a511b1bec18" name="Match content of [clientAccountNumber]">
+          <con:configuration>
+            <path>$['clientAccountNumber']</path>
+            <content>${CreateCC#RawRequest#$['header']['clientAccountNumber']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="f814e73d-0be9-481a-bb20-6b1adea74fec" name="Match content of [count]">
+          <con:configuration>
+            <path>$['count']</path>
+            <content>${DataSource#RetCount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="1d965de7-b69b-43e0-b915-d5f01b5c4986" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSource#RetResult}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="3824710b-514d-4629-907d-b29155854448" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSource#RetErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="da092f3f-9f31-4c87-9288-0485859062e8" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSource#RetErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="e5f6a200-5ba5-4805-867e-21d7127a876c">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSource</dataSourceStep>
+      <targetStep>CreateCC</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>033c8ce9-1b4e-4360-9c55-578650bf7677</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>1dfdb68a-e5b3-4091-8ae7-ccb847a59a8a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>1467fe0f-d79f-451a-9443-2ec309325041</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d9601917-82cc-4312-a22d-fe2c6956a670</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>44c66300-106b-422c-9aad-d851716fc9f2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

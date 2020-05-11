@@ -1,42 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="94e3d330-e7d0-47e3-b423-21c0a18d897f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CCExpDateValidation" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="94e3d330-e7d0-47e3-b423-21c0a18d897ffileName">CCExpDateValidation</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="CCExpDateValidation" id="b3d64584-a824-4e37-83aa-f7edd159aea0"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidation" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+<con:testCase id="94e3d330-e7d0-47e3-b423-21c0a18d897f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CCExpDateValidation" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="94e3d330-e7d0-47e3-b423-21c0a18d897ffileName">CCExpDateValidation</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="CCExpDateValidation" id="b3d64584-a824-4e37-83aa-f7edd159aea0">
+    <con:settings/>
+    <con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CCExpDateValidation" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_us",
   "month": "03",
   "year": "2020",
   "prompt": "",
   "results_page": "",
   "audio_path": ""
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CCExpDateValidationUpgrade" id="8a69af40-f57d-49d9-bf26-569946bdb672"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidationUpgrade" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://upgrade.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello6666</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CCExpDateValidationUpgrade" id="8a69af40-f57d-49d9-bf26-569946bdb672">
+    <con:settings/>
+    <con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CCExpDateValidationUpgrade" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_us",
   "month": "03",
   "year": "2020",
   "prompt": "",
   "results_page": "",
   "audio_path": ""
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CCExpDateValidationWWW" id="25e87c72-34d5-4a8a-b923-efca8fa96fd4"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidationWWW" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CCExpDateValidationWWW" id="25e87c72-34d5-4a8a-b923-efca8fa96fd4">
+    <con:settings/>
+    <con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CCExpDateValidationWWW" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_us",
   "month": "03",
   "year": "2020",
   "prompt": "",
   "results_page": "",
   "audio_path": ""
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CCExpDateValidationDemo" id="63055101-558a-4a43-a384-c16d9a17bcb1"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidationDemo" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://demo.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CCExpDateValidationDemo" id="63055101-558a-4a43-a384-c16d9a17bcb1">
+    <con:settings/>
+    <con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CCExpDateValidationDemo" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_us",
   "month": "03",
   "year": "2020",
   "prompt": "",
   "results_page": "",
   "audio_path": ""
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CCExpDateValidationDemo2" id="a780217d-fc60-4087-ab6e-549eb63df16b"><con:settings/><con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CCExpDateValidationDemo2" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://demo2.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CCExpDateValidationDemo2" id="a780217d-fc60-4087-ab6e-549eb63df16b">
+    <con:settings/>
+    <con:config service="REST Service 6" resourcePath="/vtps/rest/ccExpDateValidation" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CCExpDateValidationDemo2" id="f3ac439d-7262-471a-a377-1e699347a5b3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo2.velocitypayment.com</con:endpoint>
+        <con:request>{
   "language": "en_us",
   "month": "03",
   "year": "2020",
   "prompt": "",
   "results_page": "",
   "audio_path": ""
-}
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri><con:credentials><con:username/><con:password/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/ccExpDateValidation</con:originalUri>
+        <con:credentials>
+          <con:username/>
+          <con:password/>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

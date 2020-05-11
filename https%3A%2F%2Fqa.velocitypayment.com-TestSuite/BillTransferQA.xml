@@ -15,12 +15,13 @@
         <con:request>{
     "header":{
         "applicationID":"609",
-        "callerID":"7038944044",
-        "clientAccountNumber":"12345601",
+        "callerID":"7038945011",
+        "clientAccountNumber":"123456",
         "amount":"12.50",
         "remittanceID":"test10252019201",
         "customerID":"195",
-        "lang":"en_US"    
+        "lang":"en_US",    
+        "callSessionID":"123123"
     },
     "customerInformation": {
         "firstName":"Imtiaz",
@@ -43,6 +44,60 @@
         }        
     ]
     
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of BillTransferQA" id="94806e65-44e3-4bd0-b77e-295490e808f5">
+    <con:settings/>
+    <con:config service="REST Service 12" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of BillTransferQA" id="39aef5b8-4f9c-4ff8-9dae-e5ab8120f4b0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "header" : {\r
+      "applicationID" : "609",\r
+      "callerID" : "2408939800",\r
+      "clientAccountNumber" : "1009800",\r
+      "amount" : "21.50",\r
+      "remittanceID" : "test10252019202",\r
+      "customerID" : "195",\r
+      "lang" : "en_US",\r
+      "callSessionID" : "0019800"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "Imtiaza",\r
+      "lastName" : "Ahmeda",\r
+      "companyName" : "Moi Companya",\r
+      "addressLine1" : "2311 yorka roada",\r
+      "city" : "Gambrills",\r
+      "state" : "MD",\r
+      "zip" : "21054",\r
+      "country" : "840"\r
+   },\r
+   "customData" : [\r
+      {\r
+         "id" : "1",\r
+         "value" : "abc111a"\r
+      },\r
+      {\r
+         "id" : "2",\r
+         "value" : "abc222a"\r
+      }\r
+   ]\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
         <con:credentials>

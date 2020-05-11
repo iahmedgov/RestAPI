@@ -9,7 +9,7 @@
     <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessACH" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{
@@ -18,7 +18,7 @@
    "check_city": "Arlington",
    "check_zip": "22201",
    "check_account": "11111111",
-   "check_company": "ggdfgd",
+   "check_company": "",
    "routing_number": "256072691",
    "transaction_type": "200",
    "message_version": "2.0IVR_A",
@@ -31,7 +31,7 @@
    "account_type": "1",
    "response_format": "fixed_width",
    "application_id": "609",
-   "remittance_id": "testivrach115",
+   "remittance_id": "testivrach116",
    "username": "username",
    "password": "password",
    "check_type": "P",
@@ -89,7 +89,7 @@
    "account_type": "1",
    "response_format": "fixed_width",
    "application_id": "18",
-   "remittance_id": "testivrach201",
+   "remittance_id": "testivrach202",
    "username": "username",
    "password": "password",
    "check_type": "P",
@@ -115,6 +115,7 @@
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>

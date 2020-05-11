@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="38c99203-3345-4c60-86dc-a7d1f56f8d8c" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CallEnd" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="38c99203-3345-4c60-86dc-a7d1f56f8d8cfileName">CallEnd</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="CallEnd" id="27916ac9-7f61-4fe7-85a8-2ce804e4dce7"><con:settings/><con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallEnd" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:request>{
+<con:testCase id="38c99203-3345-4c60-86dc-a7d1f56f8d8c" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CallEnd" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="38c99203-3345-4c60-86dc-a7d1f56f8d8cfileName">CallEnd</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="CallEnd" id="27916ac9-7f61-4fe7-85a8-2ce804e4dce7">
+    <con:settings/>
+    <con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CallEnd" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
  "startTime": "10/30/2017 14:50:16",
   "endTime": "10/30/2017 14:55:50",
   "callDuration": "9",  
-  "applicationID": "608",
+  "applicationID": "609",
 "customerID": "195",
    "clientAccountNumber": "9999990",
   "languageID": "en_US",
@@ -27,10 +40,30 @@
  "DialedNumber": "5717306071",
  "transactionID": "11887994",
  "checkCompany": "Moi Company"
-}
-
-
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri><con:credentials><con:username>iahmed</con:username><con:password>hello6666</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CallEndUpgrade" id="56520580-575c-4f8b-86ed-4baf01df4d12"><con:settings/><con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallEndUpgrade" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://upgrade.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello6666</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CallEndUpgrade" id="56520580-575c-4f8b-86ed-4baf01df4d12">
+    <con:settings/>
+    <con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CallEndUpgrade" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{
  "startTime": "10/11/2017 14:50:16",
   "endTime": "10/11/2017 14:55:50",
   "callDuration": "9",  
@@ -58,10 +91,30 @@
  "DialedNumber": "5717306071",
  "transactionID": "11887994",
  "checkCompany": ""
-}
-
-
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CallEndWWW" id="0cde0b1b-382c-4b18-9660-c611b8b993f0"><con:settings/><con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallEndWWW" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://www.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CallEndWWW" id="0cde0b1b-382c-4b18-9660-c611b8b993f0">
+    <con:settings/>
+    <con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CallEndWWW" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{
  "startTime": "10/18/2017 14:50:16",
   "endTime": "10/18/2017 14:55:50",
   "callDuration": "9",  
@@ -89,10 +142,29 @@
  "DialedNumber": "5717306071",
  "transactionID": "11887997",
  "checkCompany": ""
-}
-
-
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="CallEndDemo" id="bd1f717a-07f7-42df-bd19-7715761c06af"><con:settings/><con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallEndDemo" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://demo.velocitypayment.com</con:endpoint><con:request>{
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="CallEndDemo" id="bd1f717a-07f7-42df-bd19-7715761c06af">
+    <con:settings/>
+    <con:config service="REST Service 5" resourcePath="/vtps/rest/CallEnd" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CallEndDemo" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
  "startTime": "11/10/2017 14:50:16",
   "endTime": "11/10/2017 14:55:50",
   "callDuration": "9",  
@@ -120,7 +192,20 @@
  "DialedNumber": "5717306071",
  "transactionID": "2048028",
  "checkCompany": "Moi Company"
-}
-
-
-</con:request><con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri><con:credentials><con:username>InContactIVR</con:username><con:password>Velocity17!337</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/CallEnd</con:originalUri>
+        <con:credentials>
+          <con:username>InContactIVR</con:username>
+          <con:password>Velocity17!337</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

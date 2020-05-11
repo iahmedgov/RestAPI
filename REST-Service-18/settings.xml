@@ -3,6 +3,6 @@
   <con:settings>
     <con:setting id="f8910ed3-f4cc-49c3-b1ff-4f4144dc8c8dfileName">REST-Service-18</con:setting>
   </con:settings>
-  <con:definitionCache/>
+  <con:definitionCache type="TEXT" rootPart=""/>
   <con:endpoints/>
 </con:interface>

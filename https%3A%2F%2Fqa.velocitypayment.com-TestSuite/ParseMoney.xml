@@ -56,6 +56,7 @@
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>

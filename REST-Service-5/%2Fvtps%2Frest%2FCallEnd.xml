@@ -1,2 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/CallEnd" path="/vtps/rest/CallEnd" id="8b2fc891-633c-4f03-a544-89fe713e9439" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="8b2fc891-633c-4f03-a544-89fe713e9439fileName">%2Fvtps%2Frest%2FCallEnd</con:setting></con:settings><con:parameters/><con:method name="POST" id="8f36780d-7430-4fcb-929a-eabc0fd61954" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/CallEnd">cal:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/CallEnd">cal:Fault</con:element></con:representation><con:request name="POST Request" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json"><con:settings/><con:endpoint>https://qa.velocitypayment.com</con:endpoint><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource>
+<con:resource name="/vtps/rest/CallEnd" path="/vtps/rest/CallEnd" id="8b2fc891-633c-4f03-a544-89fe713e9439" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8b2fc891-633c-4f03-a544-89fe713e9439fileName">%2Fvtps%2Frest%2FCallEnd</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="8f36780d-7430-4fcb-929a-eabc0fd61954" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/CallEnd">cal:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:cal="https://qa.velocitypayment.com/vtps/rest/CallEnd">cal:Fault</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="e3bb9182-7995-45be-aa86-11ca3a800f93" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

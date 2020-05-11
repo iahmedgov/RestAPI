@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/processACHStoredPaymentTransaction" path="/vtps/rest/processACHStoredPaymentTransaction" id="40b3e98e-b1b7-4bf7-a35f-6022c0a09e29" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/vtps/rest/payBills" path="/vtps/rest/payBills" id="e5c23c2a-7387-45f9-a725-f13729379ddb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="40b3e98e-b1b7-4bf7-a35f-6022c0a09e29fileName">%2Fvtps%2Frest%2FprocessACHStoredPaymentTransaction</con:setting>
+    <con:setting id="e5c23c2a-7387-45f9-a725-f13729379ddbfileName">%2Fvtps%2Frest%2FpayBills</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="POST" id="5760257d-cd08-4f17-aa4b-a387dcf6474e" method="POST">
+  <con:method name="POST" id="cd430d57-926a-46b5-ba77-f62d67c2acd1" method="POST">
     <con:settings/>
     <con:parameters/>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:proc="https://qa.velocitypayment.com/vtps/rest/processACHStoredPaymentTransaction">proc:Response</con:element>
+      <con:element xmlns:pay="https://qa.velocitypayment.com/vtps/rest/payBills">pay:Response</con:element>
     </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="POST Request" id="3c1948d7-1b4a-4da9-bc29-757a00259231" mediaType="application/json">
+    <con:request name="POST Request" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
       <con:credentials>
