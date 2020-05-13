@@ -15,9 +15,9 @@
         <con:request>{
     "applicationID":"609",
     "customerID":"195",
-    "callerID":"7038945011",
+    "callerID":"7038945012",
     "callGuiID":"",
-    "callSessionID":"123123"
+    "callSessionID":"5012"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
         <con:credentials>
@@ -44,6 +44,32 @@
     "callerID":"2408939800",
     "callGuiID":"",
     "callSessionID":"0019800"
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillRetrieve-Demo-3811" id="56790987-00bc-400c-bcab-72cf51c2929b">
+    <con:settings/>
+    <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillRetrieve-Demo-3811" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
+    "applicationID":"3811",
+    "customerID":"538",
+    "callerID":"4107687050",
+    "callGuiID":"",
+    "callSessionID":"5012"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
         <con:credentials>

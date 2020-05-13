@@ -15,13 +15,13 @@
         <con:request>{
     "header":{
         "applicationID":"609",
-        "callerID":"7038945011",
-        "clientAccountNumber":"123456",
+        "callerID":"7038945012",
+        "clientAccountNumber":"8945012",
         "amount":"12.50",
-        "remittanceID":"test10252019201",
+        "remittanceID":"test10252015012",
         "customerID":"195",
         "lang":"en_US",    
-        "callSessionID":"123123"
+        "callSessionID":"5012"
     },
     "customerInformation": {
         "firstName":"Imtiaz",
@@ -98,6 +98,61 @@
          "value" : "abc222a"\r
       }\r
    ]\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillTransfer-Demo-3811" id="2dfe5d38-cfc4-42f0-b970-d2fefa623cfb">
+    <con:settings/>
+    <con:config service="REST Service 12" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillTransfer-Demo-3811" id="39aef5b8-4f9c-4ff8-9dae-e5ab8120f4b0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
+    "header":{
+        "applicationID":"3811",
+        "callerID":"4107687050",
+        "clientAccountNumber":"20200513318290877050",
+        "amount":"135.00",
+        "remittanceID":"92447387050",
+        "customerID":"538",
+        "lang":"en_US",    
+        "callSessionID":"5012"
+    },
+    "customerInformation": {
+        "firstName":"IAH",
+        "lastName":"IAH",
+        "companyName":"IAH",
+        "addressLine1":"2311 york road",
+        "city":"Crofton",
+        "state":"MD",
+        "zip":"21114",
+        "country":"840"
+    },
+    "customData": [
+        {
+            "id":"1",
+            "value":"abc111"
+        },
+        {
+            "id":"2",
+            "value":"abc222"
+        }        
+    ]
+    
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
         <con:credentials>
