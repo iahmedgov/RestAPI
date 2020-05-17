@@ -93,7 +93,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "1235511104", 
+"clientAccountNumber": "22222", 
 "customerID": "195" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
