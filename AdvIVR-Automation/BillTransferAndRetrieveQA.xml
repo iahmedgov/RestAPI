@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cdf42f4a-64e0-49ad-b408-e6b7aac890a7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="BillTransferAndRetrieveQA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cdf42f4a-64e0-49ad-b408-e6b7aac890a7fileName">BillTransferAndRetrieveQA</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datagen" name="DataGenCAN" id="e3a52c1e-6a2b-4af2-9e24-6ace1bf4177a">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>1000000000</start>
+          <end>9999999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>true</persist>
+          <current>6497983059.00000000000000000000000000000000000000000000000000</current>
+        </con:configuration>
+        <con:name>Random Number</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="DataSourceBillTransfer" id="a9249762-c78c-4ee5-8c33-98551c364a6c">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/BillTransferAndRetrieve.xlsx</file>
+          <worksheet>Sheet1</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>AppID</con:property>
+      <con:property>Amount</con:property>
+      <con:property>CustID</con:property>
+      <con:property>Lang</con:property>
+      <con:property>Fname</con:property>
+      <con:property>Lname</con:property>
+      <con:property>Company</con:property>
+      <con:property>AL1</con:property>
+      <con:property>City</con:property>
+      <con:property>State</con:property>
+      <con:property>ZIP</con:property>
+      <con:property>Country</con:property>
+      <con:property>UDF1</con:property>
+      <con:property>UDF2</con:property>
+      <con:property>UDF3</con:property>
+      <con:property>UDF4</con:property>
+      <con:property>UDF5</con:property>
+      <con:property>UDF6</con:property>
+      <con:property>UDF7</con:property>
+      <con:property>UDF8</con:property>
+      <con:property>UDF9</con:property>
+      <con:property>UDF10</con:property>
+      <con:property>VerAmount</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillTransferQA" id="5818e5b8-aa55-46aa-9391-f00ff1c70dc3">
+    <con:settings/>
+    <con:config service="REST Service 23" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillTransferQA" id="6bf30bc8-d0bb-4ac0-a0ba-2dbabfd6962c" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "header" : {\r
+      "applicationID" : "${DataSourceBillTransfer#AppID}",\r
+      "callerID" : "${DataGenCAN#Random Number}",\r
+      "clientAccountNumber" : "${DataGenCAN#Random Number}",\r
+      "amount" : "${DataSourceBillTransfer#Amount}",\r
+      "remittanceID" : "${DataGenCAN#Random Number}",\r
+      "customerID" : "${DataSourceBillTransfer#CustID}",\r
+      "lang" : "${DataSourceBillTransfer#Lang}",\r
+      "callSessionID" : "${DataGenCAN#Random Number}"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "${DataSourceBillTransfer#Fname}",\r
+      "lastName" : "${DataSourceBillTransfer#Lname}",\r
+      "companyName" : "${DataSourceBillTransfer#Company}",\r
+      "addressLine1" : "${DataSourceBillTransfer#AL1}",\r
+      "city" : "${DataSourceBillTransfer#City}",\r
+      "state" : "${DataSourceBillTransfer#State}",\r
+      "zip" : "${DataSourceBillTransfer#ZIP}",\r
+      "country" : "${DataSourceBillTransfer#Country}"\r
+   },\r
+   "customData" : [\r
+      {\r
+         "id" : "1",\r
+         "value" : "${DataSourceBillTransfer#UDF1}"\r
+      },\r
+      {\r
+         "id" : "2",\r
+         "value" : "${DataSourceBillTransfer#UDF2}"\r
+      },\r
+      {\r
+         "id" : "3",\r
+         "value" : "${DataSourceBillTransfer#UDF3}"\r
+      },\r
+      {\r
+         "id" : "4",\r
+         "value" : "${DataSourceBillTransfer#UDF4}"\r
+      },\r
+      {\r
+         "id" : "5",\r
+         "value" : "${DataSourceBillTransfer#UDF5}"\r
+      },\r
+      {\r
+         "id" : "6",\r
+         "value" : "${DataSourceBillTransfer#UDF6}"\r
+      },\r
+      {\r
+         "id" : "7",\r
+         "value" : "${DataSourceBillTransfer#UDF7}"\r
+      },\r
+      {\r
+         "id" : "8",\r
+         "value" : "${DataSourceBillTransfer#UDF8}"\r
+      },\r
+      {\r
+         "id" : "9",\r
+         "value" : "${DataSourceBillTransfer#UDF9}"\r
+      },\r
+      {\r
+         "id" : "10",\r
+         "value" : "${DataSourceBillTransfer#UDF10}"\r
+      }\r
+   ]\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
+        <con:assertion type="JsonPath Match" id="c8c61bc1-737f-4bf6-ad73-9a3f910a0c76" name="Match content of [applicationID]">
+          <con:configuration>
+            <path>$['applicationID']</path>
+            <content>${BillTransferQA#RawRequest#$['header']['applicationID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c07c02a4-3998-45b1-a16c-ba90b8b04713" name="Match content of [callerID]">
+          <con:configuration>
+            <path>$['callerID']</path>
+            <content>${BillTransferQA#RawRequest#$['header']['callerID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ef78a79b-51ce-4cbe-a437-b1b1af4ecbea" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="edfe7e76-a214-4d3a-b9c0-86f89bb73b39" name="Check for existence of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="8f6ffad4-ca09-43e3-ac98-f49225df1716" name="Check for existence of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="5646cf02-5a4b-4172-997e-9ca562859389" name="Match content of [callSessionID]">
+          <con:configuration>
+            <path>$['callSessionID']</path>
+            <content>${BillTransferQA#RawRequest#$['header']['callSessionID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillRetrieveQA" id="2c282d14-f05c-4315-9d3a-4a13932fe8f0">
+    <con:settings/>
+    <con:config service="REST Service 24" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillRetrieveQA" id="387f22b5-3d06-4510-bef8-9f9a1010305f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "${DataSourceBillTransfer#AppID}",\r
+   "customerID" : "${DataSourceBillTransfer#CustID}",\r
+   "callerID" : "${BillTransferQA#RawRequest#$['header']['callerID']}",\r
+   "callGuiID" : "",\r
+   "callSessionID" : "${BillTransferQA#RawRequest#$['header']['callSessionID']}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
+        <con:assertion type="JsonPath Match" id="baf5fc43-dc4b-4488-af00-2cf62b1c16f6" name="Match content of [Amount]">
+          <con:configuration>
+            <path>$['Amount']</path>
+            <content>${DataSourceBillTransfer#VerAmount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="4190809f-103c-4127-abc6-a7f3fd666eee" name="Match content of [remittanceID]">
+          <con:configuration>
+            <path>$['remittanceID']</path>
+            <content>${BillTransferQA#RawRequest#$['header']['remittanceID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="5bc8d622-3a3c-41a1-b17b-13c7f1ae6340" name="Match content of [firstName]">
+          <con:configuration>
+            <path>$['firstName']</path>
+            <content>${DataSourceBillTransfer#Fname}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="cfb01554-5adf-4a81-91b5-15219bd05ee1" name="Match content of [lastName]">
+          <con:configuration>
+            <path>$['lastName']</path>
+            <content>${DataSourceBillTransfer#Lname}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="03b4a6ec-5d44-4659-aef1-e9d4401518b1" name="Match content of [billingAddress]">
+          <con:configuration>
+            <path>$['billingAddress']</path>
+            <content>${DataSourceBillTransfer#AL1}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e99e42be-e227-4aed-ba44-305edb6d21fe" name="Match content of [billingCity]">
+          <con:configuration>
+            <path>$['billingCity']</path>
+            <content>${DataSourceBillTransfer#City}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="d77ca4a4-c9b5-48dd-9941-cd536d751439" name="Match content of [billingState]">
+          <con:configuration>
+            <path>$['billingState']</path>
+            <content>${DataSourceBillTransfer#State}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="26786cf8-a27e-421c-8dd1-cdda3c1eae9c" name="Match content of [billingZipCode]">
+          <con:configuration>
+            <path>$['billingZipCode']</path>
+            <content>${DataSourceBillTransfer#ZIP}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="2b32ee66-d88d-484a-aed1-4223ad7a479b" name="Match content of [billerDefinedData1]">
+          <con:configuration>
+            <path>$['billerDefinedData1']</path>
+            <content>${DataSourceBillTransfer#UDF1}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="cb23b2cb-ede4-406a-a580-509110432593" name="Match content of [billerDefinedData2]">
+          <con:configuration>
+            <path>$['billerDefinedData2']</path>
+            <content>${DataSourceBillTransfer#UDF2}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="12826b4a-4127-4341-8155-04e5a34ce8a8" name="Match content of [billerDefinedData3]">
+          <con:configuration>
+            <path>$['billerDefinedData3']</path>
+            <content>${DataSourceBillTransfer#UDF3}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0b6f1682-24df-4e94-9645-870e991120c1" name="Match content of [billerDefinedData4]">
+          <con:configuration>
+            <path>$['billerDefinedData4']</path>
+            <content>${DataSourceBillTransfer#UDF4}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="76a45d60-fcf9-46b1-bf2c-81ccbdd8636c" name="Match content of [billerDefinedData5]">
+          <con:configuration>
+            <path>$['billerDefinedData5']</path>
+            <content>${DataSourceBillTransfer#UDF5}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="78a1d7b2-da74-4a22-a1d8-bbbe69e1f348" name="Match content of [billerDefinedData6]">
+          <con:configuration>
+            <path>$['billerDefinedData6']</path>
+            <content>${DataSourceBillTransfer#UDF6}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="fdfa5899-1efa-44dd-9418-ef91f182c051" name="Match content of [billerDefinedData7]">
+          <con:configuration>
+            <path>$['billerDefinedData7']</path>
+            <content>${DataSourceBillTransfer#UDF7}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b6c5c6a3-9fb8-4b7f-b327-4fa5dcbb4684" name="Match content of [billerDefinedData8]">
+          <con:configuration>
+            <path>$['billerDefinedData8']</path>
+            <content>${DataSourceBillTransfer#UDF8}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="add2396e-f97f-4147-9290-a0c4be5f04ea" name="Match content of [billerDefinedData9]">
+          <con:configuration>
+            <path>$['billerDefinedData9']</path>
+            <content>${DataSourceBillTransfer#UDF9}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c5790775-6dea-43b5-a6a2-72614f0b0258" name="Match content of [billerDefinedData10]">
+          <con:configuration>
+            <path>$['billerDefinedData10']</path>
+            <content>${DataSourceBillTransfer#UDF10}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="08a196d4-f4a0-443b-8cf7-a92c01184d04" name="Match content of [clientAccountNumber]">
+          <con:configuration>
+            <path>$['clientAccountNumber']</path>
+            <content>${BillTransferQA#RawRequest#$['header']['clientAccountNumber']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="7171c31b-0e1b-47c1-aa2b-b23d8554e7a6" name="Match content of [checkCompany]">
+          <con:configuration>
+            <path>$['checkCompany']</path>
+            <content>${DataSourceBillTransfer#Company}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="41d9623f-db17-402b-9e07-0a600b4ae493" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="fac9940d-1ac0-4edf-b78d-4bbfe70a08a1" name="Match content of [billID]">
+          <con:configuration>
+            <path>$['billID']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="632683da-7262-412f-a5df-79a830d58c8a" name="Match content of [billDueDateCutoff]">
+          <con:configuration>
+            <path>$['billDueDateCutoff']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e200bc7f-2e58-4f96-a5d3-94a0b052b69e" name="Match content of [lang]">
+          <con:configuration>
+            <path>$['lang']</path>
+            <content>${DataSourceBillTransfer#Lang}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="4d7686e2-fe8d-4b82-bff8-0635248f62b5" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>[]</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="ad7b82cb-2716-409b-9f2e-96bd314c730e">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceBillTransfer</dataSourceStep>
+      <targetStep>BillTransferQA</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>a9249762-c78c-4ee5-8c33-98551c364a6c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e3a52c1e-6a2b-4af2-9e24-6ace1bf4177a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2c282d14-f05c-4315-9d3a-4a13932fe8f0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5818e5b8-aa55-46aa-9391-f00ff1c70dc3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

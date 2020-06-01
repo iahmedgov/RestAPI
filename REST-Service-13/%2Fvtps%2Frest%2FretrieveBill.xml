@@ -23,6 +23,12 @@
       <con:params/>
       <con:element xmlns:ret="https://qa.velocitypayment.com/vtps/rest/retrieveBill">ret:Fault</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
     <con:request name="POST Request" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>

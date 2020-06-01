@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="39a958fd-d784-4a51-a762-d87f6d6df0d1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillRetrieve" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="ef9aac53-edfe-4cfb-806a-3f0ae418327b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillRetrieve-WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="39a958fd-d784-4a51-a762-d87f6d6df0d1fileName">BillRetrieve</con:setting>
+    <con:setting id="ef9aac53-edfe-4cfb-806a-3f0ae418327bfileName">BillRetrieve-WWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="BillRetrieve" id="c74969dc-e328-411c-8769-5640441627ca">
+  <con:testStep type="restrequest" name="BillRetrieve" id="351000a7-e4a9-4eaf-b445-da23e1ed21a5">
     <con:settings/>
     <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="BillRetrieve" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{
-    "applicationID":"609",
-    "customerID":"195",
-    "callerID":"7038945012",
+    "applicationID":"18",
+    "customerID":"2",
+    "callerID":"7038945013",
     "callGuiID":"",
-    "callSessionID":"3569"
+    "callSessionID":"5013"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
         <con:credentials>
@@ -30,7 +31,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Copy of BillRetrieve" id="83cd0bba-43ed-435d-a8e5-ff25d3bed91e">
+  <con:testStep type="restrequest" name="Copy of BillRetrieve" id="9bbc886e-8c1a-47b0-9e02-91762cfbc415">
     <con:settings/>
     <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Copy of BillRetrieve" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
@@ -56,7 +57,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="BillRetrieve-Demo-3811" id="56790987-00bc-400c-bcab-72cf51c2929b">
+  <con:testStep type="restrequest" name="BillRetrieve-Demo-3811" id="31b49ae7-6487-40d2-8b27-3975b37a3366">
     <con:settings/>
     <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="BillRetrieve-Demo-3811" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">

@@ -29,7 +29,7 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "609",\r
-   "remittance_id" : "testIVR07152019105",\r
+   "remittance_id" : "testIVR07152019148",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2023",\r
    "username" : "username",\r
@@ -44,7 +44,7 @@
    "user_defined8" : "udf8 data",\r
    "user_defined9" : "udf9 data",\r
    "user_defined10" : "udf10 data",\r
-   "client_account_number" : "1564945"\r
+   "client_account_number" : "1564946"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
         <con:credentials>

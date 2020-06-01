@@ -12,41 +12,41 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{
-   "amount": "21.00",
-   "check_address": "2311 york road",
-   "check_city": "Arlington",
-   "check_zip": "22201",
-   "check_account": "11111111",
-   "check_company": "",
-   "routing_number": "256072691",
-   "transaction_type": "200",
-   "message_version": "2.0IVR_A",
-   "category": "moto",
-   "requestSource": "",
-   "check_first_name": "imtiaz",
-   "check_last_name": "ahmed",
-   "check_state": "VA",
-   "email": "",
-   "account_type": "1",
-   "response_format": "fixed_width",
-   "application_id": "609",
-   "remittance_id": "testivrach116",
-   "username": "username",
-   "password": "password",
-   "check_type": "P",
-   "standard_entry_class": "TEL",
-   "user_defined1": "udf1",
-   "user_defined2": "udf2",
-   "user_defined3": "udf3",
-   "user_defined4": "udf4",
-   "user_defined5": "udf5",
-   "user_defined6": "udf6",
-   "user_defined7": "udf7",
-   "user_defined8": "udf8",
-   "user_defined9": "udf9",
-   "user_defined10": "udf10",
-   "client_account_number": "258745896"
+        <con:request>{\r
+   "amount" : "21.00",\r
+   "check_address" : "2311 york road",\r
+   "check_city" : "Arlington",\r
+   "check_zip" : "22201",\r
+   "check_account" : "11111111",\r
+   "check_company" : "",\r
+   "routing_number" : "256072691",\r
+   "transaction_type" : "200",\r
+   "message_version" : "2.0IVR_A",\r
+   "category" : "moto",\r
+   "requestSource" : "",\r
+   "check_first_name" : "imtiaz",\r
+   "check_last_name" : "ahmed",\r
+   "check_state" : "VA",\r
+   "email" : "",\r
+   "account_type" : "1",\r
+   "response_format" : "fixed_width",\r
+   "application_id" : "609",\r
+   "remittance_id" : "testivrach116",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "check_type" : "P",\r
+   "standard_entry_class" : "TEL",\r
+   "user_defined1" : "udf1",\r
+   "user_defined2" : "udf2",\r
+   "user_defined3" : "udf3",\r
+   "user_defined4" : "udf4",\r
+   "user_defined5" : "udf5",\r
+   "user_defined6" : "udf6",\r
+   "user_defined7" : "udf7",\r
+   "user_defined8" : "udf8",\r
+   "user_defined9" : "udf9",\r
+   "user_defined10" : "udf10",\r
+   "client_account_number" : "258745896"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
         <con:credentials>

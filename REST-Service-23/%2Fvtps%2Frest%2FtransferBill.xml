@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/transferBill" path="/vtps/rest/transferBill" id="ac6e00a7-3056-4198-8ae0-26cad3c0b220" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ac6e00a7-3056-4198-8ae0-26cad3c0b220fileName">%2Fvtps%2Frest%2FtransferBill</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="6e8f2664-1b21-4e40-b6d4-47b565763676" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:tran="https://qa.velocitypayment.com/vtps/rest/transferBill">tran:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="POST Request" id="6bf30bc8-d0bb-4ac0-a0ba-2dbabfd6962c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

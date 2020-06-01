@@ -17,6 +17,12 @@
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
     <con:request name="POST Request" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>

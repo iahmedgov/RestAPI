@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b8d7ca17-796b-4171-96eb-d830cfe0b0c0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVR StoredPM" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="f1b83eb0-1ce7-40c0-b174-58d487b1c98c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVR StoredPM-WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b8d7ca17-796b-4171-96eb-d830cfe0b0c0fileName">AdvancedIVR-StoredPM</con:setting>
+    <con:setting id="f1b83eb0-1ce7-40c0-b174-58d487b1c98cfileName">AdvancedIVR-StoredPM-WWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="CreateCCStoredPM Request" id="9d9cc723-27d3-45dc-a79a-3cfde7f3a25c">
+  <con:testStep type="restrequest" name="CreateCCStoredPM Request" id="43a83084-5121-49c7-8112-bde81a0a1273">
     <con:settings/>
     <con:config service="REST Service 14" resourcePath="/vtps/rest/createCCStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CreateCCStoredPM Request" id="993d281f-9a20-435c-9a55-1c3d55bdd422" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{  "header": {   
-	"clientAccountNumber": "1235511104",   
-	"applicationID": "609",   
-	"customerID": "195"  },
+	"clientAccountNumber": "1235511106",   
+	"applicationID": "18",   
+	"customerID": "2"  },
 "paymentMethod": {   
 	"paymentMethodType": "1",   
 	"pan": "6011000000000004",   
@@ -44,7 +45,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="CreateACHStoredPM" id="225bf052-f715-4bf4-b39d-526107de5e1b">
+  <con:testStep type="restrequest" name="CreateACHStoredPM" id="2563bbdf-ea7d-4a79-a90f-1b316f11a793">
     <con:settings/>
     <con:config service="REST Service 16" resourcePath="/vtps/rest/createACHStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CreateACHStoredPM" id="b4dd6391-8a4c-4f9a-a485-3c85b8888bee" mediaType="application/json" postQueryString="false">
@@ -84,17 +85,17 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="RetrieveStoredPM Request" id="c0d50d53-a8a0-4e90-82b6-29739a72c938">
+  <con:testStep type="restrequest" name="RetrieveStoredPM Request" id="542be1be-e5f0-4399-809a-ad55d7e75b3a">
     <con:settings/>
     <con:config service="REST Service 15" resourcePath="/vtps/rest/retrieveStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="RetrieveStoredPM Request" id="223f6ece-aabf-49de-940b-992579323348" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "33333", 
-"customerID": "195" 
+"clientAccountNumber": "1235511106", 
+"customerID": "2" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
         <con:credentials>
@@ -107,7 +108,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessCCWithStoredPMTransaction" id="04db6043-2459-495c-bce2-e0b1f3677e7a">
+  <con:testStep type="restrequest" name="ProcessCCWithStoredPMTransaction" id="d9fb9c85-1725-4d2c-942c-ee25d796e47e">
     <con:settings/>
     <con:config service="REST Service 17" resourcePath="/vtps/rest/processCCStoredPaymentTransaction" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessCCWithStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
@@ -124,7 +125,7 @@
    "requestSource" : "",\r
    "response_format" : "fixed_width",\r
    "application_id" : "609",\r
-   "remittance_id" : "dasd4546fsdfs2",\r
+   "remittance_id" : "dasd4546fsdfs3",\r
    "username" : "username",\r
    "password" : "password",\r
    "user_defined1" : "",\r
@@ -160,7 +161,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessACHStoredPMTransaction" id="02d4cb68-d458-461d-ae9b-7c9940f26b53">
+  <con:testStep type="restrequest" name="ProcessACHStoredPMTransaction" id="70a2e914-3a04-44ae-803a-c260e0d4e84d">
     <con:settings/>
     <con:config service="REST Service 18" resourcePath="/vtps/rest/processACHStoredPaymentTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessACHStoredPMTransaction" id="3c1948d7-1b4a-4da9-bc29-757a00259231" mediaType="application/json" postQueryString="false">
@@ -215,7 +216,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="CFCCLookupNEW" id="de5699e5-7cf1-4988-90ec-f10347808139">
+  <con:testStep type="restrequest" name="CFCCLookupNEW" id="6f3ad542-26f5-4af5-97da-507805f9f901">
     <con:settings/>
     <con:config service="REST Service 19" resourcePath="/vtps/rest/convenienceFeeCCLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CFCCLookupNEW" id="f0aa9450-e550-4455-9415-5c392f6010b9" mediaType="application/json" postQueryString="false">
@@ -245,7 +246,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="CallPostBack" id="0eeb3e1e-6d03-4b8b-a3bf-280639d95b06">
+  <con:testStep type="restrequest" name="CallPostBack" id="967e5a80-f1f5-44c4-90fa-85f5e81319cf">
     <con:settings/>
     <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CallPostBack" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
@@ -265,7 +266,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessCCWithoutStoredPMTransaction" id="88a9aef6-f85c-4270-b17c-be98cd765190">
+  <con:testStep type="restrequest" name="ProcessCCWithoutStoredPMTransaction" id="3ffefbb7-e802-4d0c-be07-353dcdb0af24">
     <con:settings/>
     <con:config service="REST Service 17" resourcePath="/vtps/rest/processCCStoredPaymentTransaction" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessCCWithoutStoredPMTransaction" id="3d1a6306-7d90-486f-a571-362e8983a93e" mediaType="application/json" postQueryString="false">
@@ -282,7 +283,7 @@
 	"requestSource": "", 
 	"response_format": "fixed_width", 
 	"application_id": "609", 
-	"remittance_id": "443gfdg4556ggg", 
+	"remittance_id": "443gfdg4556ggg2", 
 	"username": "username", 
 	"password": "password", 
 	"user_defined1": "", 

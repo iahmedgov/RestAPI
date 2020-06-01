@@ -16,3 +16,8 @@ BillRetrieve.xml
 AdvancedIVR-StoredPM.xml
 AdvancedIVRMultipleBills.xml
 AutoCCCreate%26Retrieve.xml
+AdvancedIVR-StoredPM-WWW.xml
+BillTransfer-WWW.xml
+BillRetrieve-WWW.xml
+AdvancedIVRMultipleBills-WWW.xml
+TransactionStatusLookup.xml

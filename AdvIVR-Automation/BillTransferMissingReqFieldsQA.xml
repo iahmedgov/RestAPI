@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cb679cf8-9493-4774-9e85-df79d8862742" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillTransferMissingReqFieldsQA" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cb679cf8-9493-4774-9e85-df79d8862742fileName">BillTransferMissingReqFieldsQA</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceBillRetMissingReqFields" id="47413547-918c-42fd-9698-2fb6afbebfa4">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/BillTransferAndRetrieve.xlsx</file>
+          <worksheet>Sheet2</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>AppID</con:property>
+      <con:property>CallerID</con:property>
+      <con:property>CAN</con:property>
+      <con:property>Amount</con:property>
+      <con:property>RemID</con:property>
+      <con:property>CustID</con:property>
+      <con:property>Lang</con:property>
+      <con:property>SessionID</con:property>
+      <con:property>Fname</con:property>
+      <con:property>Lname</con:property>
+      <con:property>Company</con:property>
+      <con:property>AL1</con:property>
+      <con:property>City</con:property>
+      <con:property>State</con:property>
+      <con:property>ZIP</con:property>
+      <con:property>Country</con:property>
+      <con:property>VerifyAppID</con:property>
+      <con:property>VerifyCallerID</con:property>
+      <con:property>Result</con:property>
+      <con:property>ErrorCode</con:property>
+      <con:property>ErrorMessage</con:property>
+      <con:property>VerifySessionID</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="BillTransferQA" id="173c4468-f09d-474a-8927-8c258de7d13e">
+    <con:settings/>
+    <con:config service="REST Service 12" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillTransferQA" id="39aef5b8-4f9c-4ff8-9dae-e5ab8120f4b0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "header" : {\r
+      "applicationID" : "${DataSourceBillRetMissingReqFields#AppID}",\r
+      "callerID" : "${DataSourceBillRetMissingReqFields#CallerID}",\r
+      "clientAccountNumber" : "${DataSourceBillRetMissingReqFields#CAN}",\r
+      "amount" : "${DataSourceBillRetMissingReqFields#Amount}",\r
+      "remittanceID" : "${DataSourceBillRetMissingReqFields#RemID}",\r
+      "customerID" : "${DataSourceBillRetMissingReqFields#CustID}",\r
+      "lang" : "${DataSourceBillRetMissingReqFields#Lang}",\r
+      "callSessionID" : "${DataSourceBillRetMissingReqFields#SessionID}"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "${DataSourceBillRetMissingReqFields#Fname}",\r
+      "lastName" : "${DataSourceBillRetMissingReqFields#Lname}",\r
+      "companyName" : "${DataSourceBillRetMissingReqFields#Company}",\r
+      "addressLine1" : "${DataSourceBillRetMissingReqFields#AL1}",\r
+      "city" : "${DataSourceBillRetMissingReqFields#City}",\r
+      "state" : "${DataSourceBillRetMissingReqFields#State}",\r
+      "zip" : "${DataSourceBillRetMissingReqFields#ZIP}",\r
+      "country" : "${DataSourceBillRetMissingReqFields#Country}"\r
+   },\r
+   "customData" : [ ]\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
+        <con:assertion type="JsonPath Match" id="93277ad8-c8e6-425a-b23e-ff2add2bdf13" name="Match content of [applicationID]">
+          <con:configuration>
+            <path>$['applicationID']</path>
+            <content>${DataSourceBillRetMissingReqFields#VerifyAppID}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="03d85305-db68-4194-b775-d2458826861c" name="Match content of [callerID]">
+          <con:configuration>
+            <path>$['callerID']</path>
+            <content>${DataSourceBillRetMissingReqFields#VerifyCallerID}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="92ded05d-4d62-4172-b94d-6b0e301c23e5" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>${DataSourceBillRetMissingReqFields#Result}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="21420509-2f9e-48eb-9eb7-871effebe346" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceBillRetMissingReqFields#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="6e544272-8a03-438f-ba79-e0a3aca0e286" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSourceBillRetMissingReqFields#ErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="2f4e7ae7-be38-4147-b1fb-f405f582ca77" name="Match content of [callSessionID]">
+          <con:configuration>
+            <path>$['callSessionID']</path>
+            <content>${DataSourceBillRetMissingReqFields#VerifySessionID}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="bcc1025e-031d-4070-aa65-d2c284bfe8cf">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceBillRetMissingReqFields</dataSourceStep>
+      <targetStep>Copy of BillTransferQA</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>47413547-918c-42fd-9698-2fb6afbebfa4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

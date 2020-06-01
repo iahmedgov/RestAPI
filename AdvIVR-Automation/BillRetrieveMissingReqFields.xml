@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="13c0fcd8-c37d-44ee-8a01-bf1bcc3ab01d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BillRetrieveMissingReqFields" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="13c0fcd8-c37d-44ee-8a01-bf1bcc3ab01dfileName">BillRetrieveMissingReqFields</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceBillRetrieveMissingReqFields" id="c4502859-201a-41fc-8900-9c6cb7399b50">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/BillTransferAndRetrieve.xlsx</file>
+          <worksheet>Sheet3</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>AppID</con:property>
+      <con:property>CustID</con:property>
+      <con:property>CallerID</con:property>
+      <con:property>GuiID</con:property>
+      <con:property>SessionID</con:property>
+      <con:property>ErrorCode</con:property>
+      <con:property>ErrorMessage</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of BillRetrieve" id="508691af-e233-431c-8b38-1563605b1b65">
+    <con:settings/>
+    <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of BillRetrieve" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "${DataSourceBillRetrieveMissingReqFields#AppID}",\r
+   "customerID" : "${DataSourceBillRetrieveMissingReqFields#CustID}",\r
+   "callerID" : "${DataSourceBillRetrieveMissingReqFields#CallerID}",\r
+   "callGuiID" : "${DataSourceBillRetrieveMissingReqFields#GuiID}",\r
+   "callSessionID" : "${DataSourceBillRetrieveMissingReqFields#SessionID}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
+        <con:assertion type="JsonPath Match" id="35c1da99-9168-41aa-b82a-53d28f4c164e" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceBillRetrieveMissingReqFields#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="682b2c11-3d67-4e12-8669-8af703aaa82d" name="Match content of [0]">
+          <con:configuration>
+            <path>$['errorMessage'][0]</path>
+            <content>${DataSourceBillRetrieveMissingReqFields#ErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="8e08d7da-8d6e-4979-9c20-c78db02c319e">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceBillRetrieveMissingReqFields</dataSourceStep>
+      <targetStep>Copy of BillRetrieve</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>c4502859-201a-41fc-8900-9c6cb7399b50</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/vtps/rest/retrieveBill" path="/vtps/rest/retrieveBill" id="06fb0d15-1867-493c-9f15-fc2ba17c32d4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="06fb0d15-1867-493c-9f15-fc2ba17c32d4fileName">%2Fvtps%2Frest%2FretrieveBill</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="bcca4c70-4027-4ddf-bae6-eb9331c32d3b" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ret="https://qa.velocitypayment.com/vtps/rest/retrieveBill">ret:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="POST Request" id="387f22b5-3d06-4510-bef8-9f9a1010305f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

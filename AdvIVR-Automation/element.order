@@ -4,3 +4,8 @@ MultipleCreateAndRetrieveCCStoredPM.xml
 NegativeCreateCCStoredPM.xml
 CreateAndProcessCCWithStoredPM.xml
 ProcessCCWithStoredPM.xml
+BillTransferAndRetrieveQA.xml
+BillTransferAndRetrieveNoCANlangQA.xml
+BillTransferMissingReqFieldsQA.xml
+BillRetrieveMissingReqFields.xml
+BillTransferAndRetrieveAndProcessCCQA.xml
