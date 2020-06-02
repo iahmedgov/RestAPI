@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b2926c6a-d15f-4d7f-b24a-ce8b0b34804f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="BillTransferAndRetrieveAndProcessCCQA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a7476f24-2f00-4456-a50b-a6bc8b7318e4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="BillTransferAndRetrieveAndProcessACHQA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b2926c6a-d15f-4d7f-b24a-ce8b0b34804ffileName">BillTransferAndRetrieveAndProcessCCQA</con:setting>
+    <con:setting id="a7476f24-2f00-4456-a50b-a6bc8b7318e4fileName">BillTransferAndRetrieveAndProcessACHQA</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datagen" name="Copy of DataGenCAN" id="df95c5cf-e8b6-49a8-8c65-ed165e3a8c5e">
+  <con:testStep type="datagen" name="Copy of DataGenCAN" id="7d654f48-fc02-48f7-86f4-691e7f9ea3a7">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Number">
@@ -15,7 +16,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>7609821893.00000000000000000000000000000000000000000000000000000</current>
+          <current>3997659130.000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>Random Number</con:name>
         <con:mode>READ</con:mode>
@@ -35,13 +36,13 @@ def fullname = fname + " " + lname</script>
       </con:property>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSourceTranRetProCC" id="0668cc1a-7125-4f8f-8423-3ae5eebc4629">
+  <con:testStep type="datasource" name="DataSourceTranRetProCC" id="df8fb609-24b1-4395-9e3b-86e3d66a0f6b">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/BillTransferAndRetrieve.xlsx</file>
-          <worksheet>Sheet4</worksheet>
+          <worksheet>Sheet5</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
           <evaluateFormulas>false</evaluateFormulas>
@@ -77,11 +78,14 @@ def fullname = fname + " " + lname</script>
       <con:property>RespCodeMessage</con:property>
       <con:property>ErrorCode</con:property>
       <con:property>ErrorMessage</con:property>
+      <con:property>Account</con:property>
+      <con:property>Actype</con:property>
+      <con:property>CheckType</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="BillTransferQA" id="b0c0e8b9-5d84-4c57-b33e-0eb2d3a99fb5">
+  <con:testStep type="restrequest" name="BillTransferQA" id="b2ac05b0-1555-4152-9f7f-99914697b7fa">
     <con:settings/>
     <con:config service="REST Service 12" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="BillTransferQA" id="39aef5b8-4f9c-4ff8-9dae-e5ab8120f4b0" mediaType="application/json" postQueryString="false">
@@ -221,7 +225,7 @@ def fullname = fname + " " + lname</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="BillRetrieve" id="7437e340-d3a7-4d5f-895a-353a7d3b684f">
+  <con:testStep type="restrequest" name="BillRetrieve" id="3bd62eb6-1e59-4e86-b77b-739697692fc1">
     <con:settings/>
     <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="BillRetrieve" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
@@ -490,36 +494,38 @@ def fullname = fname + " " + lname</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Copy of ProcessCC" id="8104b321-0dd9-4687-8fba-259a499c83bb">
+  <con:testStep type="restrequest" name="Copy of ProcessACH" id="99cf7f9b-fc1d-4fb0-bbda-2506033b2d3d">
     <con:settings/>
-    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Copy of ProcessCC" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+    <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of ProcessACH" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
-          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{\r
-   "card_address" : "${BillRetrieve#Response#$['billingAddress']}",\r
    "amount" : "${DataSourceTranRetProCC#Amount}",\r
-   "card_name" : "${Copy of DataGenCAN#FullName}",\r
-   "card_city" : "${BillRetrieve#Response#$['billingCity']}",\r
-   "card_zip" : "${BillRetrieve#Response#$['billingZipCode']}",\r
-   "email" : "iahmed@govolution.com",\r
-   "card_number" : "4111111111111111",\r
-   "card_state" : "${BillRetrieve#Response#$['billingState']}",\r
-   "transaction_type" : "104",\r
-   "message_version" : "2.0IVR_C",\r
-   "category" : "MOTO",\r
+   "check_address" : "${DataSourceTranRetProCC#AL1}",\r
+   "check_city" : "${DataSourceTranRetProCC#City}",\r
+   "check_zip" : "${DataSourceTranRetProCC#ZIP}",\r
+   "check_account" : "${DataSourceTranRetProCC#Account}",\r
+   "check_company" : "${DataSourceTranRetProCC#Company}",\r
+   "routing_number" : "256072691",\r
+   "transaction_type" : "200",\r
+   "message_version" : "2.0IVR_A",\r
+   "category" : "moto",\r
    "requestSource" : "",\r
+   "check_first_name" : "${DataSourceTranRetProCC#Fname}",\r
+   "check_last_name" : "${DataSourceTranRetProCC#Lname}",\r
+   "check_state" : "${DataSourceTranRetProCC#State}",\r
+   "email" : "iahmed@govolution.com",\r
+   "account_type" : "${DataSourceTranRetProCC#Actype}",\r
    "response_format" : "fixed_width",\r
-   "card_expiration" : "",\r
-   "application_id" : "${BillTransferQA#Response#$['applicationID']}",\r
+   "application_id" : "${DataSourceTranRetProCC#AppID}",\r
    "remittance_id" : "${BillRetrieve#Response#$['remittanceID']}",\r
-   "card_exmo" : "01",\r
-   "card_exyr" : "2023",\r
    "username" : "username",\r
    "password" : "password",\r
+   "check_type" : "${DataSourceTranRetProCC#CheckType}",\r
+   "standard_entry_class" : "TEL",\r
    "user_defined1" : "${BillRetrieve#Response#$['billerDefinedData1']}",\r
    "user_defined2" : "${BillRetrieve#Response#$['billerDefinedData2']}",\r
    "user_defined3" : "${BillRetrieve#Response#$['billerDefinedData3']}",\r
@@ -532,44 +538,8 @@ def fullname = fname + " " + lname</script>
    "user_defined10" : "${BillRetrieve#Response#$['billerDefinedData10']}",\r
    "client_account_number" : "${BillRetrieve#Response#$['clientAccountNumber']}"\r
 }</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
-        <con:assertion type="JsonPath Match" id="1f25b0e2-651f-439d-9d3d-9df1649ccb33" name="Match content of [remittanceID]">
-          <con:configuration>
-            <path>$['remittanceID']</path>
-            <content>${BillRetrieve#Response#$['remittanceID']}</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Existence Match" id="e79199c7-0686-4dbb-b4ee-8a5b979d0fe2" name="Check for existence of [transactionID]">
-          <con:configuration>
-            <path>$['transactionID']</path>
-            <content>true</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="face53f5-1800-4dd7-8820-4cfe3d17fd2c" name="Match content of [responseCode]">
-          <con:configuration>
-            <path>$['responseCode']</path>
-            <content>0</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="fbdc97f3-ffb7-44d5-92dc-32115e5deb47" name="Match content of [responseCodeMessage]">
-          <con:configuration>
-            <path>$['responseCodeMessage']</path>
-            <content>${DataSourceTranRetProCC#RespCodeMessage}</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="6b26964a-cdce-4481-80da-75d83eb4ee40" name="Match content of [errorCode]">
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
+        <con:assertion type="JsonPath Match" id="5cce85e3-358a-4b1e-970a-a1a608b50d3e" name="Match content of [errorCode]">
           <con:configuration>
             <path>$['errorCode']</path>
             <content>${DataSourceTranRetProCC#ErrorCode}</content>
@@ -578,16 +548,52 @@ def fullname = fname + " " + lname</script>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Existence Match" id="0f794c87-129b-49ca-b0bb-686732896b30" name="Check for existence of [approvalCode]">
+        <con:assertion type="JsonPath Match" id="52e3dcae-4a98-45fc-b392-51f78a70c702" name="Match content of [remittanceID]">
           <con:configuration>
-            <path>$['approvalCode']</path>
+            <path>$['remittanceID']</path>
+            <content>${BillRetrieve#Response#$['remittanceID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="0ed53a83-c5a5-4193-bfde-4fccb0302da2" name="Check for existence of [transactionID]">
+          <con:configuration>
+            <path>$['transactionID']</path>
             <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="4cda64da-1a3b-4e38-afdb-ecfd215bf8ac" name="Match content of [0]">
+        <con:assertion type="JsonPath Match" id="87ffd39a-1250-4a2f-bf96-3ed4fd643be8" name="Match content of [responseCode]">
+          <con:configuration>
+            <path>$['responseCode']</path>
+            <content>${DataSourceTranRetProCC#RespCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0b63d9dd-0339-4980-bf7e-7ea07e63cb7e" name="Match content of [responseCodeMessage]">
+          <con:configuration>
+            <path>$['responseCodeMessage']</path>
+            <content>${DataSourceTranRetProCC#RespCodeMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="4194948f-7a12-4066-86d6-8388bcc988df" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceTranRetProCC#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="09dfce2a-c0cd-44db-b94a-508732889029" name="Match content of [0]">
           <con:configuration>
             <path>$['errorMessage'][0]</path>
             <content>${DataSourceTranRetProCC#ErrorMessage}</content>
@@ -598,8 +604,7 @@ def fullname = fname + " " + lname</script>
         </con:assertion>
         <con:credentials>
           <con:username>iahmed</con:username>
-          <con:password>hello2222</con:password>
-          <con:domain>govolution</con:domain>
+          <con:password>hello6666</con:password>
           <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
           <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
           <con:authType>Global HTTP Settings</con:authType>
@@ -610,7 +615,7 @@ def fullname = fname + " " + lname</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="8e6f2acd-6582-42ff-9276-de3e9c5115ee">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="6859984c-4377-4819-95f6-2c2aab51c657">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSourceTranRetProCC</dataSourceStep>
@@ -637,6 +642,11 @@ def fullname = fname + " " + lname</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>8104b321-0dd9-4687-8fba-259a499c83bb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>99cf7f9b-fc1d-4fb0-bbda-2506033b2d3d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

@@ -9,3 +9,4 @@ BillTransferAndRetrieveNoCANlangQA.xml
 BillTransferMissingReqFieldsQA.xml
 BillRetrieveMissingReqFields.xml
 BillTransferAndRetrieveAndProcessCCQA.xml
+BillTransferAndRetrieveAndProcessACHQA.xml

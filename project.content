@@ -59,3 +59,4 @@ AdvIVR-Automation\BillTransferAndRetrieveNoCANlangQA.xml
 AdvIVR-Automation\BillTransferMissingReqFieldsQA.xml
 AdvIVR-Automation\BillRetrieveMissingReqFields.xml
 AdvIVR-Automation\BillTransferAndRetrieveAndProcessCCQA.xml
+AdvIVR-Automation\BillTransferAndRetrieveAndProcessACHQA.xml
