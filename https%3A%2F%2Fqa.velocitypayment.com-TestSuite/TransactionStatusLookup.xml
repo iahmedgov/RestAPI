@@ -13,21 +13,105 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{
-            "applicationID": "3811",
-            "last4Digits": "1111",
-            "parcels": "",
-            "paymentType": "",
-            "clientAccountNumber": "",
-            "udf1": "11",
-            "udf2": "21",
-            "udf3": "31",
-            "udf4": "41",
-            "udf5": "51",
-            "udf6": "61",
-            "udf7": "71",
-            "udf8": "81",
-            "udf9": "91",
-            "udf10": "101"
+  "applicationID": "609",
+  "last4Digits": "0015",
+  "lookupFieldValue": "22201"
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup-Demo-3811" id="4df549b3-f550-4965-9fc2-f28c9d8623d8">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup-Demo-3811" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
+  "applicationID": "3811",
+  "last4Digits": "0015",
+  "lookupFieldValue": "987654"
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup-Demo-3802" id="d23fedfe-b623-4973-bd54-c2475445ff5c">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup-Demo-3802" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
+  "applicationID": "3802",
+  "last4Digits": "0015",
+  "lookupFieldValue": "987654"
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup-Upgrade-2325" id="dcc0a100-12b9-4d2b-ac6d-534e7e1c6e26">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup-Upgrade-2325" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "2325",\r
+   "last4Digits" : "1111",\r
+   "lookupFieldValue" : "111112222233333"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup-Upgrade-4108" id="ea6a484a-70b4-44af-a581-a17ab0b3af7a">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup-Upgrade-4108" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4108",\r
+   "last4Digits" : "2898",\r
+   "lookupFieldValue" : "20904"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
         <con:credentials>

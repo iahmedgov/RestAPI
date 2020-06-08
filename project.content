@@ -60,3 +60,6 @@ AdvIVR-Automation\BillTransferMissingReqFieldsQA.xml
 AdvIVR-Automation\BillRetrieveMissingReqFields.xml
 AdvIVR-Automation\BillTransferAndRetrieveAndProcessCCQA.xml
 AdvIVR-Automation\BillTransferAndRetrieveAndProcessACHQA.xml
+AdvIVR-Automation\TransactionStatusLookup.xml
+AdvIVR-Automation\TranStatusLookupMissingReqFields.xml
+AdvIVR-Automation\TransactionStatusLookupACH.xml

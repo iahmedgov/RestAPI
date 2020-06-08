@@ -10,3 +10,6 @@ BillTransferMissingReqFieldsQA.xml
 BillRetrieveMissingReqFields.xml
 BillTransferAndRetrieveAndProcessCCQA.xml
 BillTransferAndRetrieveAndProcessACHQA.xml
+TransactionStatusLookup.xml
+TranStatusLookupMissingReqFields.xml
+TransactionStatusLookupACH.xml

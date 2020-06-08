@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f4725b2e-cfea-49d9-95e2-32c38a934cfc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TransactionStatusLookup" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f4725b2e-cfea-49d9-95e2-32c38a934cfcfileName">TransactionStatusLookup</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datagen" name="DataGenRandomNumber" id="b9a95540-2a7c-412c-b977-ffd59cdecd86">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>100000000</start>
+          <end>999999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>RandomNumberNumeric</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("MM/dd/yyyy")
+return sdf.format(new Date())</script>
+        </con:configuration>
+        <con:name>TodaysDate</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="DataSourceTranStatLookup" id="7b417d7f-bd44-41ef-8f20-c484ea3afce3">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/TransactionStatusLookup.xlsx</file>
+          <worksheet>Sheet1</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>Address</con:property>
+      <con:property>Amount</con:property>
+      <con:property>CardName</con:property>
+      <con:property>City</con:property>
+      <con:property>ZIP</con:property>
+      <con:property>Email</con:property>
+      <con:property>CardNumber</con:property>
+      <con:property>State</con:property>
+      <con:property>AppID</con:property>
+      <con:property>ExMo</con:property>
+      <con:property>ExYr</con:property>
+      <con:property>UDF1</con:property>
+      <con:property>UDF2</con:property>
+      <con:property>UDF3</con:property>
+      <con:property>UDF4</con:property>
+      <con:property>UDF5</con:property>
+      <con:property>UDF6</con:property>
+      <con:property>UDF7</con:property>
+      <con:property>UDF8</con:property>
+      <con:property>UDF9</con:property>
+      <con:property>UDF10</con:property>
+      <con:property>Last4</con:property>
+      <con:property>VerifyAmount</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCC" id="9d75a63b-3a09-4b97-bee2-29067d836ad1">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCC" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "${DataSourceTranStatLookup#Address}",\r
+   "amount" : "${DataSourceTranStatLookup#Amount}",\r
+   "card_name" : "${DataSourceTranStatLookup#CardName}",\r
+   "card_city" : "${DataSourceTranStatLookup#City}",\r
+   "card_zip" : "${DataSourceTranStatLookup#ZIP}",\r
+   "email" : "${DataSourceTranStatLookup#Email}",\r
+   "card_number" : "${DataSourceTranStatLookup#CardNumber}",\r
+   "card_state" : "${DataSourceTranStatLookup#State}",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "${DataSourceTranStatLookup#AppID}",\r
+   "remittance_id" : "${DataGenRandomNumber#RandomNumberNumeric}",\r
+   "card_exmo" : "${DataSourceTranStatLookup#ExMo}",\r
+   "card_exyr" : "${DataSourceTranStatLookup#ExYr}",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "user_defined1" : "${DataGenRandomNumber#RandomNumberNumeric}",\r
+   "user_defined2" : "${DataSourceTranStatLookup#UDF2}",\r
+   "user_defined3" : "${DataSourceTranStatLookup#UDF3}",\r
+   "user_defined4" : "${DataSourceTranStatLookup#UDF4}",\r
+   "user_defined5" : "${DataSourceTranStatLookup#UDF5}",\r
+   "user_defined6" : "${DataSourceTranStatLookup#UDF6}",\r
+   "user_defined7" : "${DataSourceTranStatLookup#UDF7}",\r
+   "user_defined8" : "${DataSourceTranStatLookup#UDF8}",\r
+   "user_defined9" : "${DataSourceTranStatLookup#UDF9}",\r
+   "user_defined10" : "${DataSourceTranStatLookup#UDF10}",\r
+   "client_account_number" : "${DataGenRandomNumber#RandomNumberNumeric}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:assertion type="JsonPath Match" id="f1da18cb-fe68-4aa8-a24d-9386f6bba24c" name="Match content of [remittanceID]">
+          <con:configuration>
+            <path>$['remittanceID']</path>
+            <content>${ProcessCC#RawRequest#$['remittance_id']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="cd6a2061-191e-463e-9434-026ece3fc3ae" name="Check for existence of [transactionID]">
+          <con:configuration>
+            <path>$['transactionID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="48093799-2375-48bf-a466-55a2190ac1ce" name="Match content of [transactionID] using RegEx">
+          <con:configuration>
+            <path>$['transactionID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>120.*</regEx>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="a52d2482-ec58-41b8-b626-b507cc55f992" name="Match content of [responseCode]">
+          <con:configuration>
+            <path>$['responseCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b39e2824-80f9-4ffe-90b2-d0a6cce6e5f6" name="Match content of [responseCodeMessage]">
+          <con:configuration>
+            <path>$['responseCodeMessage']</path>
+            <content>Transaction approved, no errors</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="67c2535f-0b6a-48d3-a1c7-374a920362ad" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="0bdedfa3-86ec-40a7-9e19-5ac39b11afa6" name="Check for existence of [approvalCode]">
+          <con:configuration>
+            <path>$['approvalCode']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay" id="f9f24f0d-b11c-4f39-b421-43f9994a0d32">
+    <con:settings/>
+    <con:config>
+      <delay>300000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup" id="78fd8575-74f4-48ef-947c-583f613f662d">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "${DataSourceTranStatLookup#AppID}",\r
+   "last4Digits" : "${DataSourceTranStatLookup#Last4}",\r
+   "lookupFieldValue" : "${ProcessCC#RawRequest#$['user_defined1']}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:assertion type="JsonPath Match" id="abe928fe-6cae-4099-ae72-97afbf540d0e" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ddaaacaf-6f42-44dd-b897-60b822623e7b" name="Match content of [amount]">
+          <con:configuration>
+            <path>$['transactions'][0]['amount']</path>
+            <content>${DataSourceTranStatLookup#VerifyAmount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="707e5ffc-bad1-408d-8135-c500b04d9d19" name="Match content of [paymentID]">
+          <con:configuration>
+            <path>$['transactions'][0]['paymentID']</path>
+            <content>${ProcessCC#Response#$['transactionID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="cebf26cf-eb1a-495c-9ed3-b0766e2a1e6c" name="Match content of [paymentDate]">
+          <con:configuration>
+            <path>$['transactions'][0]['paymentDate']</path>
+            <content>${DataGenRandomNumber#TodaysDate}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="3d572299-abfa-4df8-9017-26f268db081f" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>No Error</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="6f12005c-9ec2-4088-9626-8797c0596e1c" name="Match content of [recordCount]">
+          <con:configuration>
+            <path>$['recordCount']</path>
+            <content>1</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="59f5f456-884a-44db-b211-701842bc86e5" name="Match content of [paymentMethodCount]">
+          <con:configuration>
+            <path>$['paymentMethodCount']</path>
+            <content>1</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="23e9caec-4756-4357-9e80-c2c5f94fc2f4">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceTranStatLookup</dataSourceStep>
+      <targetStep>ProcessCC</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>7b417d7f-bd44-41ef-8f20-c484ea3afce3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b9a95540-2a7c-412c-b977-ffd59cdecd86</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>78fd8575-74f4-48ef-947c-583f613f662d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f9f24f0d-b11c-4f39-b421-43f9994a0d32</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

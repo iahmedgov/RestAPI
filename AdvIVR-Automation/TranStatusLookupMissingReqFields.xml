@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e6de447b-a319-4303-a723-afb00a55da1f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TranStatusLookupMissingReqFields" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e6de447b-a319-4303-a723-afb00a55da1ffileName">TranStatusLookupMissingReqFields</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceTSL" id="a51284d5-9d9d-4848-97be-6ee72192a36f">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/TransactionStatusLookup.xlsx</file>
+          <worksheet>Sheet2</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Notes</con:property>
+      <con:property>AppID</con:property>
+      <con:property>Last4</con:property>
+      <con:property>LookupFieldValue</con:property>
+      <con:property>ErrorCode</con:property>
+      <con:property>ErrorMessage</con:property>
+      <con:property>RecordCount</con:property>
+      <con:property>PMCount</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of TransactionStatusLookup" id="cc1203ce-b241-4e65-96f6-1d5e777dc219">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of TransactionStatusLookup" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "${DataSourceTSL#AppID}",\r
+   "last4Digits" : "${DataSourceTSL#Last4}",\r
+   "lookupFieldValue" : "${DataSourceTSL#LookupFieldValue}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:assertion type="JsonPath Existence Match" id="b3cbdd49-1d6b-4c3d-bdc1-c821ef4facf9" name="Check for existence of [transactions]">
+          <con:configuration>
+            <path>$['transactions']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="6e4b9655-a704-43d6-928c-a44bcd4d8237" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>${DataSourceTSL#ErrorCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e8ba08ac-bd53-457f-8673-27f0f912b696" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>${DataSourceTSL#ErrorMessage}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="364552bd-bcd1-47c6-8d80-31fc4988a5b5" name="Match content of [recordCount]">
+          <con:configuration>
+            <path>$['recordCount']</path>
+            <content>${DataSourceTSL#RecordCount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="64f4ebb6-a786-47f4-b068-4969914a5df8" name="Match content of [paymentMethodCount]">
+          <con:configuration>
+            <path>$['paymentMethodCount']</path>
+            <content>${DataSourceTSL#PMCount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="7dcc5657-af35-47bb-b9f4-d2963193f9f7">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceTSL</dataSourceStep>
+      <targetStep>Copy of TransactionStatusLookup</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>a51284d5-9d9d-4848-97be-6ee72192a36f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

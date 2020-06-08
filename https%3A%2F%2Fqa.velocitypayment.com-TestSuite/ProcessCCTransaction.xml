@@ -15,12 +15,12 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "card_address" : "2311 york road",\r
-   "amount" : "10.50",\r
+   "amount" : "20.50",\r
    "card_name" : "imtiaz ahmed",\r
    "card_city" : "",\r
    "card_zip" : "22201",\r
    "email" : "",\r
-   "card_number" : "4111111111111111",\r
+   "card_number" : "5424000000000015",\r
    "card_state" : "",\r
    "transaction_type" : "104",\r
    "message_version" : "2.0IVR_C",\r
@@ -29,12 +29,12 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "609",\r
-   "remittance_id" : "testIVR07152019148",\r
+   "remittance_id" : "testIVR06022020142",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2023",\r
    "username" : "username",\r
    "password" : "password",\r
-   "user_defined1" : "udf1 data",\r
+   "user_defined1" : "222223333344444",\r
    "user_defined2" : "udf2 data",\r
    "user_defined3" : "udf3 data",\r
    "user_defined4" : "udf4 data",\r
@@ -183,38 +183,38 @@
           <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
         </con:settings>
         <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
-        <con:request>{
-   "card_address": "2311 york road",
-   "amount": "50.00",
-   "card_name": "imtiaz ahmed",
-   "card_city": "",
-   "card_zip": "22201",
-   "email": "",
-   "card_number": "4111111111111111",
-   "card_state": "",
-   "transaction_type": "104",
-   "message_version": "2.0IVR_C",
-   "category": "MOTO",
-   "requestSource": "",
-   "response_format": "fixed_width",
-   "card_expiration": "",
-   "application_id": "18",
-   "remittance_id": "testIVR09262017192",
-   "card_exmo": "01",
-   "card_exyr": "2020",
-   "username": "username",
-   "password": "password",
-   "user_defined1": "udf1 data",
-   "user_defined2": "udf2 data",
-   "user_defined3": "udf3 data",
-   "user_defined4": "udf4 data",
-   "user_defined5": "udf5 data",
-   "user_defined6": "udf6 data",
-   "user_defined7": "udf7 data",
-   "user_defined8": "udf8 data",
-   "user_defined9": "udf9 data",
-   "user_defined10": "udf10 data",
-   "client_account_number": "1564945"
+        <con:request>{\r
+   "card_address" : "2311 york road",\r
+   "amount" : "11.50",\r
+   "card_name" : "imtiaz ahmed",\r
+   "card_city" : "",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "2325",\r
+   "remittance_id" : "testIVR09262017195",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2025",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "user_defined1" : "111112222233333",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "1564945"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
         <con:credentials>
@@ -281,6 +281,177 @@
           <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy2 of ProcessCC" id="af4f2f63-bca0-47a5-a5a3-c3f7a31de692">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy2 of ProcessCC" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "2311 york road",\r
+   "amount" : "10.50",\r
+   "card_name" : "imtiaz ahmed",\r
+   "card_city" : "",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "609",\r
+   "remittance_id" : "testIVR06022020102",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "user_defined1" : "My Data 1",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "1564946"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCC-Demo-3811" id="6e0eba9f-9b60-460f-9eff-11a50acd21b8">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCC-Demo-3811" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "2311 york road",\r
+   "amount" : "20.50",\r
+   "card_name" : "imtiaz ahmed",\r
+   "card_city" : "",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "5424000000000015",\r
+   "card_state" : "",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "3811",\r
+   "remittance_id" : "DemoIVR06022020101",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "mvatrrivr",\r
+   "password" : "T3rr@p!n$",\r
+   "user_defined1" : "987654",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "1564946"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCC-Demo-3802" id="6c252033-0e04-419a-9797-b497ad175e47">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCC-Demo-3802" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "2311 york road",\r
+   "amount" : "20.50",\r
+   "card_name" : "imtiaz ahmed",\r
+   "card_city" : "",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "5424000000000015",\r
+   "card_state" : "",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "3802",\r
+   "remittance_id" : "DemoIVR06022020202",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "mdmvaivr",\r
+   "password" : "Gl3nb@rn!3",\r
+   "user_defined1" : "987654",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "1564946"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:parameters/>
       </con:restRequest>
     </con:config>
