@@ -15,14 +15,14 @@
         <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{
     "header":{
-        "applicationID":"18",
-        "callerID":"7038945013",
-        "clientAccountNumber":"8945013",
-        "amount":"12.50",
-        "remittanceID":"test10252015013",
-        "customerID":"2",
-        "lang":"en_US",    
-        "callSessionID":"5013"
+        "applicationID":18,
+        "callerID":7038949002,
+        "clientAccountNumber":"20200504090687579002",
+        "amount":"200.00",
+        "remittanceID":"92329859002",
+        "customerID":2,
+        "language":"en_US",    
+        "callSessionID":9012
     },
     "customerInformation": {
         "firstName":"Imtiaz",

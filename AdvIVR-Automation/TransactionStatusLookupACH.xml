@@ -70,6 +70,7 @@ return sdf.format(new Date())</script>
       <con:property>UDF9</con:property>
       <con:property>UDF10</con:property>
       <con:property>Last4</con:property>
+      <con:property>VerifyAmount</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -207,6 +208,96 @@ return sdf.format(new Date())</script>
    "lookupFieldValue" : "${Copy of ProcessACH#RawRequest#$['user_defined1']}"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:assertion type="JsonPath Match" id="6edec835-9e0e-4318-a31f-4470679a5a39" name="Match content of [amount]">
+          <con:configuration>
+            <path>$['transactions'][0]['amount']</path>
+            <content>${DataSourceTranStsatLookACH#VerifyAmount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="614c9b1a-d5bc-40e5-a01a-cf1cdee4857e" name="Match content of [paymentID]">
+          <con:configuration>
+            <path>$['transactions'][0]['paymentID']</path>
+            <content>${Copy of ProcessACH#Response#$['transactionID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="75b05c63-4c61-41a9-98ef-ff6391e43af4" name="Match content of [paymentDate]">
+          <con:configuration>
+            <path>$['transactions'][0]['paymentDate']</path>
+            <content>${Copy of DataGenRandomNumber#TodaysDate}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="763b8b5f-b76d-4582-af76-62f55ff914b0" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="00b12e73-b6d8-4272-a44b-d0e8dacc3242" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>No Error</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b91b0231-eaad-4e95-b8bc-817f111637f0" name="Match content of [recordCount]">
+          <con:configuration>
+            <path>$['recordCount']</path>
+            <content>1</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="896c4db1-3940-4135-83f5-d5f139c01713" name="Match content of [paymentMethodCount]">
+          <con:configuration>
+            <path>$['paymentMethodCount']</path>
+            <content>1</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b442704c-a247-4d9a-bd1a-c1cfc88c9163" name="Match content of [amount]">
+          <con:configuration>
+            <path>$['amount']</path>
+            <content>${DataSourceTranStsatLookACH#VerifyAmount}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="da74dcbd-10f4-49d5-b55f-c9fe9e6a7d85" name="Match content of [paymentID]">
+          <con:configuration>
+            <path>$['paymentID']</path>
+            <content>${Copy of ProcessACH#Response#$['transactionID']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="4d362f59-7b32-4917-8270-59aa283e5a85" name="Match content of [paymentDate]">
+          <con:configuration>
+            <path>$['paymentDate']</path>
+            <content>${Copy of DataGenRandomNumber#TodaysDate}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

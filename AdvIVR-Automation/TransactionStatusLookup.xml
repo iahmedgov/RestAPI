@@ -29,6 +29,19 @@ return sdf.format(new Date())</script>
         <con:mode>READ</con:mode>
         <con:shared>false</con:shared>
       </con:property>
+      <con:property type="Number">
+        <con:configuration>
+          <start>01000</start>
+          <end>99999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>ZIP</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSourceTranStatLookup" id="7b417d7f-bd44-41ef-8f20-c484ea3afce3">

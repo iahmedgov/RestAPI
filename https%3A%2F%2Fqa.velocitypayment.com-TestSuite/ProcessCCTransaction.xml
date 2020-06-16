@@ -18,7 +18,7 @@
    "amount" : "20.50",\r
    "card_name" : "imtiaz ahmed",\r
    "card_city" : "",\r
-   "card_zip" : "22201",\r
+   "card_zip" : "10858",\r
    "email" : "",\r
    "card_number" : "5424000000000015",\r
    "card_state" : "",\r
@@ -29,7 +29,7 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "609",\r
-   "remittance_id" : "testIVR06022020142",\r
+   "remittance_id" : "testIVR06022020146",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2023",\r
    "username" : "username",\r

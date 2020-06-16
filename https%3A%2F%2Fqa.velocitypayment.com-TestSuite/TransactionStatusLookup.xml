@@ -107,11 +107,35 @@
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "applicationID" : "4108",\r
-   "last4Digits" : "2898",\r
-   "lookupFieldValue" : "20904"\r
+   "last4Digits" : "6255",\r
+   "lookupFieldValue" : "21042"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TransactionStatusLookup-Demo-3751" id="638f6178-b48d-4d77-8dbd-304260987c7f">
+    <con:settings/>
+    <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="TransactionStatusLookup-Demo-3751" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{
+  "applicationID": "3751",
+  "last4Digits": "1111",
+  "lookupFieldValue": "21061"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
         <con:credentials>

@@ -13,26 +13,29 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://www.velocitypayment.com</con:endpoint>
-        <con:request>{  "header": {   
-	"clientAccountNumber": "1235511106",   
-	"applicationID": "18",   
-	"customerID": "2"  },
-"paymentMethod": {   
-	"paymentMethodType": "1",   
-	"pan": "6011000000000004",   
-	"card_expiration": "102021",   
-	"card_exmo": "10",   
-	"card_exyr": "2021"  },
-"customerInformation": {   
-	"firstName": "Fred",   
-	"lastName": "Smith",   
-	"companyName": "ABC Company",   
-	"addressLine1": "123 Main St",   
-	"city": "Arlington",   
-	"state": "VA",   
-	"zip": "22201",   
-	"country": "840"  
-}
+        <con:request>{\r
+   "header" : {\r
+      "clientAccountNumber" : "1235511107",\r
+      "applicationID" : "18",\r
+      "customerID" : "2"\r
+   },\r
+   "paymentMethod" : {\r
+      "paymentMethodType" : "1",\r
+      "pan" : "6011000000000005",\r
+      "card_expiration" : "102021",\r
+      "card_exmo" : "10",\r
+      "card_exyr" : "2021"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "Fred",\r
+      "lastName" : "Smith",\r
+      "companyName" : "ABC Company",\r
+      "addressLine1" : "123 Main St",\r
+      "city" : "Arlington",\r
+      "state" : "VA",\r
+      "zip" : "22201",\r
+      "country" : "840"\r
+   }\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/createCCStoredPayment</con:originalUri>
         <con:credentials>

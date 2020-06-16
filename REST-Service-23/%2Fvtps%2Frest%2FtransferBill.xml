@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/vtps/rest/transferBill" path="/vtps/rest/transferBill" id="ac6e00a7-3056-4198-8ae0-26cad3c0b220" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/vtps/rest/transferBill" path="/vtps/rest/transferBill" id="ac6e00a7-3056-4198-8ae0-26cad3c0b220" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ac6e00a7-3056-4198-8ae0-26cad3c0b220fileName">%2Fvtps%2Frest%2FtransferBill</con:setting>
   </con:settings>
@@ -26,6 +26,10 @@
     <con:request name="POST Request" id="6bf30bc8-d0bb-4ac0-a0ba-2dbabfd6962c" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
