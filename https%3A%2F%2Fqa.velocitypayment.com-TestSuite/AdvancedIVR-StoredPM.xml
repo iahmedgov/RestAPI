@@ -14,20 +14,20 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "header" : {\r
-      "clientAccountNumber" : "1235511105",\r
+      "clientAccountNumber" : "1235511183",\r
       "applicationID" : "609",\r
       "customerID" : "195"\r
    },\r
    "paymentMethod" : {\r
       "paymentMethodType" : "1",\r
-      "pan" : "6011000000000005",\r
+      "pan" : "4922222222222223",\r
       "card_expiration" : "102021",\r
       "card_exmo" : "10",\r
       "card_exyr" : "2021"\r
    },\r
    "customerInformation" : {\r
-      "firstName" : "Fred",\r
-      "lastName" : "Smith",\r
+      "firstName" : "Kiran",\r
+      "lastName" : "More",\r
       "companyName" : "ABC Company",\r
       "addressLine1" : "123 Main St",\r
       "city" : "Arlington",\r
@@ -55,26 +55,27 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{  "header": {   
-		"clientAccountNumber": "77777",   
-		"applicationID": "609",   
-		"customerID": "195"  
-	},  
-	"paymentMethod": {   
-		"paymentMethodType": "2",   
-		"accountNumber": "12341103",   
-		"routingNumber": "256072691"  
-		},  
-	"customerInformation": {   
-		"firstName": "Stephanie",   
-		"lastName": "Payer",   
-		"companyName": "JKL Company",   
-		"addressLine1": "130 Main Street",   
-		"city": "Arlington",   
-		"state": "VA",   
-		"zip": "22201",   
-		"country": "840"  
-		} 
+        <con:request>{\r
+   "header" : {\r
+      "clientAccountNumber" : "1235511183",\r
+      "applicationID" : "609",\r
+      "customerID" : "195"\r
+   },\r
+   "paymentMethod" : {\r
+      "paymentMethodType" : "4",\r
+      "accountNumber" : "12341332",\r
+      "routingNumber" : "256072691"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "Kiran",\r
+      "lastName" : "More",\r
+      "companyName" : "ABC Company",\r
+      "addressLine1" : "123 Main Street",\r
+      "city" : "Arlington",\r
+      "state" : "VA",\r
+      "zip" : "22201",\r
+      "country" : "840"\r
+   }\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/createACHStoredPayment</con:originalUri>
         <con:credentials>
@@ -96,7 +97,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "33333", 
+"clientAccountNumber": "1235511183", 
 "customerID": "195" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>

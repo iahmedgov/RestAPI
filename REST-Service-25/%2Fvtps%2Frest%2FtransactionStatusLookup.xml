@@ -19,9 +19,15 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>text/html; charset=UTF-8</con:mediaType>
-      <con:status>503 401</con:status>
+      <con:status>503 401 500</con:status>
       <con:params/>
       <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
     </con:representation>
     <con:request name="POST Request" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json">
       <con:settings/>

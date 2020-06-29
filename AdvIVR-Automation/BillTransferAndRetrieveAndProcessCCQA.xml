@@ -15,7 +15,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>6805426590.0000000000000000000000000000000000000000000000000000</current>
+          <current>2726191115.00000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>Random Number</con:name>
         <con:mode>READ</con:mode>
@@ -554,7 +554,7 @@ def fullname = fname + " " + lname</script>
         <con:assertion type="JsonPath Match" id="face53f5-1800-4dd7-8820-4cfe3d17fd2c" name="Match content of [responseCode]">
           <con:configuration>
             <path>$['responseCode']</path>
-            <content>0</content>
+            <content>${DataSourceTranRetProCC#RespCode}</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>

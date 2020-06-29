@@ -95,9 +95,9 @@
    "user_defined8": "udf8",
    "user_defined9": "udf9",
    "user_defined10": "udf10",
-   "client_account_number": "333333"
+   "client_account_number": "333333",
       "parcel":"333333~34567~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$77.00|333333~34567~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00",
-	"paidBillID":"68459486020000003|68459486020000004",
+	"paidBillID":"68459486020000003|68459486020000004"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
         <con:credentials>

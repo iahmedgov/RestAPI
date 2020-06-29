@@ -14,8 +14,8 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{
   "applicationID": "609",
-  "last4Digits": "0015",
-  "lookupFieldValue": "22201"
+  "last4Digits": "4444",
+  "lookupFieldValue": "03106100"
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transactionStatusLookup</con:originalUri>
         <con:credentials>

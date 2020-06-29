@@ -16,7 +16,7 @@
    "amount" : "21.00",\r
    "check_address" : "2311 york road",\r
    "check_city" : "Arlington",\r
-   "check_zip" : "22201",\r
+   "check_zip" : "03106",\r
    "check_account" : "44444444",\r
    "check_company" : "",\r
    "routing_number" : "256072691",\r
@@ -31,12 +31,12 @@
    "account_type" : "1",\r
    "response_format" : "fixed_width",\r
    "application_id" : "609",\r
-   "remittance_id" : "testivrach124",\r
+   "remittance_id" : "testivrach125",\r
    "username" : "username",\r
    "password" : "password",\r
    "check_type" : "P",\r
    "standard_entry_class" : "TEL",\r
-   "user_defined1" : "2583200",\r
+   "user_defined1" : "03106100",\r
    "user_defined2" : "udf2",\r
    "user_defined3" : "udf3",\r
    "user_defined4" : "udf4",\r

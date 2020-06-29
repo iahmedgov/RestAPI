@@ -25,6 +25,7 @@ REST-Service-22\%2Fvtps%2Frest%2FpayBills.xml
 REST-Service-23\%2Fvtps%2Frest%2FtransferBill.xml
 REST-Service-24\%2Fvtps%2Frest%2FretrieveBill.xml
 REST-Service-25\%2Fvtps%2Frest%2FtransactionStatusLookup.xml
+REST-Service-26\%2Fvtps%2Frest%2FretrieveStoredPayment.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillLookup.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\ParseMoney.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\BillDueDateValidation.xml
@@ -63,3 +64,4 @@ AdvIVR-Automation\BillTransferAndRetrieveAndProcessACHQA.xml
 AdvIVR-Automation\TransactionStatusLookup.xml
 AdvIVR-Automation\TranStatusLookupMissingReqFields.xml
 AdvIVR-Automation\TransactionStatusLookupACH.xml
+AdvIVR-Automation\MultipleRetrieveStoredPM.xml
