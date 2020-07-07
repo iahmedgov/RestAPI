@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="9ae7180c-25e7-4101-9623-8dc16b679198" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVRMultipleBills" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="da65c971-b94b-4503-be5f-1f718676f76f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVRMultipleBills-Demo3759" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="9ae7180c-25e7-4101-9623-8dc16b679198fileName">AdvancedIVRMultipleBills</con:setting>
+    <con:setting id="da65c971-b94b-4503-be5f-1f718676f76ffileName">AdvancedIVRMultipleBills-Demo3759</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="SearchBills" id="f1864581-c68d-4604-a7e4-bbad6ede44d9">
+  <con:testStep type="restrequest" name="SearchBills" id="b25a74db-6862-4220-8727-4b324c0a7973">
     <con:settings/>
     <con:config service="REST Service 21" resourcePath="/vtps/rest/searchBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="SearchBills" id="dcc5ac3a-7f8c-48f9-aa61-f2dd16c3b8c6" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
         <con:request>{
-          "applicationID":"684",
-          "customerID":"195",
-          "clientAccountNumber":"666666"
+          "applicationID":"3759",
+          "customerID":"1437",
+          "clientAccountNumber":"001174007"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/searchBills</con:originalUri>
         <con:credentials>
@@ -28,18 +28,18 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="PayBills" id="5b8d982b-852f-4349-a967-a62c87418855">
+  <con:testStep type="restrequest" name="PayBills" id="510b3643-db71-4bfa-94f9-8ebdf157e089">
     <con:settings/>
     <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="PayBills" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
         <con:request>{
-          "applicationID":"684",
-          "customerID":"195",
-          "clientAccountNumber":"333333",
+          "applicationID":"3759",
+          "customerID":"1437",
+          "clientAccountNumber":"001174007",
           "billPayOption":"All"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
@@ -53,19 +53,19 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessACHMultiBills" id="687d9e03-f328-4351-9e07-ea13a525c467">
+  <con:testStep type="restrequest" name="ProcessACHMultiBills" id="2803479a-021f-4f25-a20f-c3c75cdfda1e">
     <con:settings/>
     <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessACHMultiBills" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
         <con:request>{\r
-   "amount" : "177.00",\r
-   "check_address" : "127 Main Street",\r
-   "check_city" : "Arlington",\r
-   "check_zip" : "22201",\r
+   "amount" : "50.72",\r
+   "check_address" : "Address1",\r
+   "check_city" : "City",\r
+   "check_zip" : "99999",\r
    "check_account" : "11111111",\r
    "check_company" : "",\r
    "routing_number" : "256072691",\r
@@ -73,16 +73,16 @@
    "message_version" : "2.0IVR_A",\r
    "category" : "TEL",\r
    "requestSource" : "",\r
-   "check_first_name" : "John",\r
-   "check_last_name" : "Doe",\r
-   "check_state" : "VA",\r
+   "check_first_name" : "FirstName",\r
+   "check_last_name" : "LastName",\r
+   "check_state" : "NV",\r
    "email" : "",\r
    "account_type" : "1",\r
    "response_format" : "fixed_width",\r
-   "application_id" : "684",\r
-   "remittance_id" : "I6843136",\r
-   "username" : "multibill",\r
-   "password" : "Mu!t!b!ll",\r
+   "application_id" : "3759",\r
+   "remittance_id" : "I6843137",\r
+   "username" : "elkoco",\r
+   "password" : "velocity@2020",\r
    "check_type" : "P",\r
    "standard_entry_class" : "TEL",\r
    "user_defined1" : "udf1",\r
@@ -95,9 +95,9 @@
    "user_defined8" : "udf8",\r
    "user_defined9" : "udf9",\r
    "user_defined10" : "udf10",\r
-   "client_account_number" : "333333",\r
-   "parcel" : "333333~34567~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$77.00|333333~34567~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00",\r
-   "paidBillID" : "68459486020000003|68459486020000004"\r
+   "client_account_number" : "001174007",\r
+   "parcel" : "001174007~RE~2017~001174007~119.72~4.79~124.51~1~10/02/2017~$124.51|001174007~RE~2018~001174007~122.48~4.90~127.38~1~10/01/2018~$127.38|001174007~RE~2019~001174007~123.59~4.94~128.53~1~09/30/2019~$128.53|001174007~RE~2017~001174007~119.72~11.97~131.69~2~10/02/2017~$131.69|001174007~RE~2018~001174007~122.43~12.25~134.68~2~10/01/2018~$134.68|001174007~RE~2019~001174007~123.57~12.36~135.93~2~09/30/2019~$135.93|001174007~RE~2017~001174007~119.72~21.55~141.27~3~10/02/2017~$141.27|001174007~RE~2018~001174007~122.43~22.04~144.47~3~10/01/2018~$144.47|001174007~RE~2019~001174007~123.57~22.24~145.81~3~09/30/2019~$145.81|001174007~RE~2019~001174007~137.47~42.84~180.31~4~09/30/2019~$180.31|001174007~RE~2018~001174007~122.43~98.40~220.83~4~10/01/2018~$220.83|001174007~RE~2017~001174007~119.72~144.26~263.98~4~10/02/2017~$263.98",\r
+   "paidBillID" : ""\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
         <con:credentials>
@@ -113,36 +113,36 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="ProcessCCMultiBills" id="b25ee235-3888-47e2-b5b1-5a776e13e5e8">
+  <con:testStep type="restrequest" name="ProcessCCMultiBills" id="4af00b0f-8ba8-4d8d-9cd8-211cc459eb25">
     <con:settings/>
     <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="ProcessCCMultiBills" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
           <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
         </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
         <con:request>{\r
-   "card_address" : "127 Main Street",\r
-   "amount" : "177.00",\r
-   "card_name" : "John Doe",\r
-   "card_city" : "Arlington",\r
-   "card_zip" : "22201",\r
+   "card_address" : "Address1",\r
+   "amount" : "1879.39",\r
+   "card_name" : "FirstName LastName",\r
+   "card_city" : "City",\r
+   "card_zip" : "99999",\r
    "email" : "",\r
    "card_number" : "4111111111111111",\r
-   "card_state" : "VA",\r
+   "card_state" : "NV",\r
    "transaction_type" : "104",\r
    "message_version" : "2.0IVR_C",\r
    "category" : "MOTO",\r
    "requestSource" : "",\r
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
-   "application_id" : "684",\r
-   "remittance_id" : "I6843135",\r
+   "application_id" : "3759",\r
+   "remittance_id" : "I37594417",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2023",\r
-   "username" : "multibill",\r
-   "password" : "Mu!t!b!ll",\r
+   "username" : "elkoco",\r
+   "password" : "velocity@2020",\r
    "user_defined1" : "udf1 data",\r
    "user_defined2" : "udf2 data",\r
    "user_defined3" : "udf3 data",\r
@@ -153,9 +153,9 @@
    "user_defined8" : "udf8 data",\r
    "user_defined9" : "udf9 data",\r
    "user_defined10" : "udf10 data",\r
-   "client_account_number" : "333333",\r
-   "parcel" : "333333~34567~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$77.00|333333~34567~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00",\r
-   "paidBillID" : "68459486020000003|68459486020000004"\r
+   "client_account_number" : "001174007",\r
+   "parcel" : "001174007~RE~2017~001174007~119.72~4.79~124.51~1~10/02/2017~$124.51|001174007~RE~2018~001174007~122.48~4.90~127.38~1~10/01/2018~$127.38|001174007~RE~2019~001174007~123.59~4.94~128.53~1~09/30/2019~$128.53|001174007~RE~2017~001174007~119.72~11.97~131.69~2~10/02/2017~$131.69|001174007~RE~2018~001174007~122.43~12.25~134.68~2~10/01/2018~$134.68|001174007~RE~2019~001174007~123.57~12.36~135.93~2~09/30/2019~$135.93|001174007~RE~2017~001174007~119.72~21.55~141.27~3~10/02/2017~$141.27|001174007~RE~2018~001174007~122.43~22.04~144.47~3~10/01/2018~$144.47|001174007~RE~2019~001174007~123.57~22.24~145.81~3~09/30/2019~$145.81|001174007~RE~2019~001174007~137.47~42.84~180.31~4~09/30/2019~$180.31|001174007~RE~2018~001174007~122.43~98.40~220.83~4~10/01/2018~$220.83|001174007~RE~2017~001174007~119.72~144.26~263.98~4~10/02/2017~$263.98",\r
+   "paidBillID" : "375905029150001045|375905029150001046|375905029150001047|375905029150001048|375905029150001049|375905029150001050|375905029150001051|375905029150001052|375905029150001053|375905029150001054|375905029150001892|375905029150001893"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
         <con:credentials>
