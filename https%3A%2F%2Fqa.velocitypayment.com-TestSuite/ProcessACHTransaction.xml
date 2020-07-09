@@ -18,7 +18,7 @@
    "check_city" : "Arlington",\r
    "check_zip" : "22201",\r
    "check_account" : "10001111",\r
-   "check_company" : "",\r
+   "check_company" : "Comp",\r
    "routing_number" : "256072691",\r
    "transaction_type" : "200",\r
    "message_version" : "2.0IVR_A",\r
@@ -28,13 +28,13 @@
    "check_last_name" : "ahmed",\r
    "check_state" : "MD",\r
    "email" : "",\r
-   "account_type" : "1",\r
+   "account_type" : "",\r
    "response_format" : "fixed_width",\r
    "application_id" : "609",\r
-   "remittance_id" : "testivrach310",\r
+   "remittance_id" : "testivrach311",\r
    "username" : "username",\r
    "password" : "password",\r
-   "check_type" : "P",\r
+   "check_type" : "C",\r
    "standard_entry_class" : "TEL",\r
    "user_defined1" : "10859159",\r
    "user_defined2" : "udf2",\r
@@ -336,6 +336,124 @@
    "user_defined9" : "udf9",\r
    "user_defined10" : "udf10",\r
    "client_account_number" : "258745896"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello6666</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessACH-Demo-3849" id="779b5df9-d377-462b-bd53-a6b5db1bd1e0">
+    <con:settings/>
+    <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessACH-Demo-3849" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "amount" : "21.00",\r
+   "check_address" : "2311 york road",\r
+   "check_city" : "Manchester",\r
+   "check_zip" : "03104",\r
+   "check_account" : "55550015",\r
+   "check_company" : "",\r
+   "routing_number" : "256072691",\r
+   "transaction_type" : "200",\r
+   "message_version" : "2.0IVR_A",\r
+   "category" : "moto",\r
+   "requestSource" : "",\r
+   "check_first_name" : "imtiaz",\r
+   "check_last_name" : "ahmed",\r
+   "check_state" : "NH",\r
+   "email" : "",\r
+   "account_type" : "1",\r
+   "response_format" : "fixed_width",\r
+   "application_id" : "3849",\r
+   "remittance_id" : "testivrach7720103",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "check_type" : "P",\r
+   "standard_entry_class" : "TEL",\r
+   "user_defined1" : "udf1",\r
+   "user_defined2" : "udf2",\r
+   "user_defined3" : "udf3",\r
+   "user_defined4" : "udf4",\r
+   "user_defined5" : "udf5",\r
+   "user_defined6" : "udf6",\r
+   "user_defined7" : "udf7",\r
+   "user_defined8" : "udf8",\r
+   "user_defined9" : "udf9",\r
+   "user_defined10" : "udf10",\r
+   "client_account_number" : "258745896"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello6666</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of ProcessACH" id="b64ff776-e727-4f1a-9ec2-9d69cd3822f6">
+    <con:settings/>
+    <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of ProcessACH" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "amount" : "100.00",\r
+   "check_address" : "127 Main Street",\r
+   "check_city" : "Arlington",\r
+   "check_zip" : "20832",\r
+   "check_account" : "4222222222",\r
+   "check_company" : "dfsdfsdf",\r
+   "routing_number" : "256072691",\r
+   "transaction_type" : "200",\r
+   "message_version" : "2.0IVR_A",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "check_first_name" : "John",\r
+   "check_last_name" : "Doe",\r
+   "check_state" : "MD",\r
+   "email" : "",\r
+   "account_type" : "",\r
+   "response_format" : "fixed_width",\r
+   "application_id" : "3849",\r
+   "remittance_id" : "pav053338",\r
+   "username" : "username",\r
+   "password" : "password",\r
+   "check_type" : "C",\r
+   "standard_entry_class" : "TEL",\r
+   "user_defined1" : "udf1",\r
+   "user_defined2" : "udf2",\r
+   "user_defined3" : "udf3",\r
+   "user_defined4" : "udf4",\r
+   "user_defined5" : "udf5",\r
+   "user_defined6" : "udf6",\r
+   "user_defined7" : "udf7",\r
+   "user_defined8" : "udf8",\r
+   "user_defined9" : "udf9",\r
+   "user_defined10" : "udf10",\r
+   "client_account_number" : "666666",\r
+   "parcel" : "111111~12345~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$75.00",\r
+   "paidBillID" : "68458280420000001"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
         <con:credentials>

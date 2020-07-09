@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5d566e0a-a511-429f-9a68-ea577af52176" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CallPostback" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5d566e0a-a511-429f-9a68-ea577af52176fileName">CallPostback</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="cd9ea428-592f-42ac-9d64-07657ae0f8de">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "609",\r
+   "customerID" : "195",\r
+   "callerID" : "7038945335",\r
+   "callSessionID" : "5335"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request-Demo" id="223dabdc-8132-498c-a889-42a6f86adcc9">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request-Demo" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "3811",\r
+   "customerID" : "538",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "0210"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of REST Request-Demo" id="e56d384e-5690-4db4-8c74-aa7c1df73eea">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of REST Request-Demo" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://demo.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "3811",\r
+   "customerID" : "538",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "0210"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
