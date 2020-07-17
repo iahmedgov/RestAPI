@@ -14,3 +14,4 @@ TransactionStatusLookup.xml
 TranStatusLookupMissingReqFields.xml
 TransactionStatusLookupACH.xml
 MultipleRetrieveStoredPM.xml
+MultiBillsQA.xml
