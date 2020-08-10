@@ -83,6 +83,32 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="restrequest" name="BillRetrieve-WWW" id="894734b9-fc56-485a-b20b-4fa8bb446603">
+    <con:settings/>
+    <con:config service="REST Service 13" resourcePath="/vtps/rest/retrieveBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillRetrieve-WWW" id="e2bab764-ce1b-42cb-940f-f4011de7f989" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4117",\r
+   "customerID" : "381",\r
+   "callerID" : "2408939844",\r
+   "callGuiID" : "",\r
+   "callSessionID" : "9844"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>

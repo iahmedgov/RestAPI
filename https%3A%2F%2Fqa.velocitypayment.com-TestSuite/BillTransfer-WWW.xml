@@ -169,6 +169,60 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="restrequest" name="BillTransfer-WWW" id="0100c662-9c4d-4e07-845f-76f2da8d7ae5">
+    <con:settings/>
+    <con:config service="REST Service 12" resourcePath="/vtps/rest/transferBill" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="BillTransfer-WWW" id="39aef5b8-4f9c-4ff8-9dae-e5ab8120f4b0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "header" : {\r
+      "applicationID" : "4116",\r
+      "callerID" : "2408939844",\r
+      "clientAccountNumber" : "20200504090687579844",\r
+      "amount" : "1.00",\r
+      "remittanceID" : "92329859844",\r
+      "customerID" : "381",\r
+      "language" : "en_US",\r
+      "callSessionID" : "9844"\r
+   },\r
+   "customerInformation" : {\r
+      "firstName" : "Imtiaz",\r
+      "lastName" : "Ahmed",\r
+      "companyName" : "Moi Company",\r
+      "addressLine1" : "2311 york road",\r
+      "city" : "Arlington",\r
+      "state" : "VA",\r
+      "zip" : "22201",\r
+      "country" : "840"\r
+   },\r
+   "customData" : [\r
+      {\r
+         "id" : "1",\r
+         "value" : "abc111"\r
+      },\r
+      {\r
+         "id" : "2",\r
+         "value" : "abc222"\r
+      }\r
+   ]\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/transferBill</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
