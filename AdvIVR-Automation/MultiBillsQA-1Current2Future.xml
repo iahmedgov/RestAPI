@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f2667a87-ab0b-4e6f-a0c6-b8c408294630" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="b1952a58-727f-45e9-92d6-5a4c7fe09e97" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA-1Current2Future" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="f2667a87-ab0b-4e6f-a0c6-b8c408294630fileName">MultiBillsQA</con:setting>
+    <con:setting id="b1952a58-727f-45e9-92d6-5a4c7fe09e97fileName">MultiBillsQA-1Current2Future</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="Copy of SearchBills" id="dd3ea16b-20e8-405d-8321-651f873bb5eb">
+  <con:testStep type="restrequest" name="Copy of SearchBills" id="c0462078-94a2-4214-9277-4e4f6b3a76f4">
     <con:settings/>
     <con:config service="REST Service 21" resourcePath="/vtps/rest/searchBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Copy of SearchBills" id="dcc5ac3a-7f8c-48f9-aa61-f2dd16c3b8c6" mediaType="application/json" postQueryString="false">
@@ -15,7 +15,7 @@
         <con:request>{
           "applicationID":"684",
           "customerID":"195",
-          "clientAccountNumber":"666666"
+          "clientAccountNumber":"25895820"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/searchBills</con:originalUri>
         <con:assertion type="JsonPath Match" id="787454e9-7c38-4813-89ee-53eb7598c5b9" name="Match content of [applicationId]">
@@ -39,7 +39,7 @@
         <con:assertion type="JsonPath Match" id="2e4de422-12a6-46fd-9c2e-5b973742cb33" name="Match content of [clientAccountNumber]">
           <con:configuration>
             <path>$['clientAccountNumber']</path>
-            <content>"666666"</content>
+            <content>"25895820"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -48,7 +48,7 @@
         <con:assertion type="JsonPath Match" id="e7e2e989-cd5b-4654-8135-0bcebfff9dc2" name="Match content of [numberOverdueBills]">
           <con:configuration>
             <path>$['numberOverdueBills']</path>
-            <content>"3"</content>
+            <content>"0"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -57,7 +57,7 @@
         <con:assertion type="JsonPath Match" id="c7481800-45cf-4a4b-bc27-b233528d74fb" name="Match content of [overdueAmount]">
           <con:configuration>
             <path>$['overdueAmount']</path>
-            <content>"270.0000"</content>
+            <content>"0"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -75,7 +75,7 @@
         <con:assertion type="JsonPath Match" id="00c62121-a52f-43f1-9cfd-e9a0c9c24e1e" name="Match content of [currentAmount]">
           <con:configuration>
             <path>$['currentAmount']</path>
-            <content>"110.0000"</content>
+            <content>"12.5000"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -84,7 +84,7 @@
         <con:assertion type="JsonPath Match" id="0c22ae17-d891-429d-a5a2-02e650bc53be" name="Match content of [currentBillDueDate]">
           <con:configuration>
             <path>$['currentBillDueDate']</path>
-            <content>"2020-09-30"</content>
+            <content>"2020-11-01"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -93,7 +93,7 @@
         <con:assertion type="JsonPath Match" id="f2b1abad-0483-4ae3-a904-4fbcacf4ca2c" name="Match content of [numberTotalBills]">
           <con:configuration>
             <path>$['numberTotalBills']</path>
-            <content>"4"</content>
+            <content>"3"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -102,7 +102,25 @@
         <con:assertion type="JsonPath Match" id="8152872a-ca20-4b67-9a3d-e9081d0f129f" name="Match content of [totalAmount]">
           <con:configuration>
             <path>$['totalAmount']</path>
-            <content>"380.0000"</content>
+            <content>"40.5000"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c8db709b-7ea7-4348-8b85-7757bc97ab47" name="Match content of [numberFutureBills]">
+          <con:configuration>
+            <path>$['numberFutureBills']</path>
+            <content>"2"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="df148b2d-a495-4684-8af4-55ebc07ab0aa" name="Match content of [futureBillAmount]">
+          <con:configuration>
+            <path>$['futureBillAmount']</path>
+            <content>"28.0000"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -145,7 +163,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Copy of PayBillsAll" id="94a64de2-6e41-4c3b-a07b-1d16224b2e9d">
+  <con:testStep type="restrequest" name="Copy of PayBillsAll" id="47167e45-71ed-4662-b9cb-78b878996526">
     <con:settings/>
     <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Copy of PayBillsAll" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
@@ -156,14 +174,14 @@
         <con:request>{
           "applicationID":"684",
           "customerID":"195",
-          "clientAccountNumber":"666666",
+          "clientAccountNumber":"25895820",
           "billPayOption":"All"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
         <con:assertion type="JsonPath Match" id="4a917253-089b-4c6c-9a69-fee3ac5026a1" name="Match content of [numberPaidBills]">
           <con:configuration>
             <path>$['numberPaidBills']</path>
-            <content>"4"</content>
+            <content>"3"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -172,7 +190,7 @@
         <con:assertion type="JsonPath Match" id="87ae6b74-84b4-494d-a28d-68e57214fbfb" name="Match content of [paidBillAmount]">
           <con:configuration>
             <path>$['paidBillAmount']</path>
-            <content>"380.0000"</content>
+            <content>"40.5000"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -190,7 +208,7 @@
         <con:assertion type="JsonPath Match" id="13aa8f41-76e8-4228-a852-4ded990c4302" name="Match content of [firstName]">
           <con:configuration>
             <path>$['firstName']</path>
-            <content>"John"</content>
+            <content>"Kelly"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -199,7 +217,7 @@
         <con:assertion type="JsonPath Match" id="96534a10-45c0-4392-a5aa-c5f702a10367" name="Match content of [lastName]">
           <con:configuration>
             <path>$['lastName']</path>
-            <content>"Tyler"</content>
+            <content>"Honda"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -208,7 +226,7 @@
         <con:assertion type="JsonPath Match" id="4286eb24-d601-48c7-b47b-ef8f2cfd13bb" name="Match content of [billingAddress]">
           <con:configuration>
             <path>$['billingAddress']</path>
-            <content>"85 Main Street"</content>
+            <content>"103 Elm road"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -241,19 +259,37 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Existence Match" id="6d1413f3-64c1-4594-a8dc-259c9f242d24" name="Check for existence of [clientAccountNumber]">
+        <con:assertion type="JsonPath Match" id="a65ccb22-e995-4899-83bd-2383cc6e4891" name="Match content of [clientAccountNumber]">
           <con:configuration>
             <path>$['clientAccountNumber']</path>
-            <content>true</content>
+            <content>null</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Existence Match" id="d904bbbc-fc0c-475b-a7c6-05db86a9c6ed" name="Check for existence of [checkCompany]">
+        <con:assertion type="JsonPath Match" id="38c63217-557b-4120-afcf-ed385c7bfb51" name="Match content of [checkCompany]">
           <con:configuration>
             <path>$['checkCompany']</path>
-            <content>true</content>
+            <content>""</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0c9bc640-b378-45dc-b701-3647f459fc0a" name="Match content of [parcel]">
+          <con:configuration>
+            <path>$['parcel']</path>
+            <content>"25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~11/01/2020~$12.50|25895820~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~02/15/2021~$13.50|25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~07/06/2021~$14.50"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="aafd5ea4-68e6-4e9b-9008-335a53d3498c" name="Match content of [billIDs]">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>"68451332060000070|68451332060000071|68451332060000072"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -286,24 +322,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="0c9bc640-b378-45dc-b701-3647f459fc0a" name="Match content of [parcel]">
-          <con:configuration>
-            <path>$['parcel']</path>
-            <content>"666666~67890~4~2019~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/31/2019~$80.00|666666~67890~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$90.00|666666~67890~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00|666666~67890~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~09/30/2020~$110.00"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="aafd5ea4-68e6-4e9b-9008-335a53d3498c" name="Match content of [billIDs]">
-          <con:configuration>
-            <path>$['billIDs']</path>
-            <content>"68451332060000012|68451332060000013|68451332060000014|68451332060000015"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -314,7 +332,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Copy of PayBillsAllCurrent" id="e2f19ba1-0838-43e7-bcd1-c9641fa0d9f8">
+  <con:testStep type="restrequest" name="Copy of PayBillsAllCurrent" id="73c5b3fa-e436-4aeb-8134-b6ffc2d22423">
     <con:settings/>
     <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Copy of PayBillsAllCurrent" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
@@ -325,7 +343,7 @@
         <con:request>{
           "applicationID":"684",
           "customerID":"195",
-          "clientAccountNumber":"666666",
+          "clientAccountNumber":"25895820",
           "billPayOption":"Current"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
@@ -341,7 +359,7 @@
         <con:assertion type="JsonPath Match" id="b848904d-42df-48b4-8586-2b5613d2ea0e" name="Match content of [paidBillAmount]">
           <con:configuration>
             <path>$['paidBillAmount']</path>
-            <content>"110.0000"</content>
+            <content>"12.5000"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -359,7 +377,7 @@
         <con:assertion type="JsonPath Match" id="afe4d3cf-d5b7-4399-badb-3feb6c16b029" name="Match content of [firstName]">
           <con:configuration>
             <path>$['firstName']</path>
-            <content>"John"</content>
+            <content>"Kelly"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -368,7 +386,7 @@
         <con:assertion type="JsonPath Match" id="ba5372af-fdbf-4f91-8485-35ef9f7df6fd" name="Match content of [lastName]">
           <con:configuration>
             <path>$['lastName']</path>
-            <content>"Tyler"</content>
+            <content>"Honda"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -377,7 +395,7 @@
         <con:assertion type="JsonPath Match" id="5c26d3a9-7c77-4965-94dd-14afee09d494" name="Match content of [billingAddress]">
           <con:configuration>
             <path>$['billingAddress']</path>
-            <content>"85 Main Street"</content>
+            <content>"103 Elm road"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -431,7 +449,7 @@
         <con:assertion type="JsonPath Match" id="443a663f-ff04-4a44-b3c8-814db033b532" name="Match content of [parcel]">
           <con:configuration>
             <path>$['parcel']</path>
-            <content>"666666~67890~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~09/30/2020~$110.00"</content>
+            <content>"25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~11/01/2020~$12.50"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -440,7 +458,7 @@
         <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000015"</content>
+            <content>"68451332060000070"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -483,7 +501,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Copy of PayBillsAllOverDue" id="883fcecb-436b-4cd3-abc3-d456c5d22e83">
+  <con:testStep type="restrequest" name="Copy of PayBillsAllOverDue" id="8fe49844-5e8a-46cd-8d16-2765ec14c69c">
     <con:settings/>
     <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Copy of PayBillsAllOverDue" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
@@ -494,14 +512,14 @@
         <con:request>{
           "applicationID":"684",
           "customerID":"195",
-          "clientAccountNumber":"666666",
+          "clientAccountNumber":"25895820",
           "billPayOption":"OverDue"
      }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
         <con:assertion type="JsonPath Match" id="e4590e8d-57a0-43bc-8058-01efdcbde77a" name="Match content of [numberPaidBills]">
           <con:configuration>
             <path>$['numberPaidBills']</path>
-            <content>"3"</content>
+            <content>"0"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -510,7 +528,7 @@
         <con:assertion type="JsonPath Match" id="801de4d2-bf78-4117-9394-66b3d65ba449" name="Match content of [paidBillAmount]">
           <con:configuration>
             <path>$['paidBillAmount']</path>
-            <content>"270.0000"</content>
+            <content>"0"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -528,7 +546,7 @@
         <con:assertion type="JsonPath Match" id="e5b2e8a7-9635-46b3-adb2-fd9199ff9c14" name="Match content of [firstName]">
           <con:configuration>
             <path>$['firstName']</path>
-            <content>"John"</content>
+            <content>null</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -537,7 +555,7 @@
         <con:assertion type="JsonPath Match" id="6d0702c4-6e22-4c41-98fb-ef80e6a4b7d3" name="Match content of [lastName]">
           <con:configuration>
             <path>$['lastName']</path>
-            <content>"Tyler"</content>
+            <content>null</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -546,7 +564,176 @@
         <con:assertion type="JsonPath Match" id="c33d148d-2b69-42ff-b4d7-a3f82b92ca0a" name="Match content of [billingAddress]">
           <con:configuration>
             <path>$['billingAddress']</path>
-            <content>"85 Main Street"</content>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="2d8db38f-bad0-4ba5-ba2e-eec56b87edec" name="Match content of [billingCity]">
+          <con:configuration>
+            <path>$['billingCity']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c3285d80-0fe4-4713-825f-9e95e1d46c5f" name="Match content of [billingState]">
+          <con:configuration>
+            <path>$['billingState']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="984ee2a4-dcd7-45b9-9a8d-4248b5c8e0c4" name="Match content of [billingZipCode]">
+          <con:configuration>
+            <path>$['billingZipCode']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="898aa60b-d2f3-45d0-a8bb-e96e78f9f436" name="Match content of [clientAccountNumber]">
+          <con:configuration>
+            <path>$['clientAccountNumber']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="9ff419be-7b84-4ad5-8e9e-22db98bd1c26" name="Match content of [checkCompany]">
+          <con:configuration>
+            <path>$['checkCompany']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="fb2c06ba-0dc3-4f7a-9976-858a026f6645" name="Match content of [parcel]">
+          <con:configuration>
+            <path>$['parcel']</path>
+            <content>""</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="cff2f1ae-b3ae-4121-81db-a277bcce6b62" name="Match content of [billIDs]">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>""</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="bfabae85-bc27-4b1e-8252-920a0861c8dc" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e9ff70ac-5cbf-4ac5-91a5-26f9b649b536" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="55054ddf-9549-4a8b-96cc-e6fd4b4835a5" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of PayBillsAllOverdueCurrent" id="eec625aa-6bd8-4745-bcd6-76cf6b728508">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of PayBillsAllOverdueCurrent" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895820",
+          "billPayOption":"OverDueCurrent"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="JsonPath Match" id="e4590e8d-57a0-43bc-8058-01efdcbde77a" name="Match content of [numberPaidBills]">
+          <con:configuration>
+            <path>$['numberPaidBills']</path>
+            <content>"1"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="801de4d2-bf78-4117-9394-66b3d65ba449" name="Match content of [paidBillAmount]">
+          <con:configuration>
+            <path>$['paidBillAmount']</path>
+            <content>"12.5000"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="82e65d1f-14b3-4c73-8cf0-0f74d708bb14" name="Check for existence of [remittanceID]">
+          <con:configuration>
+            <path>$['remittanceID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e5b2e8a7-9635-46b3-adb2-fd9199ff9c14" name="Match content of [firstName]">
+          <con:configuration>
+            <path>$['firstName']</path>
+            <content>"Kelly"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="6d0702c4-6e22-4c41-98fb-ef80e6a4b7d3" name="Match content of [lastName]">
+          <con:configuration>
+            <path>$['lastName']</path>
+            <content>"Honda"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c33d148d-2b69-42ff-b4d7-a3f82b92ca0a" name="Match content of [billingAddress]">
+          <con:configuration>
+            <path>$['billingAddress']</path>
+            <content>"103 Elm road"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -600,7 +787,7 @@
         <con:assertion type="JsonPath Match" id="fb2c06ba-0dc3-4f7a-9976-858a026f6645" name="Match content of [parcel]">
           <con:configuration>
             <path>$['parcel']</path>
-            <content>"666666~67890~4~2019~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/31/2019~$80.00|666666~67890~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$90.00|666666~67890~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00"</content>
+            <content>"25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~11/01/2020~$12.50"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -609,7 +796,7 @@
         <con:assertion type="JsonPath Match" id="cff2f1ae-b3ae-4121-81db-a277bcce6b62" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000012|68451332060000013|68451332060000014"</content>
+            <content>"68451332060000070"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -634,6 +821,175 @@
           </con:configuration>
         </con:assertion>
         <con:assertion type="JsonPath Match" id="55054ddf-9549-4a8b-96cc-e6fd4b4835a5" name="Match content of [errorMessage]">
+          <con:configuration>
+            <path>$['errorMessage']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of PayBillsAllCurrentFuture" id="ce454c31-a313-4965-ba87-8416842221bb">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of PayBillsAllCurrentFuture" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895820",
+          "billPayOption":"CurrentFuture"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="JsonPath Match" id="44e33849-6d8c-43ce-b8e7-2555aa075ffe" name="Match content of [numberPaidBills]">
+          <con:configuration>
+            <path>$['numberPaidBills']</path>
+            <content>"3"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="b848904d-42df-48b4-8586-2b5613d2ea0e" name="Match content of [paidBillAmount]">
+          <con:configuration>
+            <path>$['paidBillAmount']</path>
+            <content>"40.5000"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="4106a1a4-a5a4-44d0-8e74-f91839cf2a8d" name="Check for existence of [remittanceID]">
+          <con:configuration>
+            <path>$['remittanceID']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="afe4d3cf-d5b7-4399-badb-3feb6c16b029" name="Match content of [firstName]">
+          <con:configuration>
+            <path>$['firstName']</path>
+            <content>"Kelly"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ba5372af-fdbf-4f91-8485-35ef9f7df6fd" name="Match content of [lastName]">
+          <con:configuration>
+            <path>$['lastName']</path>
+            <content>"Honda"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="5c26d3a9-7c77-4965-94dd-14afee09d494" name="Match content of [billingAddress]">
+          <con:configuration>
+            <path>$['billingAddress']</path>
+            <content>"103 Elm road"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="66fe3e0d-c763-4749-8109-05c288a1f3f4" name="Match content of [billingCity]">
+          <con:configuration>
+            <path>$['billingCity']</path>
+            <content>"Arlington"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="615d43ef-aa5e-4dc5-8c00-fa33bf3c130e" name="Match content of [billingState]">
+          <con:configuration>
+            <path>$['billingState']</path>
+            <content>"VA"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="f725547f-269f-4b7a-b87f-a953d9e2a9a2" name="Match content of [billingZipCode]">
+          <con:configuration>
+            <path>$['billingZipCode']</path>
+            <content>"22201"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="817b3e7a-2e72-423e-8d85-07b96c5971a8" name="Match content of [clientAccountNumber]">
+          <con:configuration>
+            <path>$['clientAccountNumber']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="084c5cd4-8acb-4fc9-9df8-229a526d48c9" name="Match content of [checkCompany]">
+          <con:configuration>
+            <path>$['checkCompany']</path>
+            <content>""</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="443a663f-ff04-4a44-b3c8-814db033b532" name="Match content of [parcel]">
+          <con:configuration>
+            <path>$['parcel']</path>
+            <content>"25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~11/01/2020~$12.50|25895820~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~02/15/2021~$13.50|25895820~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~07/06/2021~$14.50"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>"68451332060000070|68451332060000071|68451332060000072"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c4256aac-6161-4880-a992-04d4267f36db" name="Match content of [result]">
+          <con:configuration>
+            <path>$['result']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ece6b3b7-91b3-407f-947d-7b4561faaf54" name="Match content of [errorCode]">
+          <con:configuration>
+            <path>$['errorCode']</path>
+            <content>null</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="235bac93-8c48-4882-ba56-f4234e08266d" name="Match content of [errorMessage]">
           <con:configuration>
             <path>$['errorMessage']</path>
             <content>null</content>

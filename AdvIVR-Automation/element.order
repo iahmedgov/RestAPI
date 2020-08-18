@@ -15,3 +15,9 @@ TranStatusLookupMissingReqFields.xml
 TransactionStatusLookupACH.xml
 MultipleRetrieveStoredPM.xml
 MultiBillsQA.xml
+MultiBillsQA-OverDueOnly.xml
+MultiBillsQA-1OverDue1Current.xml
+MultiBillsQA-3OverDue1Current.xml
+MultiBillsQA-1OverDue1Current2Future.xml
+MultiBillsQA-1Current.xml
+MultiBillsQA-1Current2Future.xml

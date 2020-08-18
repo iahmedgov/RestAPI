@@ -68,3 +68,9 @@ AdvIVR-Automation\TranStatusLookupMissingReqFields.xml
 AdvIVR-Automation\TransactionStatusLookupACH.xml
 AdvIVR-Automation\MultipleRetrieveStoredPM.xml
 AdvIVR-Automation\MultiBillsQA.xml
+AdvIVR-Automation\MultiBillsQA-OverDueOnly.xml
+AdvIVR-Automation\MultiBillsQA-1OverDue1Current.xml
+AdvIVR-Automation\MultiBillsQA-3OverDue1Current.xml
+AdvIVR-Automation\MultiBillsQA-1OverDue1Current2Future.xml
+AdvIVR-Automation\MultiBillsQA-1Current.xml
+AdvIVR-Automation\MultiBillsQA-1Current2Future.xml

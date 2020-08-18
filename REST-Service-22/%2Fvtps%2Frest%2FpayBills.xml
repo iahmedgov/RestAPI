@@ -23,6 +23,18 @@
       <con:params/>
       <con:element>data</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+      <con:status>503</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:pay="https://qa.velocitypayment.com/vtps/rest/payBills">pay:Fault</con:element>
+    </con:representation>
     <con:request name="POST Request" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
