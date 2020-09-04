@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b1952a58-727f-45e9-92d6-5a4c7fe09e97" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA-1Current2Future" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="b1952a58-727f-45e9-92d6-5a4c7fe09e97" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA-1Current2Future" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b1952a58-727f-45e9-92d6-5a4c7fe09e97fileName">MultiBillsQA-1Current2Future</con:setting>
   </con:settings>
@@ -289,7 +289,7 @@
         <con:assertion type="JsonPath Match" id="aafd5ea4-68e6-4e9b-9008-335a53d3498c" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000070|68451332060000071|68451332060000072"</content>
+            <content>"68425306230000070|68425306230000071|68425306230000072"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -458,7 +458,7 @@
         <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000070"</content>
+            <content>"68425306230000070"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -796,7 +796,7 @@
         <con:assertion type="JsonPath Match" id="cff2f1ae-b3ae-4121-81db-a277bcce6b62" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000070"</content>
+            <content>"68425306230000070"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -965,7 +965,7 @@
         <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
           <con:configuration>
             <path>$['billIDs']</path>
-            <content>"68451332060000070|68451332060000071|68451332060000072"</content>
+            <content>"68425306230000070|68425306230000071|68425306230000072"</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>

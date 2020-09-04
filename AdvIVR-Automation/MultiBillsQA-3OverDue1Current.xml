@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="50ca1d59-e902-465e-9ddc-cb163e78fffe" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA-3OverDue1Current" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="50ca1d59-e902-465e-9ddc-cb163e78fffe" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="MultiBillsQA-3OverDue1Current" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="50ca1d59-e902-465e-9ddc-cb163e78fffefileName">MultiBillsQA-3OverDue1Current</con:setting>
   </con:settings>
