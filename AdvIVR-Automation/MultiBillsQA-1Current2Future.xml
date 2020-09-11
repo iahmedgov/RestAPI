@@ -286,15 +286,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="aafd5ea4-68e6-4e9b-9008-335a53d3498c" name="Match content of [billIDs]">
-          <con:configuration>
-            <path>$['billIDs']</path>
-            <content>"68425306230000070|68425306230000071|68425306230000072"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="JsonPath Match" id="b69e67c6-ee25-4f57-868f-5e345d6f4a80" name="Match content of [result]">
           <con:configuration>
             <path>$['result']</path>
@@ -320,6 +311,16 @@
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="ba8644ce-3860-4faa-b4f5-522bfaf2d74c" name="Match content of [billIDs] using RegEx">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>684.*.0070|684.*.0071|684.*.0072</regEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -455,15 +456,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
-          <con:configuration>
-            <path>$['billIDs']</path>
-            <content>"68425306230000070"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="JsonPath Match" id="c4256aac-6161-4880-a992-04d4267f36db" name="Match content of [result]">
           <con:configuration>
             <path>$['result']</path>
@@ -489,6 +481,16 @@
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="36bee790-d3ef-4655-9d9c-573b6bc2a25e" name="Match content of [billIDs] using RegEx">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>684.*.0070</regEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -793,15 +795,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="cff2f1ae-b3ae-4121-81db-a277bcce6b62" name="Match content of [billIDs]">
-          <con:configuration>
-            <path>$['billIDs']</path>
-            <content>"68425306230000070"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="JsonPath Match" id="bfabae85-bc27-4b1e-8252-920a0861c8dc" name="Match content of [result]">
           <con:configuration>
             <path>$['result']</path>
@@ -827,6 +820,16 @@
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="210ce78a-8a86-4bfc-8fb8-f72e96f95d7c" name="Match content of [billIDs] using RegEx">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>684.*.0070</regEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -962,15 +965,6 @@
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="JsonPath Match" id="614f39f5-6f9e-4a18-af4e-9fddd7b68d93" name="Match content of [billIDs]">
-          <con:configuration>
-            <path>$['billIDs']</path>
-            <content>"68425306230000070|68425306230000071|68425306230000072"</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="JsonPath Match" id="c4256aac-6161-4880-a992-04d4267f36db" name="Match content of [result]">
           <con:configuration>
             <path>$['result']</path>
@@ -996,6 +990,16 @@
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath RegEx Match" id="85726389-26cf-493a-bc5e-ef55f93ab227" name="Match content of [billIDs] using RegEx">
+          <con:configuration>
+            <path>$['billIDs']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+            <regEx>684.*.0070|684.*.0071|684.*.0072</regEx>
           </con:configuration>
         </con:assertion>
         <con:credentials>
