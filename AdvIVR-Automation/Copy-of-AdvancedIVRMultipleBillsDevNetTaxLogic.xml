@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a15cac12-098d-4be9-b79a-c5d82b611138" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVRMultipleBillsDevNetTaxLogic" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a15cac12-098d-4be9-b79a-c5d82b611138" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Copy of AdvancedIVRMultipleBillsDevNetTaxLogic" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="a15cac12-098d-4be9-b79a-c5d82b611138fileName">AdvancedIVRMultipleBillsDevNetTaxLogic</con:setting>
+    <con:setting id="a15cac12-098d-4be9-b79a-c5d82b611138fileName">Copy-of-AdvancedIVRMultipleBillsDevNetTaxLogic</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="SearchBills-25895812" id="55d336da-22bf-4002-88ba-ffac27f18b59">
@@ -1146,66 +1146,6 @@
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:parameters/>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="ProcessACHMultiBills" id="aed11029-24bb-4a87-be11-524700ab6c39">
-    <con:settings/>
-    <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="ProcessACHMultiBills" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
-        </con:settings>
-        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{\r
-   "amount" : "177.00",\r
-   "check_address" : "127 Main Street",\r
-   "check_city" : "Arlington",\r
-   "check_zip" : "22201",\r
-   "check_account" : "11111111",\r
-   "check_company" : "",\r
-   "routing_number" : "256072691",\r
-   "transaction_type" : "200",\r
-   "message_version" : "2.0IVR_A",\r
-   "category" : "TEL",\r
-   "requestSource" : "",\r
-   "check_first_name" : "John",\r
-   "check_last_name" : "Doe",\r
-   "check_state" : "VA",\r
-   "email" : "",\r
-   "account_type" : "1",\r
-   "response_format" : "fixed_width",\r
-   "application_id" : "",\r
-   "remittance_id" : "I6843137",\r
-   "username" : "multibill",\r
-   "password" : "Mu!t!b!ll",\r
-   "check_type" : "P",\r
-   "standard_entry_class" : "TEL",\r
-   "user_defined1" : "udf1",\r
-   "user_defined2" : "udf2",\r
-   "user_defined3" : "udf3",\r
-   "user_defined4" : "udf4",\r
-   "user_defined5" : "udf5",\r
-   "user_defined6" : "udf6",\r
-   "user_defined7" : "udf7",\r
-   "user_defined8" : "udf8",\r
-   "user_defined9" : "udf9",\r
-   "user_defined10" : "udf10",\r
-   "client_account_number" : "333333",\r
-   "parcel" : "333333~34567~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$77.00|333333~34567~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00",\r
-   "paidBillID" : "68459486020000003|68459486020000004"\r
-}</con:request>
-        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
-        <con:credentials>
-          <con:username>iahmed</con:username>
-          <con:password>hello6666</con:password>
-          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
-          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
-          <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>

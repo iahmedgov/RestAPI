@@ -1,0 +1,2162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b7af9005-c602-4c64-a1b2-73bb6d0df32f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="AdvancedIVRMultipleBillsDevNetTaxLogic" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a15cac12-098d-4be9-b79a-c5d82b611138fileName">AdvancedIVRMultipleBillsDevNetTaxLogic</con:setting>
+    <con:setting id="b7af9005-c602-4c64-a1b2-73bb6d0df32ffileName">AdvancedIVRMultipleBillsDevNetTaxLogic</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="SearchBills-25895812" id="120b8474-a9ab-4aea-b9d1-ce3f88c304d9">
+    <con:settings/>
+    <con:config service="REST Service 21" resourcePath="/vtps/rest/searchBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="SearchBills-25895812" id="dcc5ac3a-7f8c-48f9-aa61-f2dd16c3b8c6" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/searchBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="4cf96ba7-5118-486e-9d03-836de5edcb06" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:applicationId[1]</con:xpath>
+              <con:element>applicationId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>684</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:customerId[1]</con:xpath>
+              <con:element>customerId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>195</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberOverdueBills[1]</con:xpath>
+              <con:element>numberOverdueBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>1</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:overdueAmount[1]</con:xpath>
+              <con:element>overdueAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12.5000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberCurrentBills[1]</con:xpath>
+              <con:element>numberCurrentBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>1</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentAmount[1]</con:xpath>
+              <con:element>currentAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>13.5000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentBillDueDate[1]</con:xpath>
+              <con:element>currentBillDueDate</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2020-12-15</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberTotalBills[1]</con:xpath>
+              <con:element>numberTotalBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>4</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:totalAmount[1]</con:xpath>
+              <con:element>totalAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>52.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberFutureBills[1]</con:xpath>
+              <con:element>numberFutureBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:futureBillAmount[1]</con:xpath>
+              <con:element>futureBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>26.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/searchBills">
+   <applicationId>684</applicationId>
+   <customerId>195</customerId>
+   <clientAccountNumber>25895812</clientAccountNumber>
+   <numberOverdueBills>1</numberOverdueBills>
+   <overdueAmount>12.5000</overdueAmount>
+   <numberCurrentBills>1</numberCurrentBills>
+   <currentAmount>13.5000</currentAmount>
+   <currentBillDueDate>2020-12-15</currentBillDueDate>
+   <numberTotalBills>4</numberTotalBills>
+   <totalAmount>52.0000</totalAmount>
+   <numberFutureBills>2</numberFutureBills>
+   <futureBillAmount>26.0000</futureBillAmount>
+   <result>0</result>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PayBills-All-25895812" id="e06651b9-7098-4d77-a7af-5460cf8cbd3f">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PayBills-All-25895812" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812",
+          "billPayOption":"All"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="80e67967-04c0-44c2-943d-83feda109d17" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:numberPaidBills[1]</con:xpath>
+              <con:element>numberPaidBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>4</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:paidBillAmount[1]</con:xpath>
+              <con:element>paidBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>52.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843587</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:firstName[1]</con:xpath>
+              <con:element>firstName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Soni</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:lastName[1]</con:xpath>
+              <con:element>lastName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Jones</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingAddress[1]</con:xpath>
+              <con:element>billingAddress</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>201 Elm road</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingCity[1]</con:xpath>
+              <con:element>billingCity</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Arlington</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingState[1]</con:xpath>
+              <con:element>billingState</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>VA</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingZipCode[1]</con:xpath>
+              <con:element>billingZipCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>22201</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:checkCompany[1]</con:xpath>
+              <con:element>checkCompany</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:parcel[1]</con:xpath>
+              <con:element>parcel</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~08/12/2020~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/15/2020~$13.50|25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/01/2021~$13.50</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billIDs[1]</con:xpath>
+              <con:element>billIDs</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>68403200990000054|68403200990000055|68403200990000056|68403200990000057</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/payBills">
+   <numberPaidBills>4</numberPaidBills>
+   <paidBillAmount>52.0000</paidBillAmount>
+   <remittanceID>I6843587</remittanceID>
+   <firstName>Soni</firstName>
+   <lastName>Jones</lastName>
+   <billingAddress>201 Elm road</billingAddress>
+   <billingCity>Arlington</billingCity>
+   <billingState>VA</billingState>
+   <billingZipCode>22201</billingZipCode>
+   <clientAccountNumber null="true"/>
+   <checkCompany/>
+   <parcel>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~08/12/2020~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/15/2020~$13.50|25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/01/2021~$13.50</parcel>
+   <billIDs>68403200990000054|68403200990000055|68403200990000056|68403200990000057</billIDs>
+   <result null="true"/>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PayBills-OverDueCurrent-25895812" id="e7d21efa-2a7c-48a0-b1b0-4adbc091fd0b">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PayBills-OverDueCurrent-25895812" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812",
+          "billPayOption":"OverDueCurrent"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="87633385-c012-4620-927d-544e323a0448" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:numberPaidBills[1]</con:xpath>
+              <con:element>numberPaidBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:paidBillAmount[1]</con:xpath>
+              <con:element>paidBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>26.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843588</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:firstName[1]</con:xpath>
+              <con:element>firstName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Soni</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:lastName[1]</con:xpath>
+              <con:element>lastName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Jones</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingAddress[1]</con:xpath>
+              <con:element>billingAddress</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>201 Elm road</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingCity[1]</con:xpath>
+              <con:element>billingCity</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Arlington</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingState[1]</con:xpath>
+              <con:element>billingState</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>VA</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingZipCode[1]</con:xpath>
+              <con:element>billingZipCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>22201</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:checkCompany[1]</con:xpath>
+              <con:element>checkCompany</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:parcel[1]</con:xpath>
+              <con:element>parcel</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~08/12/2020~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/15/2020~$13.50</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billIDs[1]</con:xpath>
+              <con:element>billIDs</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>68403200990000054|68403200990000055</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/payBills">
+   <numberPaidBills>2</numberPaidBills>
+   <paidBillAmount>26.0000</paidBillAmount>
+   <remittanceID>I6843588</remittanceID>
+   <firstName>Soni</firstName>
+   <lastName>Jones</lastName>
+   <billingAddress>201 Elm road</billingAddress>
+   <billingCity>Arlington</billingCity>
+   <billingState>VA</billingState>
+   <billingZipCode>22201</billingZipCode>
+   <clientAccountNumber null="true"/>
+   <checkCompany/>
+   <parcel>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~08/12/2020~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~12/15/2020~$13.50</parcel>
+   <billIDs>68403200990000054|68403200990000055</billIDs>
+   <result null="true"/>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCCMultiBills-OverDueCurrent-25895812" id="7e08fbbd-4ec2-488d-9ed6-20dc68bcbe5d">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCCMultiBills-OverDueCurrent-25895812" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "201 Elm road",\r
+   "amount" : "26.00",\r
+   "card_name" : "Soni Jones",\r
+   "card_city" : "Arlington",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "VA",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "684",\r
+   "remittance_id" : "${PayBills-OverDueCurrent-25895812#Response#$['remittanceID']}",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "multibill",\r
+   "password" : "Mu!t!b!ll",\r
+   "user_defined1" : "udf1 data",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "25895812",\r
+   "parcel" : "${PayBills-OverDueCurrent-25895812#Response#$['parcel']}",\r
+   "paidBillID" : "${PayBills-OverDueCurrent-25895812#Response#$['billIDs']}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="2791afdb-3767-4464-ae45-4d45dce6fce2" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843588</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:transactionID[1]</con:xpath>
+              <con:element>transactionID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12083467</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCode[1]</con:xpath>
+              <con:element>responseCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCodeMessage[1]</con:xpath>
+              <con:element>responseCodeMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Transaction approved, no errors</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorMessage[1]/ns1:e[1]</con:xpath>
+              <con:element>e</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:approvalCode[1]</con:xpath>
+              <con:element>approvalCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>996647239</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/processCCTransaction">
+   <remittanceID>I6843588</remittanceID>
+   <transactionID>12083467</transactionID>
+   <responseCode>0</responseCode>
+   <responseCodeMessage>Transaction approved, no errors</responseCodeMessage>
+   <errorCode>0</errorCode>
+   <errorMessage>
+      <e/>
+   </errorMessage>
+   <approvalCode>996647239</approvalCode>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="SearchBills-AfterPayment-25895812" id="db51b5a1-4973-452e-a955-e9aef8de7bb8">
+    <con:settings/>
+    <con:config service="REST Service 21" resourcePath="/vtps/rest/searchBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="SearchBills-AfterPayment-25895812" id="dcc5ac3a-7f8c-48f9-aa61-f2dd16c3b8c6" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/searchBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="7d54a475-b11a-433b-a9ce-19e7d7a7d8fa" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:applicationId[1]</con:xpath>
+              <con:element>applicationId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>684</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:customerId[1]</con:xpath>
+              <con:element>customerId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>195</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberOverdueBills[1]</con:xpath>
+              <con:element>numberOverdueBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:overdueAmount[1]</con:xpath>
+              <con:element>overdueAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberCurrentBills[1]</con:xpath>
+              <con:element>numberCurrentBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>1</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentAmount[1]</con:xpath>
+              <con:element>currentAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12.5000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentBillDueDate[1]</con:xpath>
+              <con:element>currentBillDueDate</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2021-03-12</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberTotalBills[1]</con:xpath>
+              <con:element>numberTotalBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:totalAmount[1]</con:xpath>
+              <con:element>totalAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>26.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberFutureBills[1]</con:xpath>
+              <con:element>numberFutureBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>1</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:futureBillAmount[1]</con:xpath>
+              <con:element>futureBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>13.5000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/searchBills">
+   <applicationId>684</applicationId>
+   <customerId>195</customerId>
+   <clientAccountNumber>25895812</clientAccountNumber>
+   <numberOverdueBills>0</numberOverdueBills>
+   <overdueAmount>0</overdueAmount>
+   <numberCurrentBills>1</numberCurrentBills>
+   <currentAmount>12.5000</currentAmount>
+   <currentBillDueDate>2021-03-12</currentBillDueDate>
+   <numberTotalBills>2</numberTotalBills>
+   <totalAmount>26.0000</totalAmount>
+   <numberFutureBills>1</numberFutureBills>
+   <futureBillAmount>13.5000</futureBillAmount>
+   <result>0</result>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessACHMultiBills" id="45db86e3-f1bc-4ee7-b7e2-ba6edcec713e">
+    <con:settings/>
+    <con:config service="REST Service 9" resourcePath="/vtps/rest/processACHTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessACHMultiBills" id="07334b5e-6827-4283-85c1-b66ac8c9bce0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "amount" : "177.00",\r
+   "check_address" : "127 Main Street",\r
+   "check_city" : "Arlington",\r
+   "check_zip" : "22201",\r
+   "check_account" : "11111111",\r
+   "check_company" : "",\r
+   "routing_number" : "256072691",\r
+   "transaction_type" : "200",\r
+   "message_version" : "2.0IVR_A",\r
+   "category" : "TEL",\r
+   "requestSource" : "",\r
+   "check_first_name" : "John",\r
+   "check_last_name" : "Doe",\r
+   "check_state" : "VA",\r
+   "email" : "",\r
+   "account_type" : "1",\r
+   "response_format" : "fixed_width",\r
+   "application_id" : "",\r
+   "remittance_id" : "I6843137",\r
+   "username" : "multibill",\r
+   "password" : "Mu!t!b!ll",\r
+   "check_type" : "P",\r
+   "standard_entry_class" : "TEL",\r
+   "user_defined1" : "udf1",\r
+   "user_defined2" : "udf2",\r
+   "user_defined3" : "udf3",\r
+   "user_defined4" : "udf4",\r
+   "user_defined5" : "udf5",\r
+   "user_defined6" : "udf6",\r
+   "user_defined7" : "udf7",\r
+   "user_defined8" : "udf8",\r
+   "user_defined9" : "udf9",\r
+   "user_defined10" : "udf10",\r
+   "client_account_number" : "333333",\r
+   "parcel" : "333333~34567~1~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/31/2020~$77.00|333333~34567~2~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/30/2020~$100.00",\r
+   "paidBillID" : "68459486020000003|68459486020000004"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processACHTransaction</con:originalUri>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello6666</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PayBills-Current-25895812" id="0c754b09-e2e1-4833-99e2-dfd06558feba">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PayBills-Current-25895812" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812",
+          "billPayOption":"Current"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="558919c5-9b47-4d3b-841c-816b7c132664" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:numberPaidBills[1]</con:xpath>
+              <con:element>numberPaidBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>1</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:paidBillAmount[1]</con:xpath>
+              <con:element>paidBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12.5000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843592</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:firstName[1]</con:xpath>
+              <con:element>firstName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Soni</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:lastName[1]</con:xpath>
+              <con:element>lastName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Jones</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingAddress[1]</con:xpath>
+              <con:element>billingAddress</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>201 Elm road</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingCity[1]</con:xpath>
+              <con:element>billingCity</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Arlington</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingState[1]</con:xpath>
+              <con:element>billingState</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>VA</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingZipCode[1]</con:xpath>
+              <con:element>billingZipCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>22201</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:checkCompany[1]</con:xpath>
+              <con:element>checkCompany</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:parcel[1]</con:xpath>
+              <con:element>parcel</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billIDs[1]</con:xpath>
+              <con:element>billIDs</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>68403200990000056</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/payBills">
+   <numberPaidBills>1</numberPaidBills>
+   <paidBillAmount>12.5000</paidBillAmount>
+   <remittanceID>I6843592</remittanceID>
+   <firstName>Soni</firstName>
+   <lastName>Jones</lastName>
+   <billingAddress>201 Elm road</billingAddress>
+   <billingCity>Arlington</billingCity>
+   <billingState>VA</billingState>
+   <billingZipCode>22201</billingZipCode>
+   <clientAccountNumber null="true"/>
+   <checkCompany/>
+   <parcel>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50</parcel>
+   <billIDs>68403200990000056</billIDs>
+   <result null="true"/>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="PayBills-CurrentFuture-25895812" id="d212cabb-dac7-49ac-bca9-572ef2fe6a81">
+    <con:settings/>
+    <con:config service="REST Service 22" resourcePath="/vtps/rest/payBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PayBills-CurrentFuture-25895812" id="4736f1be-efcb-4656-9e0c-55f122be4966" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812",
+          "billPayOption":"CurrentFuture"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/payBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="c86eb9b1-e07b-4e04-9d6e-3552dc574981" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:numberPaidBills[1]</con:xpath>
+              <con:element>numberPaidBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>2</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:paidBillAmount[1]</con:xpath>
+              <con:element>paidBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>26.0000</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843593</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:firstName[1]</con:xpath>
+              <con:element>firstName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Soni</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:lastName[1]</con:xpath>
+              <con:element>lastName</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Jones</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingAddress[1]</con:xpath>
+              <con:element>billingAddress</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>201 Elm road</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingCity[1]</con:xpath>
+              <con:element>billingCity</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Arlington</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingState[1]</con:xpath>
+              <con:element>billingState</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>VA</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billingZipCode[1]</con:xpath>
+              <con:element>billingZipCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>22201</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:checkCompany[1]</con:xpath>
+              <con:element>checkCompany</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:parcel[1]</con:xpath>
+              <con:element>parcel</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/01/2021~$13.50</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:billIDs[1]</con:xpath>
+              <con:element>billIDs</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>68403200990000056|68403200990000057</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:result[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/payBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/payBills">
+   <numberPaidBills>2</numberPaidBills>
+   <paidBillAmount>26.0000</paidBillAmount>
+   <remittanceID>I6843593</remittanceID>
+   <firstName>Soni</firstName>
+   <lastName>Jones</lastName>
+   <billingAddress>201 Elm road</billingAddress>
+   <billingCity>Arlington</billingCity>
+   <billingState>VA</billingState>
+   <billingZipCode>22201</billingZipCode>
+   <clientAccountNumber null="true"/>
+   <checkCompany/>
+   <parcel>25895812~89012~3~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~03/12/2021~$12.50|25895812~89013~4~2020~Test 4~Test 5~Test 6~Test 7~Test 8~Test 9~Test 10~06/01/2021~$13.50</parcel>
+   <billIDs>68403200990000056|68403200990000057</billIDs>
+   <result null="true"/>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCCMultiBills-CurrentFuture-25895812" id="b50317a2-5ad5-43cc-8be2-b2927ce7ae98">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCCMultiBills-CurrentFuture-25895812" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "201 Elm road",\r
+   "amount" : "26.00",\r
+   "card_name" : "Soni Jones",\r
+   "card_city" : "Arlington",\r
+   "card_zip" : "22201",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "VA",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "684",\r
+   "remittance_id" : "${PayBills-CurrentFuture-25895812#Response#$['remittanceID']}",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "multibill",\r
+   "password" : "Mu!t!b!ll",\r
+   "user_defined1" : "udf1 data",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "25895812",\r
+   "parcel" : "${PayBills-CurrentFuture-25895812#Response#$['parcel']}",\r
+   "paidBillID" : "${PayBills-CurrentFuture-25895812#Response#$['billIDs']}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="72b31b50-9f23-4803-a949-6e22023c098c" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843593</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:transactionID[1]</con:xpath>
+              <con:element>transactionID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12083469</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCode[1]</con:xpath>
+              <con:element>responseCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCodeMessage[1]</con:xpath>
+              <con:element>responseCodeMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Transaction approved, no errors</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorMessage[1]/ns1:e[1]</con:xpath>
+              <con:element>e</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:approvalCode[1]</con:xpath>
+              <con:element>approvalCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>255537636</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/processCCTransaction">
+   <remittanceID>I6843593</remittanceID>
+   <transactionID>12083469</transactionID>
+   <responseCode>0</responseCode>
+   <responseCodeMessage>Transaction approved, no errors</responseCodeMessage>
+   <errorCode>0</errorCode>
+   <errorMessage>
+      <e/>
+   </errorMessage>
+   <approvalCode>255537636</approvalCode>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="SearchBills-AfterSecondPayment-25895812" id="a4fca4e4-e132-4ab4-8079-9355a8fd83f0">
+    <con:settings/>
+    <con:config service="REST Service 21" resourcePath="/vtps/rest/searchBills" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="SearchBills-AfterSecondPayment-25895812" id="dcc5ac3a-7f8c-48f9-aa61-f2dd16c3b8c6" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{
+          "applicationID":"684",
+          "customerID":"195",
+          "clientAccountNumber":"25895812"
+     }</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/searchBills</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="12dfbde6-f426-401b-bea2-752f4a3480d6" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:applicationId[1]</con:xpath>
+              <con:element>applicationId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>684</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:customerId[1]</con:xpath>
+              <con:element>customerId</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>195</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:clientAccountNumber[1]</con:xpath>
+              <con:element>clientAccountNumber</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>25895812</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberOverdueBills[1]</con:xpath>
+              <con:element>numberOverdueBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:overdueAmount[1]</con:xpath>
+              <con:element>overdueAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberCurrentBills[1]</con:xpath>
+              <con:element>numberCurrentBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentAmount[1]</con:xpath>
+              <con:element>currentAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentBillDueDate[1]</con:xpath>
+              <con:element>currentBillDueDate</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:currentBillDueDate[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberTotalBills[1]</con:xpath>
+              <con:element>numberTotalBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:totalAmount[1]</con:xpath>
+              <con:element>totalAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:numberFutureBills[1]</con:xpath>
+              <con:element>numberFutureBills</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:futureBillAmount[1]</con:xpath>
+              <con:element>futureBillAmount</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:result[1]</con:xpath>
+              <con:element>result</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorCode[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]</con:xpath>
+              <con:element>errorMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/searchBills';
+//ns1:Response[1]/ns1:errorMessage[1]/@null</con:xpath>
+              <con:element>@null</con:element>
+              <con:type/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>true</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/searchBills">
+   <applicationId>684</applicationId>
+   <customerId>195</customerId>
+   <clientAccountNumber>25895812</clientAccountNumber>
+   <numberOverdueBills>0</numberOverdueBills>
+   <overdueAmount>0</overdueAmount>
+   <numberCurrentBills>0</numberCurrentBills>
+   <currentAmount>0</currentAmount>
+   <currentBillDueDate null="true"/>
+   <numberTotalBills>0</numberTotalBills>
+   <totalAmount>0</totalAmount>
+   <numberFutureBills>0</numberFutureBills>
+   <futureBillAmount>0</futureBillAmount>
+   <result>0</result>
+   <errorCode null="true"/>
+   <errorMessage null="true"/>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>b203980c-f78d-47fb-bbe6-3c9c41528d63</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d1d78b5a-6da4-4aad-9d26-bd5ea4cc7842</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2bf72459-fdf8-4db4-928f-d1ade3ff1f4a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

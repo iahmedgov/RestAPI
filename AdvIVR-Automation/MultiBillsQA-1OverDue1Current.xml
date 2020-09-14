@@ -1013,6 +1013,157 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="restrequest" name="ProcessCCMultiBills-All-25895808" id="610b250e-2be0-4e13-9e26-fa048d8f240a">
+    <con:settings/>
+    <con:config service="REST Service 10" resourcePath="/vtps/rest/processCCTransaction" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ProcessCCMultiBills-All-25895808" id="3d2ae421-4615-4a73-bb18-ecd8a3a8c847" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@disable-property-expansions">false</con:setting>
+        </con:settings>
+        <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "card_address" : "${Copy of PayBillsAll#Response#$['billingAddress']}",\r
+   "amount" : "26.00",\r
+   "card_name" : "Sam Slitzer",\r
+   "card_city" : "${Copy of PayBillsAll#Response#$['billingCity']}",\r
+   "card_zip" : "${Copy of PayBillsAll#Response#$['billingZipCode']}",\r
+   "email" : "",\r
+   "card_number" : "4111111111111111",\r
+   "card_state" : "${Copy of PayBillsAll#Response#$['billingState']}",\r
+   "transaction_type" : "104",\r
+   "message_version" : "2.0IVR_C",\r
+   "category" : "MOTO",\r
+   "requestSource" : "",\r
+   "response_format" : "fixed_width",\r
+   "card_expiration" : "",\r
+   "application_id" : "684",\r
+   "remittance_id" : "${Copy of PayBillsAll#Response#$['remittanceID']}",\r
+   "card_exmo" : "01",\r
+   "card_exyr" : "2023",\r
+   "username" : "multibill",\r
+   "password" : "Mu!t!b!ll",\r
+   "user_defined1" : "udf1 data",\r
+   "user_defined2" : "udf2 data",\r
+   "user_defined3" : "udf3 data",\r
+   "user_defined4" : "udf4 data",\r
+   "user_defined5" : "udf5 data",\r
+   "user_defined6" : "udf6 data",\r
+   "user_defined7" : "udf7 data",\r
+   "user_defined8" : "udf8 data",\r
+   "user_defined9" : "udf9 data",\r
+   "user_defined10" : "udf10 data",\r
+   "client_account_number" : "25895808",\r
+   "parcel" : "${Copy of PayBillsAll#Response#$['parcel']}",\r
+   "paidBillID" : "${Copy of PayBillsAll#Response#$['billIDs']}"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/processCCTransaction</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="2791afdb-3767-4464-ae45-4d45dce6fce2" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:remittanceID[1]</con:xpath>
+              <con:element>remittanceID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>I6843588</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:transactionID[1]</con:xpath>
+              <con:element>transactionID</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>12083467</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCode[1]</con:xpath>
+              <con:element>responseCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:responseCodeMessage[1]</con:xpath>
+              <con:element>responseCodeMessage</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Transaction approved, no errors</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorCode[1]</con:xpath>
+              <con:element>errorCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>0</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:errorMessage[1]/ns1:e[1]</con:xpath>
+              <con:element>e</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue xsi:nil="true"/>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://qa.velocitypayment.com/vtps/rest/processCCTransaction';
+//ns1:Response[1]/ns1:approvalCode[1]</con:xpath>
+              <con:element>approvalCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>exists</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>996647239</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://qa.velocitypayment.com/vtps/rest/processCCTransaction">
+   <remittanceID>I6843588</remittanceID>
+   <transactionID>12083467</transactionID>
+   <responseCode>0</responseCode>
+   <responseCodeMessage>Transaction approved, no errors</responseCodeMessage>
+   <errorCode>0</errorCode>
+   <errorMessage>
+      <e/>
+   </errorMessage>
+   <approvalCode>996647239</approvalCode>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>iahmed</con:username>
+          <con:password>hello2222</con:password>
+          <con:domain>govolution</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
