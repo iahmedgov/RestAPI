@@ -51,6 +51,7 @@ https%3A%2F%2Fqa.velocitypayment.com-TestSuite\AdvancedIVRMultipleBills-WWW.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\TransactionStatusLookup.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\AdvancedIVRMultipleBills-Demo3759.xml
 https%3A%2F%2Fqa.velocitypayment.com-TestSuite\CallPostback.xml
+https%3A%2F%2Fqa.velocitypayment.com-TestSuite\Copy-of-AdvancedIVRMultipleBills-Demo3759.xml
 AdvIVR-Automation\CreateAndRetrieveCCStoredPM.xml
 AdvIVR-Automation\DuplicateCreateCCStoredPM.xml
 AdvIVR-Automation\MultipleCreateAndRetrieveCCStoredPM.xml
