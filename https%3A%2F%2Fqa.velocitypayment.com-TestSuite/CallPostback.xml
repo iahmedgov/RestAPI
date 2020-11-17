@@ -15,8 +15,8 @@
         <con:request>{\r
    "applicationID" : "609",\r
    "customerID" : "195",\r
-   "callerID" : "7038945335",\r
-   "callSessionID" : "5335"\r
+   "callerID" : "7038945329",\r
+   "callSessionID" : "5329"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
@@ -87,6 +87,146 @@
    "customerID" : "538",\r
    "callerID" : "4107687000",\r
    "callSessionID" : "0210"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request-Upgrade" id="687c66f2-e4d9-4d55-a723-9e13370dbbb1">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request-Upgrade" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4117",\r
+   "customerID" : "381",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "1600"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request-WWW" id="98a1d439-80f8-4b9d-8fda-645e6ea3ab3b">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request-WWW" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4117",\r
+   "customerID" : "381",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "1600"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request-Upgrade2" id="f9470e18-616f-4b81-8bea-1ad054e1d0a9">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request-Upgrade2" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4117",\r
+   "customerID" : "381",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "1880"\r
+}</con:request>
+        <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request-WWW2" id="fe805744-1044-4cd4-9062-326aca6e36d4">
+    <con:settings/>
+    <con:config service="REST Service 20" resourcePath="/vtps/rest/callPostback" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request-WWW2" id="3cad5152-6c6f-444a-bb9e-a5bac92bd6f8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:request>{\r
+   "applicationID" : "4117",\r
+   "customerID" : "381",\r
+   "callerID" : "4107687000",\r
+   "callSessionID" : "1880"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/callPostback</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="85234bc1-fe8a-4ed9-970b-5e1caf67390d" name="Valid HTTP Status Codes">

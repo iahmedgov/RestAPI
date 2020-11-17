@@ -25,7 +25,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>text/html; charset=UTF-8</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 503</con:status>
       <con:params/>
       <con:element>html</con:element>
     </con:representation>

@@ -71,19 +71,19 @@
         <con:request>{\r
    "header" : {\r
       "applicationID" : "609",\r
-      "callerID" : "2408939800",\r
-      "clientAccountNumber" : "1009800",\r
-      "amount" : "21.50",\r
-      "remittanceID" : "test10252019202",\r
+      "callerID" : "2408939801",\r
+      "clientAccountNumber" : "1009801",\r
+      "amount" : "15.50",\r
+      "remittanceID" : "test10252019203",\r
       "customerID" : "195",\r
       "lang" : "en_US",\r
-      "callSessionID" : "0019800"\r
+      "callSessionID" : "9801"\r
    },\r
    "customerInformation" : {\r
-      "firstName" : "Imtiaza",\r
-      "lastName" : "Ahmeda",\r
-      "companyName" : "Moi Companya",\r
-      "addressLine1" : "2311 yorka roada",\r
+      "firstName" : "Imtiazas",\r
+      "lastName" : "Ahmedas",\r
+      "companyName" : "Moi Companyas",\r
+      "addressLine1" : "2311 yorka roadas",\r
       "city" : "Gambrills",\r
       "state" : "MD",\r
       "zip" : "21054",\r
@@ -92,11 +92,11 @@
    "customData" : [\r
       {\r
          "id" : "1",\r
-         "value" : "abc111a"\r
+         "value" : "abc111as"\r
       },\r
       {\r
          "id" : "2",\r
-         "value" : "abc222a"\r
+         "value" : "abc222as"\r
       }\r
    ]\r
 }</con:request>
@@ -176,7 +176,7 @@
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic bWRtdmFpdnI6dyFNdyRVRTVfSHo6NUFG" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "header" : {\r
       "applicationID" : "4116",\r

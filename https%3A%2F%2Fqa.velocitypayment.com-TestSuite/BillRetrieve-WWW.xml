@@ -39,12 +39,12 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="BASIC aWFobWVkOmhlbGxvMjIyMg==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
-        <con:request>{
-    "applicationID":"609",
-    "customerID":"195",
-    "callerID":"2408939800",
-    "callGuiID":"",
-    "callSessionID":"0019800"
+        <con:request>{\r
+   "applicationID" : "609",\r
+   "customerID" : "195",\r
+   "callerID" : "2408939801",\r
+   "callGuiID" : "",\r
+   "callSessionID" : "9801"\r
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveBill</con:originalUri>
         <con:credentials>
