@@ -130,11 +130,6 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="a8579c4f-c6ee-4b7e-9c07-fe728da7d66b" name="Response SLA">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

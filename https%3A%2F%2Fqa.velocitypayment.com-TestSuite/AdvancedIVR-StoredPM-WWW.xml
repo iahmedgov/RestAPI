@@ -10,20 +10,20 @@
     <con:config service="REST Service 14" resourcePath="/vtps/rest/createCCStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CreateCCStoredPM Request" id="993d281f-9a20-435c-9a55-1c3d55bdd422" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvODg4OA==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOkBwcGxlMTIzIQ==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "header" : {\r
-      "clientAccountNumber" : "1235511107",\r
+      "clientAccountNumber" : "1235511116",\r
       "applicationID" : "18",\r
       "customerID" : "2"\r
    },\r
    "paymentMethod" : {\r
       "paymentMethodType" : "1",\r
-      "pan" : "6011000000000005",\r
+      "pan" : "6011000000000011",\r
       "card_expiration" : "102021",\r
-      "card_exmo" : "10",\r
+      "card_exmo" : "11",\r
       "card_exyr" : "2021"\r
    },\r
    "customerInformation" : {\r
@@ -94,11 +94,11 @@
     <con:config service="REST Service 15" resourcePath="/vtps/rest/retrieveStoredPayment" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="RetrieveStoredPM Request" id="223f6ece-aabf-49de-940b-992579323348" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvODg4OA==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOkBwcGxlMTIzIQ==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "1235511107", 
+"clientAccountNumber": "1235511116", 
 "customerID": "2" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>

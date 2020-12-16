@@ -31,7 +31,7 @@
    "account_type" : "",\r
    "response_format" : "fixed_width",\r
    "application_id" : "609",\r
-   "remittance_id" : "testivrach311",\r
+   "remittance_id" : "testivrach359",\r
    "username" : "username",\r
    "password" : "password",\r
    "check_type" : "C",\r
@@ -89,7 +89,7 @@
    "account_type" : "1",\r
    "response_format" : "fixed_width",\r
    "application_id" : "2325",\r
-   "remittance_id" : "testivrach204",\r
+   "remittance_id" : "testivrach259",\r
    "username" : "username",\r
    "password" : "password",\r
    "check_type" : "P",\r

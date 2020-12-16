@@ -14,15 +14,15 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "header" : {\r
-      "clientAccountNumber" : "1235511183",\r
+      "clientAccountNumber" : "1235511196",\r
       "applicationID" : "609",\r
       "customerID" : "195"\r
    },\r
    "paymentMethod" : {\r
       "paymentMethodType" : "1",\r
-      "pan" : "4922222222222223",\r
+      "pan" : "4922222222222226",\r
       "card_expiration" : "102021",\r
-      "card_exmo" : "10",\r
+      "card_exmo" : "01",\r
       "card_exyr" : "2021"\r
    },\r
    "customerInformation" : {\r
@@ -57,13 +57,13 @@
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "header" : {\r
-      "clientAccountNumber" : "1235511183",\r
+      "clientAccountNumber" : "1235511196",\r
       "applicationID" : "609",\r
       "customerID" : "195"\r
    },\r
    "paymentMethod" : {\r
       "paymentMethodType" : "4",\r
-      "accountNumber" : "12341332",\r
+      "accountNumber" : "12341333",\r
       "routingNumber" : "256072691"\r
    },\r
    "customerInformation" : {\r
@@ -97,7 +97,7 @@
         </con:settings>
         <con:endpoint>https://qa.velocitypayment.com</con:endpoint>
         <con:request>{ 
-"clientAccountNumber": "1235511183", 
+"clientAccountNumber": "1235511196", 
 "customerID": "195" 
 }</con:request>
         <con:originalUri>https://qa.velocitypayment.com/vtps/rest/retrieveStoredPayment</con:originalUri>
@@ -128,7 +128,7 @@
    "requestSource" : "",\r
    "response_format" : "fixed_width",\r
    "application_id" : "609",\r
-   "remittance_id" : "dasd4546fsdfs2",\r
+   "remittance_id" : "dasd4546fsdfs58",\r
    "username" : "username",\r
    "password" : "password",\r
    "user_defined1" : "",\r
@@ -141,8 +141,8 @@
    "user_defined8" : "",\r
    "user_defined9" : "",\r
    "user_defined10" : "",\r
-   "client_account_number" : "123000102",\r
-   "paymentMethodID" : "83152",\r
+   "client_account_number" : "1235511185",\r
+   "paymentMethodID" : "84445",\r
    "card_address" : "2311 york road",\r
    "card_name" : "Dggtrd Sgdd",\r
    "card_city" : "Crofton",\r

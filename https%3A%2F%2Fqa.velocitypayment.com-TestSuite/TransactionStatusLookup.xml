@@ -81,9 +81,9 @@
     <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="TransactionStatusLookup-Upgrade-2325" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOkBwcGxlMTIzIQ==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
-        <con:endpoint>https://upgrade.velocitypayment.com</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{\r
    "applicationID" : "2325",\r
    "last4Digits" : "1111",\r
@@ -105,7 +105,7 @@
     <con:config service="REST Service 25" resourcePath="/vtps/rest/transactionStatusLookup" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="TransactionStatusLookup-Upgrade-4108" id="3711a3b6-f28c-45ef-974f-e28ec5b0a243" mediaType="application/json" postQueryString="false">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOmhlbGxvNzc3Nw==" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic aWFobWVkOkBwcGxlMTIzIQ==" xmlns="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://www.velocitypayment.com</con:endpoint>
         <con:request>{\r

@@ -29,7 +29,7 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "609",\r
-   "remittance_id" : "testIVR06022020150",\r
+   "remittance_id" : "testIVR06022020158",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2023",\r
    "username" : "username",\r
@@ -199,7 +199,7 @@
    "response_format" : "fixed_width",\r
    "card_expiration" : "",\r
    "application_id" : "2325",\r
-   "remittance_id" : "testIVR09262017195",\r
+   "remittance_id" : "testIVR09262017199",\r
    "card_exmo" : "01",\r
    "card_exyr" : "2025",\r
    "username" : "username",\r
